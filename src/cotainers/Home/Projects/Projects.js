@@ -60,7 +60,7 @@ const Projects = () => {
           bulletClass: 'swiper-pagination-bullet',
         }}
         autoplay={{
-          delay: 70000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         className="mySwiper mySwiper-projects"

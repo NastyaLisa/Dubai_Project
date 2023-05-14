@@ -58,7 +58,7 @@ const Hero = () => {
 
           }}
           autoplay={{
-            delay: 50000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           navigation={{
