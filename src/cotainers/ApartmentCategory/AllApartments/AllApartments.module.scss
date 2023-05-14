@@ -1,0 +1,190 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %container;
+  position: relative;
+}
+
+.apartments {
+  padding-top: 42px;
+
+  @include onTablet {
+    padding-top: 62px;
+  }
+
+  @include onDesctop {
+    padding-top: 120px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    @include onTablet {
+      margin-bottom: 0;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    @include onDesctop {
+      margin-bottom: 84px;
+      font-size: 60px;
+      line-height: 80px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 130px;
+    height: 130px;
+
+    @include onTablet {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include onDesctop {
+      height: 430px;
+      width: 430px;
+    }
+
+    &__inform {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30%;
+    row-gap: 30px;
+    
+    @include onDesctop{
+      
+      top: 55%;
+      row-gap: 50px;
+    }
+     
+
+
+    }
+    &__title {
+      font-family: $mainFontSecondary;
+      font-weight: $mainFontSecondaryWeight;
+      text-align: center;
+      // position: absolute;
+      // left: 10%;
+      // top: 80%;
+      font-size: 14px;
+
+      @include onDesctop {
+        font-size: 48px;
+        line-height: 26px;
+        /* or 133% */
+
+        
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      font-weight: $mainFontSecondaryWeight;
+      font-size: 10px;
+      // line-height: 14px;
+      text-align: end;
+      @include onDesctop {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      &:hover {
+        color: $colorAccent;
+        cursor: pointer;
+      
+    }
+  }
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  // row-gap: 8px;
+  text-align: left;
+
+  padding: 2px 4px 2px 4px;
+  background-color: $colorAccent;
+  color: $colorMain;
+
+  @include onDesctop {
+    row-gap: 73px;
+    padding: 54px 30px 33px 30px;
+  }
+
+  h3 {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 14px;
+    // line-height: 26px;
+
+    @include onDesctop {
+      font-size: 48px;
+line-height: 26px;
+    }
+  }
+
+  p {
+    font-size: 10px;
+    // line-height: 12px;
+
+    // @include onTablet {
+    //   font-size: 12px;
+    //   line-height: 14px;
+    // }
+
+    @include onDesctop {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}
+
+// .pagination{
+//   .paginationWrapper {
+//     margin-top: 35px;
+//     background-color: aqua;
+  
+//     @include onTablet{
+//       margin-top: 50px;
+//     }
+//     @include onDesctop{
+//   margin-top: 110px;
+//     }
+  
+//     .swiper-pagination-bullet {
+//       width: 13px;
+//       height: 13px;
+//       // background-color: $colorAccent;
+  
+//       @include onDesctop { 
+//         width: 13px;
+//       height: 13px;
+//       }
+//     }
+//     .paginationItemActive{
+//       color: $colorAccent;
+//     }
+//   }
+// }

@@ -1,0 +1,156 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %container;
+}
+
+.contact {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 42px;
+
+  @include onTablet {
+    padding-top: 62px;
+  }
+
+  @include onDesctop {
+    padding-top: 90px;
+  }
+
+  &__title {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 30px;
+
+    @include onTablet {
+      font-size: 50px;
+      line-height: 62px;
+    }
+
+    @include onDesctop {
+      font-size: 60px;
+      line-height: 75px;
+      padding-bottom: 90px;
+      padding-left: 345px;
+    }
+  }
+
+  &__address {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $colorMain;
+   
+
+    @include onTablet {
+      position: absolute;
+      z-index: 2;
+      top: 33%;
+      left: calc(50% - 320px);
+      // transform: translate(-50%, -50%);
+     
+    }
+
+    @include onDesctop {
+      position: absolute;
+      z-index: 2;
+      top: 33%;
+      left: calc(50% - 617px);
+      // transform: translate(-50%, -50%);
+     
+    }
+  }
+
+  &__items {
+    width: 287px;
+    height: 293px;
+    @include onTablet {
+      padding: 30px;
+      width: 273px;
+      height: 355px;
+    }
+
+    @include onDesctop {
+      padding: 85px;
+       width: 544px;
+      height: 605px;
+    }
+  }
+  .city {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    @include onDesctop{
+      font-size: 32px;
+line-height: 45px;
+    }
+  }
+
+  .phone{
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 20px;
+    line-height: 25px;
+
+    @include onDesctop{
+      font-size: 32px;
+      line-height: 45px;
+      padding: 30px 0 60px;
+    }
+  }
+  
+
+  &__item {
+    font-weight: 600;
+    color: $colorMainText;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include onDesctop {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+.country{
+  color: $colorAccent;
+}
+    .detail {
+      font-weight: $mainFontWeight;
+      color: $colorText;
+    }
+  }
+}
+
+.map {
+  position: relative;
+
+  width: 289px;
+  height: 351px;
+
+  @include onTablet {
+    width: 695px;
+    height: 595px;
+  }
+
+  @include onDesctop {
+    width: 1800px;
+    height: 768px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,101 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %container;
+  width: $mobileContentWidth;
+ 
+
+  @include onTablet {
+    width: 400px
+    
+  }
+
+  @include onDesctop {
+    width: 878px;
+    
+  }
+
+
+
+}
+
+.description {
+  margin: 0 auto;
+  padding: 42px;
+
+  @include onTablet {
+    
+    padding: 62px;
+  }
+
+  @include onDesctop {
+  
+    padding: 120px;
+  }
+
+  &__main__title {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 24px;
+    line-height: 30px;
+    // color: $colorTextFaq;
+    padding-bottom: 10px;
+
+    @include onTablet {
+      font-size: 30px;
+      line-height: 37px;
+      padding-bottom: 23px;
+      // padding-right: 200px;
+    }
+
+    @include onDesctop {
+      font-size: 60px;
+      line-height: 35px;
+
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 16px;
+    line-height: 18px;
+    // color: $colorTextFaq;
+    padding-bottom: 10px;
+
+    @include onTablet {
+      font-size: 20px;
+      line-height: 18px;
+      padding-bottom: 23px;
+    
+    }
+
+    @include onDesctop {
+      font-size: 25px;
+      line-height: 26px;
+
+      padding-bottom: 50px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+
+    @include onTablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include onDesctop {
+    }
+
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 80px;
+  }
+}

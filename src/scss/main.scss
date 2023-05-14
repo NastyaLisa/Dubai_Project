@@ -1,0 +1,157 @@
+@import 'utils/fonts';
+@import 'utils/mixin';
+@import 'utils/variables';
+@import 'utils/normalize';
+@import 'utils/templates';
+
+
+html{
+  font-family: $mainFontFirst;
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSize;
+  color: $colorMainText;
+  background-color: $colorMain;
+  
+  @include onTablet{
+     font-size: 16px;
+  }
+  @include onDesctop {
+      font-size: 18px;
+    
+  }
+}
+
+
+.container {
+  @extend %container;
+}
+
+// .section{
+//   // background-color: ;
+//   @extend %container;
+//   // margin: 0 auto;
+// }
+
+.projects__pagination {
+  margin-top: 35px;
+  
+
+  @include onTablet{
+    margin-top: 50px;
+  }
+  @include onDesctop{
+margin-top: 110px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    background-color: $colorAccent;
+
+    @include onDesctop { 
+      width: 13px;
+    height: 13px;
+    }
+  }
+  
+}
+
+.reviews__slider {
+  .swiper {
+    padding-top: 50px;
+
+    @include onTablet {
+      padding-top: 70px;
+    }
+
+    @include onDesctop {
+      padding-top: 150px;
+      overflow: visible;
+    }
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next {
+    padding-top: 20px;
+  }
+
+  .reviews-pagination {
+    margin-top: 20px;
+    padding-top: 20px;
+
+    @include onTablet {
+      margin-top: 36px;
+      padding-top: 36px;
+    }
+
+    @include onDesctop {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      background-color: $colorAccent;
+
+      @include onDesctop {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+
+.apartments__pagination {
+  margin-top: 35px;
+  
+
+  @include onTablet{
+    margin-top: 50px;
+  }
+  @include onDesctop{
+margin-top: 110px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    background-color: $colorAccent;
+
+    @include onDesctop { 
+      width: 13px;
+    height: 13px;
+    }
+  }
+  
+}
+
+// .offers__pagination {
+//   margin-top: 35px;
+  
+
+//   @include onTablet{
+//     margin-top: 50px;
+//   }
+//   @include onDesctop{
+// margin-top: 110px;
+//   }
+
+//   .swiper-pagination-bullet {
+//     width: 20px;
+//     height: 20px;
+//     text-align: center;
+//     line-height: 20px;
+//     font-size: 12px;
+//     color: #000;
+//     opacity: 1;
+//     background: rgba(0, 0, 0, 0.2);
+//   }
+  
+//   .swiper-pagination-bullet-active {
+//     color: #fff;
+//     background: #007aff;
+//   }
+  
+// }

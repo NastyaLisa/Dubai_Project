@@ -1,0 +1,45 @@
+@import 'utils/fonts';
+@import  'utils/mixin';
+@import  'utils/variables';
+
+
+.lang {
+  display: none;
+
+  @include onDesctop {
+    display: flex;
+    width: 50px;
+   
+  }
+
+  &__open{
+    display:block;
+    margin-top: 38px;
+    background-color: aqua;
+  }
+  &__btn{
+    font-size: 14px;
+  line-height: 16px;
+ 
+
+  @include onTablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include onDesctop {
+    
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  
+  }
+//dont work
+  &:not(:last-child){
+
+    @include onDesctop{
+    margin-right: 7px;
+    }
+  }
+}
+}

@@ -1,0 +1,204 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %container;
+}
+
+.projects {
+  padding-top: 42px;
+
+  @include onTablet {
+    padding-top: 62px;
+  }
+
+  @include onDesctop {
+    padding-top: 120px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 auto 10px;
+
+    @include onTablet {
+      flex-direction: row;
+
+      align-items: center;
+      max-width: 691px;
+      margin: 0 auto 25px;
+    }
+
+    @include onDesctop {
+      align-items: center;
+      flex-direction: row;
+      max-width: 1103px;
+
+      margin: 5px auto 77px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 24px;
+    line-height: 30px;
+
+    @include onTablet {
+      margin-bottom: 0;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    @include onDesctop {
+      margin-bottom: 0;
+      font-size: 48px;
+      line-height: 49px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
+
+    @include onDesctop {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 287px;
+
+      @include onTablet {
+        width: 290px;
+      }
+
+      @include onDesctop {
+        width: 400px;
+      }
+
+      li {
+        font-size: 12px;
+        line-height: 14px;
+
+        &:last-child {
+          font-family: $mainFontSecondaryWeight;
+          font-style: italic;
+          color: $colorText;
+        }
+
+        &:hover {
+          color: $colorAccent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 140px;
+    height: 186px;
+
+    @include onTablet {
+      width: 165px;
+      height: 220px;
+    }
+
+    @include onDesctop {
+      height: 573px;
+      width: 430px;
+    }
+
+    &__title {
+      font-family: $mainFontSecondary;
+      font-weight: $mainFontSecondaryWeight;
+      position: absolute;
+      left: 10%;
+      top: 80%;
+      font-size: 20px;
+
+      @include onDesctop {
+        font-size: 32px;
+        line-height: 45px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  text-align: left;
+
+  padding: 15px 8px 10px 9px;
+  background-color: $colorAccent;
+  color: $colorMain;
+
+  @include onDesctop {
+    row-gap: 125px;
+    padding: 46px 96px 44px 30px;
+  }
+
+  h3 {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include onDesctop {
+      font-size: 32px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    font-size: 10px;
+    line-height: 12px;
+
+    @include onTablet {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @include onDesctop {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 12px;
+    line-height: 14px;
+
+    @include onDesctop {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

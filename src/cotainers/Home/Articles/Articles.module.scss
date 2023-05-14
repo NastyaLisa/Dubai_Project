@@ -1,0 +1,132 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+
+.container{
+  @extend %container;
+  margin: 0 auto;
+  margin-top: 120px;
+  @include onTablet {
+  }
+
+  @include onDesctop {
+    max-width: 1100px;
+    height: 490px;
+
+  }
+
+}
+.articles {
+ 
+  margin-top: 120px;
+  color: $colorMainText;
+
+  &__description {
+    @include onTablet {
+    }
+
+    @include onDesctop {
+      @include flex-all-sb;
+      // @include flex-v-center;
+      margin-bottom: 50px;
+    }
+  
+
+  h2 {
+    @include onDesctop {
+      font-family: $mainFontSecondary;
+      font-weight: $mainFontSecondaryWeight;
+      font-size: 70px;
+      line-height: 87px;
+    }
+  }
+  a{
+    @include onDesctop{
+      display: flex;
+      align-items: center;
+      font-family: $mainFontSecondary;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: $colorText;
+    }
+   
+  }
+}
+
+
+&__column {
+  @include onDesctop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 27px;
+    max-width: 1100px;
+    // height: 490px;
+  }
+
+  &__item {
+    @include onDesctop {
+      position: relative;
+      height: 350px;
+      width: 350px;
+    }
+
+    &__title {
+      @include onDesctop {
+        position: absolute;
+        left: 10%;
+        top: 80%;
+
+        font-family: $mainFontSecondary;
+        font-weight: $mainFontSecondaryWeight;
+        font-size: 25px;
+        line-height: 35px;
+        
+      }
+    }
+  }
+}
+
+}
+
+
+
+.item__text{
+  @include onDesctop{
+   
+    display: flex;
+    flex-direction: column;
+        justify-content: space-between;
+    align-items: flex-start;
+    text-align:left;
+    padding: 41px 35px 23px;
+    border: 1px solid $colorAccent;
+    color: $colorMainText;
+    
+  }
+
+  h4{
+    @include onDesctop{
+      font-family: $mainFontSecondary;
+      font-weight: $mainFontSecondaryWeight;
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+p{
+  color: $colorText;
+  font-size: 16px;
+}
+    a{
+      @include onDesctop{}
+      display: flex;
+      align-items: center;
+      font-family: $mainFontSecondary;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: $colorAccent;
+    }
+  }

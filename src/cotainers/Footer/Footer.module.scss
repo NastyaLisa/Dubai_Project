@@ -1,0 +1,80 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+
+.footer {
+  position: relative;
+  @include onDesctop {
+    padding: 122px 0 50px 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    // top: 85px;
+    border-top: 2px solid yellowgreen;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 95px;
+    border-bottom: 2px solid yellowgreen;
+  }
+
+  &__container {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+    margin-top: 70px;
+  }
+
+  &__grid {
+    @include onDesctop {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 7%;
+      padding-top: 100px;
+      padding-bottom: 95px;
+
+      font-weight: 300;
+
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__list {
+      margin-top: 40px;
+    }
+    &__list li {
+      white-space: nowrap;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &__item a {
+      &:hover {
+        color: $colorAccent;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.copyright {
+  // padding-top: 50px;
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+

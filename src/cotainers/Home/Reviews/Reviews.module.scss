@@ -1,0 +1,58 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %container;
+  
+  // padding-left: 50px;
+
+
+}
+
+.reviews {
+  margin: 0 auto;
+  // max-width: $mobileContentWidth  ;
+  @include onTablet{
+    max-width: $tabletContentWidth; 
+  }
+  @include onDesctop {
+       
+    
+max-width: $desctopContentWidthMain;
+
+  }
+
+  &__column {
+    @include onDesctop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      column-gap: 18px;
+      padding: 25px 40px 17px 13px;
+      // margin-top: 150px;
+      width: 525px;
+      height: 311px;
+      position: relative;
+      border: 2px solid $colorAccent;
+    }
+
+    img {
+      @include onDesctop {
+        position: absolute;
+        top: -20%;
+      }
+    }
+  }
+}
+
+.quotes {
+  @include onDesctop {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 200px;
+    margin-left: 400px;
+    color: $colorAccent;
+  }
+}

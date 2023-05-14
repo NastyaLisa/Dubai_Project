@@ -1,0 +1,98 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+
+.logo {
+  display: block;
+  width: 114px;
+  margin-left: 15px;
+
+  position: relative;
+
+  @include onTablet {
+    width: 179px;
+  }
+
+  @include onDesctop {
+    width: 184px;
+
+    line-height: 13px;
+  }
+
+  &__subtitle {
+    font-size: 10px;
+    line-height: 100%;
+
+    @include onTablet {
+    }
+
+    @include onDesctop {
+      margin-top: 4px;
+      font-size: 11px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 18px;
+    line-height: 1;
+    
+
+    @include onTablet {
+      font-size: 20px;
+    }
+
+    @include onDesctop {
+      font-size: 28px;
+    }
+  }
+
+  &::before {
+    width: 30px;
+    bottom: -8px;
+    border-bottom: 2px solid $colorAccent;
+
+    @include onTablet {
+      width: 36px;
+    }
+
+    @include onDesctop {
+      width: 40px;
+    }
+  }
+
+  &::before {
+    width: 30px;
+    top: -5px;
+    border-top: 2px solid $colorAccent;
+
+    @include onTablet {
+      top: -10px;
+      width: 36px;
+    }
+
+    @include onDesctop {
+      width: 40px;
+      top: -10px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 49px;
+    left: -10px;
+    border-left: 2px solid $colorAccent;
+
+    @include onTablet {
+      height: 59px;
+    }
+
+    @include onDesctop {
+      height: 63px;
+      left: -16px;
+    }
+  }
+}

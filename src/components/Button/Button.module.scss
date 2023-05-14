@@ -1,0 +1,31 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+
+.btn{
+    display: none;
+   
+    width: 176px;
+    height: 41px;
+    background-color: $colorAccent;
+    color: $colorBlack;
+    font-family: $mainFontFirst;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    @include onTablet{
+    display: none;
+    }
+    @include onDesctop{
+    display: block;
+    
+    }
+
+    &__open{
+        display: block;
+        margin-top: 38px;
+    }
+    
+}
+

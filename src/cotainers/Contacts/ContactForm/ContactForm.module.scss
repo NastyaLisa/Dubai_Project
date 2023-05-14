@@ -1,0 +1,144 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.container {
+  @extend %containerMin;
+}
+
+.contactForm {
+  padding-top: 52px;
+
+  @include onTablet {
+    padding-top: 70px;
+  }
+
+  @include onDesctop {
+    padding-top: 210px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+
+  @include onTablet{
+    flex-direction: row;
+    column-gap: 30px;
+  }
+  @include onDesctop {
+    
+    flex-direction: row;
+    column-gap: 30px;
+  
+  }
+
+  &__title {
+        text-align: start;
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+
+    @include onDesctop {
+      margin-bottom: 70px;
+      font-size: 32px;
+      line-height: 35px;
+    }
+
+    span {
+      color: $colorAccent;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include onTablet{
+      flex-direction: row;
+      column-gap: 30px;
+      row-gap: 0;
+    }
+    @include onDesctop{
+      
+      flex-direction: row;
+      column-gap: 30px;
+      row-gap: 0;
+    }
+    }
+    
+
+  label {
+    display: none;
+  }
+
+  &__input,
+  &__textarea {
+    border: 1px solid #c9c9c9;
+    font-family: $mainFontFirst;
+    width: 288px;
+    height: 50px;
+    padding: 17px;
+
+    @include onTablet {
+      width: 211px;
+    }
+
+    @include onDesctop {
+      width: 350px;
+
+      padding: 36px;
+
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &:focus {
+      border-color: $colorAccent;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 218px;
+  }
+
+  .invalid {
+    border-color: red;
+  }
+
+  &__btn {
+    width: 288px;
+    height: 52px;
+    border: none;
+    background-color: $colorAccent;
+    color: $colorMain;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    cursor: pointer;
+
+    @include onDesctop {
+      width: 150px;
+      height: 50px;
+    }
+
+    // margin-top: 20px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $colorMainText;
+    }
+  }
+
+  //окончание форм
+}

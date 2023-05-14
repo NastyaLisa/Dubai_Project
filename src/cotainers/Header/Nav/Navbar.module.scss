@@ -1,0 +1,155 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+
+.nav {
+  @include flex-v-center;
+
+  // max-width: 114px;
+  // width: 100%;
+  // display: none;
+  font-family: $mainFontSecondary;
+  font-weight: $mainFontWeight;
+
+  @include onTablet {
+    // max-width: 179px;
+  }
+
+  @include onDesctop {
+    max-width: 670px;
+  }
+
+  &__list {
+    display: none;
+
+    @include onTablet {
+      // display: grid;
+      // grid-template-columns: repeat(4, auto);
+      // column-gap: 35px;
+      // line-height: 19px;
+    }
+
+    @include onDesctop {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(4, auto);
+      width: 340px;
+      column-gap: 53px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__open {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 20px;
+      width: 288px;
+      padding-bottom: 59px;
+      padding-left: 20px;
+      border-bottom: 2px solid $colorAccent;
+      font-size: 36px;
+    }
+
+    // &__active{
+    //   display: grid;
+    //   grid-template-rows: repeat(4,auto);
+    //   row-gap: 20px;
+
+    // }
+
+    &__link {
+      @include onTablet {
+        &:hover {
+          color: $colorAccent;
+          cursor: pointer;
+        }
+      }
+
+      @include onDesctop {
+        transition: opacity 0.2s ease-in;
+        display: flex;
+      }
+
+      &:hover {
+        @include onDesctop {
+          color: $colorAccent;
+          cursor: pointer;
+          // opacity: 0.8;
+        }
+      }
+
+      &__active {
+        @include onDesctop {
+          position: relative;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          left: 0;
+          top: 100%;
+
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: $colorAccent;
+        }
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &:hover .submenu {
+    display: block;
+  }
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  background-color: $colorMain;
+  width: 247px;
+  margin-top: 20px;
+  border: 1px solid #979797;
+  @include onDesctop {
+ 
+  }
+  &__link {
+    font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+      // justify-content: center;
+      align-items: center;
+      height: 36px;
+      width: 100%;
+
+      color: $colorMainText;
+      cursor: pointer;
+      opacity: 1;
+    @include onDesctop {
+      
+    }
+
+    &:hover {
+      background-color: $colorAccent;
+
+      cursor: pointer;
+      @include onDesctop {
+    
+        // opacity: 0.8;
+      }
+    }
+  }
+}
