@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "homepage": "https://nastyalisa.github.io/Dubai_Project",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development --mode development --watch",
     "start": " webpack serve --open --mode development",
     "lint": "eslint -c .eslintrc.json --ext .js,.jsx .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "> 1%",
@@ -27,6 +30,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-webpack-plugin": "^4.0.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "node-sass": "^8.0.0",
