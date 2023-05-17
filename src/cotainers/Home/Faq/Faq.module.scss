@@ -3,9 +3,19 @@
 @import "utils/templates";
 @import "utils/fonts";
 
+.container{
+  @extend %containerMin;
+}
+
+
 .faq {
+  padding-top: 50px;
+@include onTablet{
+  padding-top: 70px;
+}
+
   @include onDesctop {
-    margin-top: 110px;
+    mpadding-top: 110px;
   }
 
   &__title {
