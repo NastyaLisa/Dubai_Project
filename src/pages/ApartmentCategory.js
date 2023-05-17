@@ -7,15 +7,13 @@ import FormInner from '../components/Form/FormInner';
 
 const ApartmentCategory = () => {
   return(
-    <>
-      <h1>ApartamentCategory</h1>
-
+    <main className="section">
       <ApartmentHero />
       <AllApartments/>
       <BestOffers/>
       <Description/>
       <FormInner/>
-    </>
+    </main>
     
   );
 };

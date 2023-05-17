@@ -15,8 +15,8 @@ const Articles = ()=>{
     <section className={styles.articles}>
       <div className={styles.container}>
         <div className={styles.articles__description}> 
-          <h2>Useful articles</h2>
-          <a>View all articles <AiOutlineRight/></a>
+          <h2 className={styles.articles__description__title}>Useful articles</h2>
+          <a href="#" className={styles.articles__description__link}>View all articles <AiOutlineRight/></a>
         </div>
        
         <div className={styles.articles__column}>
@@ -27,10 +27,10 @@ const Articles = ()=>{
           </div>
 
           <div className={`${styles.articles__column__item} ${styles.item__text}`} >
-            <span>Jule 03, 2022</span>
-            <h4>Discover Architecture</h4>
-            <p>Projects for many large domestic and foreign corporations, enterprises in many elds such</p>
-            <a>Learn more <AiOutlineRight/></a>
+            <span className={styles.item__text__date}>Jule 03, 2022</span>
+            <h4 className={styles.item__text__title}>Discover Architecture</h4>
+            <p className={styles.item__text__desc}>Projects for many large domestic and foreign corporations, enterprises in many elds such</p>
+            <a href="#" className={styles.item__text__link}>Learn more <AiOutlineRight/></a>
           </div>
 
           <div className={styles.articles__column__item} >

@@ -9,6 +9,7 @@ html{
   font-family: $mainFontFirst;
   font-weight: $mainFontWeight;
   font-size: $mainFontSize;
+  line-height: 21px;
   color: $colorMainText;
   background-color: $colorMain;
   
@@ -22,15 +23,7 @@ html{
 }
 
 
-.container {
-  @extend %container;
-}
 
-// .section{
-//   // background-color: ;
-//   @extend %container;
-//   // margin: 0 auto;
-// }
 
 .projects__pagination {
   margin-top: 35px;
@@ -58,14 +51,12 @@ margin-top: 110px;
 
 .reviews__slider {
   .swiper {
-    padding-top: 50px;
-
-    @include onTablet {
-      padding-top: 70px;
-    }
-
+  padding-top: 36px;
+@include onTablet{
+  padding-top: 46px;
+}
     @include onDesctop {
-      padding-top: 150px;
+     padding-top: 56px;
       overflow: visible;
     }
   }

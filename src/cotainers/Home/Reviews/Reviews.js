@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Reviews.module.scss';
-import image1 from 'images/home/Mask Group_2.png';
+import paul from 'images/home/reviews/Mask-Group2.png';
+import robert from 'images/home/reviews/Mask-Group.png';
 import {ImQuotesRight} from 'react-icons/im';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,7 +25,7 @@ const Reviews = ()=>{
             loop={true}
             
             autoplay={{
-              delay: 5000,
+              delay: 50000,
               disableOnInteraction: false,
             }}
 
@@ -54,73 +55,77 @@ const Reviews = ()=>{
               },
             }}
           >
+           
             <SwiperSlide >
               <div className={styles.reviews__column}>
                 <ImQuotesRight className={styles.quotes}/>
-                <img src={image1}/>
-                <span>Paul</span>
-                <span>Owner in Paul.com</span>
-                <p>
-          Projects for many large domestic and foreign 
-          corporations, enterprises in many elds such as nance, 
-          banking, F&B, education, communication.
+                <div className={styles.reviews__column__img}>
+                  <img src={paul}/>
+                </div>
+                <span className={styles.person__name}>
+                  Paul</span>
+                <span className={styles.person__position}>Owner <span className={styles.person__company}>in Paul.com</span></span>
+                <p className={styles.person__quotes}>
+                Projects for many large domestic and foreign corporations, 
+                enterprises in many elds such as nance, banking, F&B, education, communication.
                 </p>
               </div>    
             </SwiperSlide >
+
             <SwiperSlide>
               <div className={styles.reviews__column}>
                 <ImQuotesRight className={styles.quotes}/>
-                <img src={image1}/>
-                <span>
+                <div className={styles.reviews__column__img}>
+                  <img src={robert}/>
+                </div>
+                <span className={styles.person__name}>
           Robert
                 </span>
-                <span>
-          Founder in Apple inc.
+                <span className={styles.person__position}>
+          Founder <span className={styles.person__company}>in Apple inc.</span>
                 </span>
-                <p>
+                <p className={styles.person__quotes}>
           Founded in 2007, Sparch is specializing in 
           providing innovative services such as website design, 
           brand identity and marketing
                 </p>
               </div>
-            </SwiperSlide>
+            </SwiperSlide>  
+            <SwiperSlide >
+              <div className={styles.reviews__column}>
+                <ImQuotesRight className={styles.quotes}/>
+                <div className={styles.reviews__column__img}>
+                  <img src={paul}/>
+                </div>
+                <span className={styles.person__name}>
+                  Paul</span>
+                <span className={styles.person__position}>Owner <span className={styles.person__company}>in Paul.com</span></span>
+                <p className={styles.person__quotes}>
+                Projects for many large domestic and foreign corporations, 
+                enterprises in many elds such as nance, banking, F&B, education, communication.
+                </p>
+              </div>    
+            </SwiperSlide >
 
             <SwiperSlide>
               <div className={styles.reviews__column}>
                 <ImQuotesRight className={styles.quotes}/>
-                <img src={image1}/>
-                <span>
+                <div className={styles.reviews__column__img}>
+                  <img src={robert}/>
+                </div>
+                <span className={styles.person__name}>
           Robert
                 </span>
-                <span>
-          Founder in Apple inc.
+                <span className={styles.person__position}>
+          Founder <span className={styles.person__company}>in Apple inc.</span>
                 </span>
-                <p>
+                <p className={styles.person__quotes}>
           Founded in 2007, Sparch is specializing in 
           providing innovative services such as website design, 
           brand identity and marketing
                 </p>
               </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className={styles.reviews__column}>
-                <ImQuotesRight className={styles.quotes}/>
-                <img src={image1}/>
-                <span>
-          Robert
-                </span>
-                <span>
-          Founder in Apple inc.
-                </span>
-                <p>
-          Founded in 2007, Sparch is specializing in 
-          providing innovative services such as website design, 
-          brand identity and marketing
-
-                </p>
-              </div>
-            </SwiperSlide>     
+            </SwiperSlide>    
 
             <div className="reviews-pagination">
               <div className="swiper-pagination">

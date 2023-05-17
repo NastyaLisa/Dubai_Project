@@ -1,0 +1,89 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+
+.container {
+  @extend %containerMin;
+}
+
+.articles {
+  padding-top: 78px;
+
+  @include onTablet {
+    padding-top: 15px;
+  }
+
+  @include onDesctop {
+    padding-top: 60px;
+  }
+
+  &__content {
+    margin: 0 auto;
+
+    @include onDesctop {
+      max-width: 730px;
+    }
+  }
+
+  &__title {
+    font-family: $mainFontSecondary;
+    font-weight: $mainFontSecondaryWeight;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 10px;
+
+    @include onTablet {
+      font-size: 25px;
+      line-height: 45px;
+      padding-bottom: 20px;
+    }
+
+    @include onDesctop {
+      font-size: 25px;
+      line-height: 45px;
+
+      padding-bottom: 50px;
+    }
+  }
+
+  &__text {
+    color: $colorText;
+    list-style-type: disc;
+    padding-bottom: 10px;
+
+    @include onTablet {
+      padding-bottom: 20px;
+    }
+
+    @include onDesctop {
+      text-align: justify;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__main {
+    padding-bottom: 30px;
+
+    @include onTablet {
+      padding-bottom: 50px;
+    }
+
+    @include onDesctop {
+      padding-bottom: 47px;
+    }
+  }
+
+  &__list {
+    padding-top: 30px;
+    border-top: 1px solid $colorText;
+
+    @include onTablet {
+      padding-top: 50px;
+    }
+
+    @include onDesctop {
+      padding-top: 65px;
+    }
+  }
+}

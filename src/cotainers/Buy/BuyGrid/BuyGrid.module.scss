@@ -1,0 +1,164 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+
+.container {
+  @extend %containerMin;
+}
+
+.grid {
+  padding-top: 50px;
+
+  @include onDesctop {
+    padding-top: 109px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    min-width: 287px;
+
+    @include onTablet {
+      min-width: 690px;
+    }
+
+    @include onDesctop {
+      min-width: 1100px;
+    }
+  }
+
+  &__header {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    height: 74px;
+
+    background-color: #fcd54c;
+
+    @include onTablet {
+      width: 690px;
+    }
+
+    @include onDesctop {
+      width: 1110px;
+    }
+
+    &__text {
+      text-align: center;
+      color: $colorMain;
+      font-family: $mainFontSecondary;
+      font-size: 16px;
+      line-height: 26px;
+
+      &:not(.column_first) {
+        display: none;
+
+        @include onTablet {
+          display: block;
+        
+          text-align: center;
+          width: 178px;
+        }
+
+        @include onDesctop {
+          display: block;
+         
+          text-align: center;
+          width: 360px;
+        }
+      }
+    }
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+
+    height: 52px;
+
+    &__text {
+      justify-content: flex-start;
+      padding-left: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__odd {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__mark {
+      justify-content: center;
+
+      align-items: center;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $colorAccent;
+    }
+  }
+
+  &__cell__first {
+    grid-area: 2 / 1 / 16 / 2;
+    width: 288px;
+
+    @include onTablet {
+      grid-area: 2 / 1 / 16 / 2;
+      width: 320px;
+    }
+
+    @include onDesctop {
+      grid-area: 2 / 1 / 16 / 2;
+      width: 370px;
+    }
+  }
+
+  &__cell__second {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      grid-area: 2 / 2 / 16 / 3;
+      width: 227px;
+    }
+
+    @include onDesctop {
+      display: block;
+      grid-area: 2 / 2 / 16 / 3;
+      width: 370px;
+      margin: 0 auto;
+    }
+  }
+
+  &__cell__third {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      grid-area: 2 / 3 / 16 / 4;
+      width: 133px;
+    }
+
+    @include onDesctop {
+      display: block;
+      grid-area: 2 / 3 / 16 / 4;
+      width: 370px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.column_first {
+  margin-right: auto;
+  padding-left: 20px;
+}

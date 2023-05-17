@@ -1,65 +1,77 @@
-@import 'variables';
-@import 'mixin';
+@import "variables";
+@import "mixin";
 
+%container {
+  max-width: $mobileContentWidth;
+  margin: 0 auto;
+  padding: 0 2px;
+  border: 1px solid coral;
 
-%container{
-    max-width: $mobileContentWidth;
-    // width: 100%;
-    margin: 0 auto;
-    padding: 0 4px;
-    border: 1px solid coral;
-   
-        
-    @include onTablet {
+  @include onTablet {
+    min-width: $smTabletWidth;
     max-width: $tabletContentWidth;
-    padding: 0 10px;
+    padding: 0 5px;
     border: 1px solid yellow;
-    }
-    
-    @include onDesctop {
-      // max-width: $desctopContentWidthMain;
-      max-width: $desctopContentWidth;
-      
-      border: 2px solid violet;
-      padding: 0 15px;
-    }
   }
-  
 
-  %containerMin{
-    max-width: $mobileContentWidth;
-    // width: 100%;
-    margin: 0 auto;
-    padding: 0 4px;
-    border: 1px solid coral;
-   
-        
-    @include onTablet {
+  @include onDesctop {
+    min-width: $smDesctopWidth;
+    max-width: $desctopContentWidth;
+
+    border: 2px solid violet;
+    padding: 0 15px;
+  }
+}
+
+%containerMin {
+  max-width: $mobileContentWidth;
+  margin: 0 auto;
+  padding: 0 2px;
+  border: 1px solid coral;
+
+  @include onTablet {
+    min-width: $smTabletWidth;
     max-width: $tabletContentWidth;
-    padding: 0 10px;
+    padding: 0 5px;
     border: 1px solid yellow;
-    }
-    
-    @include onDesctop {
-      // max-width: $desctopContentWidthMain;
-      max-width: $desctopContentWidthMin;
-      
-      border: 2px solid violet;
-      padding: 0 15px;
-    }
   }
-  
+  @include onDesctop {
+    min-width: $smDesctopWidth;
+    max-width: $desctopContentWidthMin;
+
+    border: 2px solid blue;
+    padding: 0 15px;
+  }
+}
+
+%font-main-text {
+  font-size: 14px;
+  line-height: 21px;
+  /* or 150% */
+
+  @include onDesctop {
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+  }
+}
+
+
+%font-title-text{
+  font-family: $mainFontSecondary;
+  font-weight: $mainFontSecondaryWeight;
+  font-size: 24px;
+line-height: 30px;
   
 
-// %sectionMargin{
-//   margin: 20px auto 0;
-//   @include onTablet {
+  @include onTablet {
+    font-size: 40px;
+    line-height: 50px;
+  }
 
-//    margin: 30px auto 0;
-//  }
-//  @include onDesctop {
-  
-//    margin: 90px auto 0;
-//  }
-
-// }
+  @include onDesctop {
+    font-size: 60px;
+line-height: 80px;
+/* or 133% */
+  }
+}

@@ -6,10 +6,9 @@
 .container {
   @extend %containerMin;
   margin: 0 auto;
-
 }
 
-.articles {
+.services {
   padding-top: 43px;
   color: $colorMainText;
 
@@ -23,6 +22,7 @@
 
   &__description {
     @include flex-all-sb;
+
     &__title {
       font-family: $mainFontSecondary;
       font-weight: $mainFontSecondaryWeight;
@@ -30,13 +30,13 @@
       line-height: 30px;
 
       @include onTablet {
-        font-size: 30px;
-        line-height: 37px;
+        font-size: 25px;
+        line-height: 45px;
       }
 
       @include onDesctop {
-        font-size: 70px;
-        line-height: 87px;
+        font-size: 32px;
+        line-height: 45px;
       }
     }
 
@@ -59,17 +59,13 @@
         font-size: 16px;
         line-height: 21px;
       }
+
       &:hover {
         color: $colorAccent;
         cursor: pointer;
       }
     }
-
-
   }
-
-  
-  
 
   &__column {
     display: flex;
@@ -98,10 +94,11 @@
       width: 290px;
       height: 219px;
 
-      @include onTablet{
+      @include onTablet {
         width: 208px;
         height: 220px;
       }
+
       @include onDesctop {
         height: 350px;
         width: 350px;
@@ -139,76 +136,54 @@
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
-  padding: 30px 23px;
-  border: 1px solid $colorAccent;
-  color: $colorMainText;
-  @include onTablet{
+  padding: 23px;
+
+  color: $colorMain;
+  background-color: $colorAccent;
+
+  @include onTablet {
     padding: 23px 14px 14px;
   }
+
   @include onDesctop {
     padding: 41px 35px 23px;
   }
-  &__date{
-    font-size: 12px;
-    line-height: 14px;
-
-    @include onDesctop{
-      font-size: 16px;
-      line-height: 26px;
-    }
-
-  }
-
-
- 
 
   &__title {
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 35px;
 
     @include onDesctop {
-      
       font-size: 25px;
       line-height: 35px;
     }
   }
 
-
   &__desc {
     font-size: 12px;
-    line-height: 14px;
+    line-height: 18px;
 
-    color: $colorText;
-
-    @include onDesctop{
-      font-size: 16px;
-      line-height: 26px;
+    @include onDesctop {
     }
-    
+
+    font-size: 16px;
+    line-height: 26px;
   }
 
   &__link {
     display: flex;
     align-items: center;
     font-family: $mainFontSecondary;
-    
     font-weight: 600;
     color: $colorAccent;
-    font-size: 12px;
-line-height: 0px;
+    font-size: 16px;
+    line-height: 24px;
 
-    @include onDesctop {
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    
-    
     &:hover {
-        color: $colorAccent;
-        cursor: pointer;
-      }
+      color: $colorAccent;
+      cursor: pointer;
+    }
   }
 }
