@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
 import image1 from 'images/hero/slider_1.webp';
 import image2 from 'images/hero/slider_2.webp';
 import image3 from 'images/hero/slider_3.webp';
@@ -21,10 +22,11 @@ import './SwiperStyles.scss';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Hero = () => {
+  const intl = useIntl();
   const menu = [
-    { accent: '01', textId: 'Home.slider1' },
-    { accent: '02', textId: 'Home.slider2' },
-    { accent: '03', textId: 'Home.slider3' },
+    { accent: '01', textId: 'Home.slider.1' },
+    { accent: '02', textId: 'Home.slider.2' },
+    { accent: '03', textId: 'Home.slider.3' },
   ];
   
 
@@ -55,21 +57,18 @@ const Hero = () => {
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: (index, className) => {
-              // const { accent, textId } = menu;
-              console.log(menu[index]);
+              const bullet = menu[index];
+              const text = intl.formatMessage({ id: bullet.textId });
+              console.log(bullet.textId);
 
               return `
-                 <div  class="swiper-pagination-bullet ${className}">
-                  <div class="swiper-pagination__item">
-                    <span class="pagination__accent">
-                      ${menu[index].accent}
-                    </span>
-                     <span class="pagination__text">
-                    ${menu[index].textId}
-                    </span> 
-                  </div>
-                </div>
-              `;
+            <div class='swiper-pagination-bullet ${className}'>
+              <div class="swiper-pagination__item">
+                <span class="pagination__accent">${bullet.accent}</span>
+                <span class="pagination__text">${text}</span>
+              </div>
+            </div>
+          `;
             },
           }}
           autoplay={{

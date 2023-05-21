@@ -1,150 +1,234 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import Logo from 'component/Logo/Logo';
 import Button from 'component/Button/Button';
 
 import styles from './Footer.module.scss';
 
-// import Social from '../../components/Social/Social';
-
-
 const Footer = () => {
-  const [buyMenuOpen, setBuyMenuOpen] = useState(false);
-  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [informationMenuOpen, setInformationMenuOpen] = useState(false);
-  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
-  
-  const handleBuyMenuClick = () => {
-    setBuyMenuOpen(!buyMenuOpen);
-  };
+  const [subMenuStates, setSubMenuStates] = useState({
+    isBuySubMenuOpen: false,
+    isServicesSubMenuOpen: false,
+    isInformationSubMenuOpen: false,
+    isCompanySubMenuOpen: false,
+  });
+  const location = useLocation();
 
-  const handleInformationMenuClick = () => {
-    setInformationMenuOpen(!informationMenuOpen);
-  };
-  const handServicesMenuOpenClick = () => {
-    setServicesMenuOpen(!servicesMenuOpen);
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Прокручиваем страницу вверх при изменении маршрута
+  }, [location]);
 
-  const handAboutMenuOpenClick = () => {
-    setAboutMenuOpen(!aboutMenuOpen);
+  const toggleSubMenu = (subMenu) => {
+    setSubMenuStates((prevState) => ({
+      ...prevState,
+      [subMenu]: !prevState[subMenu],
+    }));
   };
-
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__container} >
+      <div className={styles.container}>
         <div className={styles.footer__logo}>
           <NavLink to="/">
             <Logo />
           </NavLink>
         </div>
-
-        <div className={styles.footer__grid}>
-         
-          <div className={styles.footer__grid__items}>
-         
-            <NavLink to="/buy">BUY</NavLink>
-            <button 
-              onClick={handleBuyMenuClick}
-              className={styles.mobile_only}
-            >
-              {buyMenuOpen ? '-' : '+'}
-            </button>
-         
-            <ul className={`${styles.footer__grid__list} ${buyMenuOpen ? styles.show : styles.hide}`}>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Apartment in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">House in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Apartments in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Loft in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Apartments in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Penthouse in Dubai</NavLink></li>
-              <li className={styles.footer__grid__link}><NavLink to="/apartment-category">Villa in Dubai</NavLink></li>
-            </ul>
-         
-          </div>
-    
-          
-          <div className={styles.footer__grid__items}>
-            <NavLink to="/services">Services</NavLink>
-            <button 
-              onClick={handServicesMenuOpenClick}
-              className={styles.mobile_only}
-            >
-              {servicesMenuOpen ? '-' : '+'}
-            </button>
-            <ul className={`${styles.footer__grid__list} ${servicesMenuOpen ? styles.show : styles.hide}`}>
-            
-              <li className={styles.footer__grid__link}>Property management in Dubai, UAE</li>
-              <li className={styles.footer__grid__link}>Sell property in Dubai, UAE</li>
-              <li className={styles.footer__grid__link}>Rent property in Dubai, UAE</li>
-              <li className={styles.footer__grid__link}>Investments in Dubai, UAE</li>
-              <li className={styles.footer__grid__link}>Real estate for cryptocurrency in Dubai</li>
-              <li className={styles.footer__grid__link}>Moving to Dubai, UAE</li>
-            </ul>
-          </div>
-
-          <div className={styles.footer__grid__items}>
-            <NavLink to="/">Information</NavLink>
-            <button 
-              onClick={handleInformationMenuClick}
-              className={styles.mobile_only}
-            >
-              {informationMenuOpen ? '-' : '+'}
-            </button>
-            <ul className={`${styles.footer__grid__list} ${informationMenuOpen ? styles.show : styles.hide}`}>
-            
-            
-              <li className={styles.footer__grid__link}>Video</li>
-              <li className={styles.footer__grid__link}>Podcasts</li>
-              <li className={styles.footer__grid__link}>Laws</li>
-              <li className={styles.footer__grid__link}>Questions and answers</li>
-              <li className={styles.footer__grid__link}>Books</li>
-              <li className={styles.footer__grid__link}>Articles</li>
-            </ul>
-          </div>
-
-          <div className={styles.footer__grid__items}>
-            <NavLink to="/about">About company</NavLink>
-            <button 
-              onClick={handAboutMenuOpenClick}
-              className={styles.mobile_only}
-            >
-              {aboutMenuOpen ? '-' : '+'}
-            </button>
-            <ul className={`${styles.footer__grid__list} ${aboutMenuOpen ? styles.show : styles.hide}`}>
-            
-            
-              <li className={styles.footer__grid__link}>Jobs</li>
-              <li className={styles.footer__grid__link}>Story</li>
-              <li className={styles.footer__grid__link}>Licenses</li>
-              <li className={styles.footer__grid__link}>Why are we</li>
-              <li className={styles.footer__grid__link}>Real estate agency</li>
-            </ul>
-          </div>
-
-          <div className={styles.footer__grid__items}>
-            <NavLink to="/contacts">Contact
-            </NavLink>
-            <address>
-              <ul className={styles.footer__grid__list}>
-                <li className={styles.footer__grid__link}>964 Worthington Drive<br />
-                  Dubai, UAE</li>
-                <li className={styles.footer__grid__link}>dubairealty@mail.com</li>
-                <li className={styles.footer__grid__link}><Button /></li>
+        {/* <div className={styles.footer__list}> */}
+        <div className={styles.footer__menu}>
+          <ul className={styles.footer__menu__list}>
+            {/* BUY        */}
+            <li className={styles.footer__menu__link}>
+              <NavLink to="/buy">
+                <FormattedMessage id="footer.buy" />
+              </NavLink>
+              <button
+                onClick={() => toggleSubMenu('isBuySubMenuOpen')}
+                className={`${styles.button__arrow} ${
+                  subMenuStates.isBuySubMenuOpen ? styles.active : ''
+                }`}
+              ></button>
+              <ul
+                className={`${styles.footer__submenu__list} ${
+                  subMenuStates.isBuySubMenuOpen ? styles.open : ''
+                }`}
+              >
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu1" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu2" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu3" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    {' '}
+                    <FormattedMessage id="footer.buy.submenu4" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu3" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu5" />
+                  </NavLink>
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <NavLink to="/apartment-category">
+                    <FormattedMessage id="footer.buy.submenu6" />
+                  </NavLink>
+                </li>
               </ul>
-            </address>
-          </div>
+            </li>
 
+            {/* Services */}
+            <li className={styles.footer__menu__link}>
+              <NavLink to="/services">
+                <FormattedMessage id="footer.services" />
+              </NavLink>
+              <button
+                onClick={() => toggleSubMenu('isServicesSubMenuOpen')}
+                className={`${styles.button__arrow} ${
+                  subMenuStates.isServicesSubMenuOpen ? styles.active : ''
+                }`}
+              ></button>
+              <ul
+                className={`${styles.footer__submenu__list} ${
+                  subMenuStates.isServicesSubMenuOpen ? styles.open : ''
+                }`}
+              >
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu1" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu2" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu3" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu4" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu5" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.services.submenu6" />
+                </li>
+              </ul>
+            </li>
+
+            {/* Information */}
+
+            <li className={styles.footer__menu__link}>
+              <NavLink to="/">
+                <FormattedMessage id="footer.inform" />
+              </NavLink>
+              <button
+                onClick={() => toggleSubMenu('isInformationSubMenuOpen')}
+                className={`${styles.button__arrow} ${
+                  subMenuStates.isInformationSubMenuOpen ? styles.active : ''
+                }`}
+              ></button>
+              <ul
+                className={`${styles.footer__submenu__list} ${
+                  subMenuStates.isInformationSubMenuOpen ? styles.open : ''
+                }`}
+              >
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu1" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu2" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu3" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu4" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu5" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.inform.submenu6" />
+                </li>
+              </ul>
+            </li>
+
+            {/* About company */}
+            <li className={styles.footer__menu__link}>
+              <NavLink to="/about">
+                <FormattedMessage id="footer.about" />
+              </NavLink>
+              <button
+                onClick={() => toggleSubMenu('isCompanySubMenuOpen')}
+                className={`${styles.button__arrow} ${
+                  subMenuStates.isCompanySubMenuOpen ? styles.active : ''
+                }`}
+              ></button>
+              <ul
+                className={`${styles.footer__submenu__list} ${
+                  subMenuStates.isCompanySubMenuOpen ? styles.open : ''
+                }`}
+              >
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.about.submenu1" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.about.submenu2" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.about.submenu3" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.about.submenu4" />
+                </li>
+                <li className={styles.footer__submenu__link}>
+                  <FormattedMessage id="footer.about.submenu5" />
+                </li>
+              </ul>
+            </li>
+
+            {/* Contact< */}
+            <li className={styles.footer__menu__link}>
+              <NavLink to="/contacts">
+                <FormattedMessage id="footer.contacts" />
+              </NavLink>
+              <address>
+                <ul className={styles.footer__contact__list}>
+                  <li className={styles.footer__contact__link}>
+                    <FormattedMessage id="footer.contacts.address" />
+                  </li>
+                  <li className={styles.footer__contact__link}>
+                    dubairealty@mail.com
+                  </li>
+                  <li className={styles.footer__contact__link}>
+                    <Button className={styles.btn__footer} />
+                  </li>
+                </ul>
+              </address>
+            </li>
+          </ul>
         </div>
 
-        <div className={styles.copyright}>
-          <div>Copyright © 2023 Dubai Realty</div>
-
-                   
-          {/* <Social className="social social__footer" /> */}
+        <div className={styles.footer__bottom}>
+          <div className={styles.footer__bottom__text}>
+            <p>© 2023 Dubai Realty</p>
+          </div>
         </div>
       </div>
     </footer>
-
   );
 };
 

@@ -10,9 +10,9 @@ const translations = {
     'header.submenu2': 'Apartments in Dubai',
     'header.submenu3': ' Category number five',
     'button.consultation': 'Book a consultation ',
-    'Home.slider1': 'Lorem Ipsum \nDolorem apset',
-    'Home.slider2': 'Lorem Ipsum \nDolorem apset',
-    'Home.slider3': 'Lorem Ipsum \nDolorem apset',
+    'Home.slider.1': 'Welcome to our \nluxury homes',
+    'Home.slider.2': 'Discover your \ndream home.',
+    'Home.slider.3': 'Experience luxury living \n ',
 
     'Home.welcome': 'Welcome Home',
     'Home.to': 'To',
@@ -65,6 +65,56 @@ const translations = {
     'reviews.personCompany2': 'in Apple inc',
     'reviews.personQuotes2':
       'Founded in 2007, Sparch is specializing in providing innovative services such as website design, brand identity and marketing"',
+    'faq.title': 'FAQ',
+    'question.1':
+      'The largest and oldest Quotations Page on the Web with about 30 categories',
+    'answer.1':
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac fringilla magna. Vestibulum vel quam consectetur, ultricies nunc in, sagittis neque.',
+    'question.2':
+      'A huge collection of inspirational quotes, thoughts of greatest minds in history',
+    'answer.2':
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac fringilla magna. Vestibulum vel quam consectetur, ultricies nunc in, sagittis neque.',
+
+    'question.3': 'Quotations from the great works of literature',
+    'answer.3':
+      'The book club\'s website is a wonderful resource for literature lovers, offering a curated selection of quotations from the great works of literature.',
+    'question.4': 'Read quotes and sayings from famous people in history',
+    'answer.4':
+      'If you\'re a fan of history, you\'ll love this website that lets you read quotes and sayings from some of the most famous people in history.',
+    'question.5': 'Collected quotes from Albert Einstein',
+    'answer.5':
+      'This website is a must-visit for anyone interested in the ideas of Albert Einstein, featuring a collection of some of his most insightful and thought-provoking quotes.',
+    'footer.buy': 'Buy',
+    'footer.buy.submenu1': 'Apartment in Dubai',
+    'footer.buy.submenu2': 'House in Dubai',
+    'footer.buy.submenu3': ' Apartments in Dubai',
+    'footer.buy.submenu4': 'Loft in Dubai',
+    'footer.buy.submenu5': 'Penthouse in Dubai',
+    'footer.buy.submenu6': 'Villa in Dubai',
+    'footer.services': 'Services',
+    'footer.services.submenu1': 'Property management in Dubai, UAE',
+    'footer.services.submenu2': 'Sell property in Dubai, UAE',
+    'footer.services.submenu3': 'Rent property in Dubai, UAE',
+    'footer.services.submenu4': 'Investments in Dubai, UAE',
+    'footer.services.submenu5': 'Real estate for cryptocurrency in Dubai',
+    'footer.services.submenu6': ' Moving to Dubai, UAE',
+
+    'footer.inform': 'Information',
+    'footer.inform.submenu1': 'Video',
+    'footer.inform.submenu2': 'Podcasts',
+    'footer.inform.submenu3': 'Laws',
+    'footer.inform.submenu4': 'Questions and answers',
+    'footer.inform.submenu5': 'Books',
+    'footer.inform.submenu6': 'Articles',
+
+    'footer.about': 'About company',
+    'footer.about.submenu1': 'Jobs',
+    'footer.about.submenu2': 'Story',
+    'footer.about.submenu3': 'Licenses',
+    'footer.about.submenu4': 'Why are we',
+    'footer.about.submenu5': 'Real estate agency',
+    'footer.contacts': 'Contact',
+    'footer.contacts.address': '964 Worthington Drive\nDubai, UAE',
   },
 };
 

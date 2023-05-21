@@ -10,9 +10,9 @@ const translations = {
     'header.submenu2': 'Квартири в Дубаї',
     'header.submenu3': 'Категорія номер п\'ять',
     'button.consultation': 'Отримати консультацію',
-    'Home.slider1': 'Lorem Ipsum \nDolorem apset',
-    'Home.slider2': 'Lorem Ipsum \nDolorem apset',
-    'Home.slider3': 'Lorem Ipsum \nDolorem apset',
+    'Home.slider.1': 'Ласкаво просимо до мрії ',
+    'Home.slider.2': 'Відкрийте для себе будинок мрії',
+    'Home.slider.3': 'Відчуйте розкішне життя',
     'Home.welcome': 'Ласкаво просимо',
     'Home.to': 'До',
     'Home.luxury': 'Розкоші',
@@ -81,18 +81,65 @@ const translations = {
 
     'reviews.personName1': 'Пол',
     'reviews.personPosition1': 'Власник',
-    'reviews.personCompany1':'Paul.com.',
-    'reviews.personQuotes1': 'Проекти для багатьох великих вітчизняних і зарубіжних корпорацій, підприємств у багатьох галузях, таких як фінанси, банківська справа, ресторанне господарство, освіта, зв\'язок.',
+    'reviews.personCompany1': 'Paul.com.',
+    'reviews.personQuotes1':
+      'Проекти для багатьох великих вітчизняних і зарубіжних корпорацій, підприємств у багатьох галузях, таких як фінанси, банківська справа, ресторанне господарство, освіта, зв\'язок.',
 
     'reviews.personName2': 'Роберт',
     'reviews.personPosition2': 'Засновник ',
-    'reviews.personCompany2':'Apple inc.',
-    'reviews.personQuotes2': 'Заснована у 2007 році, Sparch спеціалізується на наданні інноваційних послуг, таких як дизайн веб-сайтів, фірмовий стиль та маркетинг.',
+    'reviews.personCompany2': 'Apple inc.',
+    'reviews.personQuotes2':
+      'Заснована у 2007 році, Sparch спеціалізується на наданні інноваційних послуг, таких як дизайн веб-сайтів, фірмовий стиль та маркетинг.',
+    'faq.title': 'Запитання та відповіді',
+    'question.1':
+      'Найбільша і найдавніша сторінка з цитатами в Інтернеті з приблизно 30 категоріями',
+    'answer.1':
+      'Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus.',
+    'question.2':
+      'Велика колекція натхненних цитат, думки найвеличезніших розумів в історії',
+    'answer.2':
+      'Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus.',
+    'question.3': 'Цитати з великих творів літератури',
+    'answer.3':
+      'Веб-сайт книжкового клубу є чудовим ресурсом для любителів літератури, пропонуючи відібрану підбірку цитат з великих творів літератури.',
+    'question.4': 'Читайте цитати та вислови відомих людей в історії',
+    'answer.4':
+      'Якщо ви шанувальник історії, вам сподобається цей веб-сайт, який дозволяє читати цитати та вислови деяких з найвідоміших людей в історії.',
+    'question.5': 'Зібрані цитати Альберта Ейнштейна',
+    'answer.5':
+      'Цей веб-сайт є обов\'язковим для відвідування для всіх, хто цікавиться ідеями Альберта Ейнштейна, і містить колекцію його найбільш проникливих і задумливих цитат.',
 
+    'footer.buy': 'Купити',
+    'footer.buy.submenu1': 'Квартира в Дубаї',
+    'footer.buy.submenu2': 'Будинок в Дубаї',
+    'footer.buy.submenu3': 'Апартаменти в Дубаї',
+    'footer.buy.submenu4': 'Лофт в Дубаї',
+    'footer.buy.submenu5': 'Пентхаус в Дубаї',
+    'footer.buy.submenu6': 'Вілла в Дубаї',
 
+    'footer.services': 'Послуги',
+    'footer.services.submenu1': 'Управління нерухомістю в Дубаї, ОАЕ',
+    'footer.services.submenu2': 'Продаж нерухомості в Дубаї, ОАЕ',
+    'footer.services.submenu3': 'Оренда нерухомості в Дубаї, ОАЕ',
+    'footer.services.submenu4': 'Інвестиції в Дубаї, ОАЕ',
+    'footer.services.submenu5': 'Нерухомість за криптовалюту в Дубаї',
+    'footer.services.submenu6': 'Переїзд до Дубаї, ОАЕ',
 
-
-
+    'footer.inform': 'Інформація',
+    'footer.inform.submenu1': 'Відео',
+    'footer.inform.submenu2': 'Подкасти',
+    'footer.inform.submenu3': 'Закони',
+    'footer.inform.submenu4': 'Питання та відповіді',
+    'footer.inform.submenu5': 'Книги',
+    'footer.inform.submenu6': 'Статті',
+    'footer.about': 'Про компанію',
+    'footer.about.submenu1': 'Вакансії',
+    'footer.about.submenu2': 'Історія',
+    'footer.about.submenu3': 'Ліцензії',
+    'footer.about.submenu4': 'Чому ми',
+    'footer.about.submenu5': 'Агентство нерухомості',
+    'footer.contacts': 'Контакт',
+    'footer.contacts.address': '964 Worthington Drive\nДубай, ОАЕ',
   },
 };
 

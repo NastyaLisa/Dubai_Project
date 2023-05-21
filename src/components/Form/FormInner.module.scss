@@ -11,6 +11,7 @@
   background-image: url("images/home/contact_form.webp");
   background-size: cover;
   background-position: center;
+  padding: 48px 0;
   
 
   @include onTablet {
@@ -20,7 +21,7 @@
 
   @include onDesctop {
     height: 400px;
-    
+      padding: 85px 0;
   }
 }
 
@@ -37,7 +38,8 @@
   }
 
   &__descr {
-    margin-top: 49px;
+    // margin-top: 49px;
+    padding-bottom: 10px;
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
@@ -47,7 +49,8 @@
     @include onTablet {}
 
     @include onDesctop {
-      margin-top: 87px;
+      padding-bottom: 10px;
+      // margin-top: 87px;
       line-height: 29px;
     }
   }

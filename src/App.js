@@ -26,7 +26,7 @@ const App = () => {
     <IntlProvider locale={locale} messages={messages[locale]}>
       <div>
         <React.Fragment>
-          <Header onLanguageChange={handleLanguageChange}/>
+          <Header onLanguageChange={handleLanguageChange} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/buy" element={<Buy />} />
@@ -34,6 +34,8 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
+
+            <Route path="*" element={<h1>Click Logo</h1>} />
           </Routes>
           <Footer />
         </React.Fragment>

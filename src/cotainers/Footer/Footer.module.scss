@@ -3,8 +3,25 @@
 @import "utils/variables";
 @import "utils/templates";
 
+
+.container {
+
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .footer {
+
+  padding: 50px 0 65px 0;
   position: relative;
+
+  @include onTablet {
+    padding: 70px 0 50px 0;
+  }
 
   @include onDesctop {
     padding: 122px 0 50px 0;
@@ -15,7 +32,6 @@
     display: block;
     position: absolute;
     width: 100%;
-    // top: 85px;
     border-top: 2px solid yellowgreen;
   }
 
@@ -32,133 +48,130 @@
     }
   }
 
-  &__container {
-    @extend %container;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
 
   &__logo {
+    padding-top: 40px;
+
     @include onDesctop {
-      margin-top: 70px;
+      padding-top: 70px;
+
     }
   }
 
-  &__grid {
-    @include onDesctop {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-gap: 7%;
-      padding-top: 100px;
-      padding-bottom: 95px;
+  &__menu {
+    padding-top: 40px;
 
-      font-weight: 300;
-
-      width: 100%;
-      margin: 0 auto;
+    @include onTablet {
+      padding-top: 30px;
     }
 
     &__list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: $mobileContentWidth;
 
-      display: none;
-    //   // position: absolute;
-    //   // width: 100%;
-    //   // left: 0;
-    //   // top: 100%;
-    //   // background-color: #fff;
-    //   // border: 1px solid #ccc;
-    //   // z-index: 1;
-    //   // .desktop_only
-      @include onDesctop {
-        margin-top: 40px;
-        display: block;
-        // display: flex;
-        // flex-direction: column;
-        // position: relative;
+      @include onTablet {
+        width: $tabletContentWidth;
       }
 
-    //   // .active {
-    //   //   display: block;
-    //   // }
+      @include onDesctop {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 7%;
+        padding-top: 100px;
+        padding-bottom: 95px;
+
+        font-weight: 300;
+
+        width: 100%;
+        margin: 0 auto;
+      }
+
     }
 
     &__link {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+      }
+
+    }
+
+  }
+
+  &__submenu__list {
+    display: none;
+    position: relative;
+
+    padding: 5px 0 0 15px;
+
+    @include onDesctop {
+      padding: 40px 0 0;
       display: block;
-      margin: 0;
-      white-space: nowrap;
+      position: relative;
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+
+  &__submenu__link {
+
+    white-space: nowrap;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: $colorAccent;
+      cursor: pointer;
+    }
+  }
+
+
+  &__contact__list {
+
+    @include onDesctop {
+      padding: 40px 0 0;
+    }
+
+  }
+
+  &__contact__link {
+    &:not(:last-child) {
+      margin-bottom: 20px;
 
       &:hover {
         color: $colorAccent;
         cursor: pointer;
       }
-
-      &:not(:last-child) {
-        @include onDesctop {
-          margin-bottom: 20px;
-        }
-      }
     }
-
-
-    &__items {
-      margin-bottom: 30px;
-
-      @include onDesctop {
-        margin-bottom: 0;
-      }
-
-      button {
-        display: block;
-        margin-bottom: 10px;
-
-        @include onDesctop{
-          display: none;
-        }
-      }
-    }
-
-  
   }
 }
+  .button__arrow {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid $colorMainText;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
 
-.copyright {
-  // padding-top: 50px;
+    @include onDesctop {
+      display: none;
+    }
 
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
+    &.active {
+      border-top: 10px solid $colorAccent;
+      transform: rotate(-180deg);
 
-.mobile_only {
-  @include onDesctop{display: none;}
-  
-  }
-
-  // .desktop_only{
-  //   @include onDesctop {
-  //     margin-top: 40px;
-  //     display: flex;
-  //     flex-direction: column;
-  //     position: relative;
-  //   }
-  // }
-
-  .desktop_only {
-    display: none;
- 
-  
-  @include onDesctop {
-      display: block;
     }
   }
 
-  .show {
+  .btn__footer{
     display: block;
-  }
-  
-  .hide {
-    display: none;
   }
