@@ -8,32 +8,38 @@
 html{
   font-family: $mainFontFirst;
   font-weight: $mainFontWeight;
-  font-size: $mainFontSize;
-  line-height: 21px;
+   font-size: 14px;
+line-height: 160%;
   color: $colorMainText;
   background-color: $colorMain;
+
   
-  @include onTablet{
-     font-size: 16px;
-  }
+
   @include onDesctop {
-      font-size: 18px;
+     font-size: 18px;
+line-height: 160%;
+
     
   }
 }
 
-
+// .section{
+//   @extend %containerMain;
+// }
 
 
 .projects__pagination {
-  margin-top: 35px;
-  
+  // margin-top: 35px;
+  margin: 35px auto 0;
 
   @include onTablet{
-    margin-top: 50px;
+    // margin-top: 50px;
+      margin: 50px auto 0;
   }
   @include onDesctop{
-margin-top: 110px;
+
+// margin-top: 110px;
+  margin: 110px auto 0;
   }
 
   .swiper-pagination-bullet {

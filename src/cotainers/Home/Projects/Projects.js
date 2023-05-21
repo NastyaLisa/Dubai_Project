@@ -1,6 +1,7 @@
 // router ???
 
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import image1 from 'images/home/villas.webp';
 import image2 from 'images/home/villas_2.webp';
 import image3 from 'images/home/houses.webp';
@@ -22,17 +23,35 @@ const Projects = () => {
   return (
     <section className={`${styles.projects} ${styles.container}`}>
       <header className={styles.projects__header}>
-        <h2 className={styles.projects__title}>Latest projects</h2>
+        <h2 className={styles.projects__title}>
+          <FormattedMessage id="projects.title" />
+        </h2>
         <nav className={styles.projects__nav}>
           <ul className={styles.projects__nav__list}>
-            <li><a href="#">All</a></li>
-            <li><a href="#">Building</a></li>
-            <li><a href="#">Interior</a></li>
-            <li><a href="#">View all projects</a></li>
+            <li>
+              <a href="#">
+                <FormattedMessage id="projects.all" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedMessage id="projects.building" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedMessage id="projects.interior" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedMessage id="projects.viewAll" />
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
-      
+
       <Swiper
         breakpoints={{
           0: {
@@ -43,12 +62,16 @@ const Projects = () => {
               fill: 'row',
             },
           },
-          368: {
-            slidesPerView: 4,
+
+          576: {
+            slidesPerView: 3,
             spaceBetween: 10,
           },
-
-          769: {
+          950: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1100: {
             slidesPerView: 4,
             spaceBetween: 30,
           },
@@ -63,9 +86,10 @@ const Projects = () => {
           delay: 5000,
           disableOnInteraction: false,
         }}
-        className="mySwiper mySwiper-projects"
+        className={styles.projects__swiper}
+        // className="mySwiper mySwiper-projects"
       >
-        <SwiperSlide >
+        <SwiperSlide>
           <div className={styles.projects__card}>
             <p className={styles.projects__card__title}>Villas</p>
             <img src={image1} alt="illustration villa" />
@@ -79,11 +103,19 @@ const Projects = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={`${styles.projects__card} ${styles.card__text}`}>
-            <h3>Dubai</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Consequat molestie integer aliquam consectetur.
-                Faucibus vitae dui massa tellus magna sit.</p>
-            <button><a href="#">See project </a> <AiOutlineRight /></button>
+            <h3>
+              
+              <FormattedMessage id="projects.card.title" />
+            </h3>
+            <p>
+              <FormattedMessage id="projects.card.description" />
+            </p>
+            <button>
+              <a href="#">
+                <FormattedMessage id="projects.card.button" />
+                <AiOutlineRight />
+              </a>
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -94,11 +126,19 @@ const Projects = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={`${styles.projects__card} ${styles.card__text}`}>
-            <h3>Dubai</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Consequat molestie integer aliquam consectetur.
-                Faucibus vitae dui massa tellus magna sit.</p>
-            <button><a href="#">See project <AiOutlineRight /></a> </button>
+            <h3>
+              
+              <FormattedMessage id="projects.card.title" />
+            </h3>
+            <p>
+              <FormattedMessage id="projects.card.description" />
+            </p>
+            <button>
+              <a href="#">
+                <FormattedMessage id="projects.card.button" />
+                <AiOutlineRight />
+              </a>
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -119,6 +159,7 @@ const Projects = () => {
             <img src={image1} alt="illustration villa" />
           </div>
         </SwiperSlide>
+
         <div className="projects__pagination">
           <div className="swiper-pagination">
             <span className="swiper-pagination-bullet "></span>

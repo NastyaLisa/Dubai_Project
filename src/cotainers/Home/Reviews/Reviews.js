@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styles from './Reviews.module.scss';
 import paul from 'images/home/reviews/Mask-Group2.png';
 import robert from 'images/home/reviews/Mask-Group.png';
@@ -16,19 +17,17 @@ const Reviews = ()=>{
   return (
     <section className={styles.reviews}>
       <div className={styles.container}>
-        <div className="reviews__slider">    
+        <div className="reviews__slider">
           <Swiper
             slidesPerView={2}
             slidesPerGroup={1}
             spaceBetween={60}
             initialSlide={1}
             loop={true}
-            
             autoplay={{
               delay: 50000,
               disableOnInteraction: false,
             }}
-
             pagination={{
               el: '.swiper-pagination',
               clickable: true,
@@ -37,107 +36,116 @@ const Reviews = ()=>{
             className="mySwiper mySwiper-reviews"
             breakpoints={{
               0: {
-                slidesPerView:1,
-                slidesPerGroup:1,
-                spaceBetween: 50,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                // spaceBetween: 50,
               },
-              368: {
-                slidesPerView:2,
-                slidesPerGroup:1,
-                spaceBetween: 50,
-             
+              650: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                // spaceBetween: 40,
               },
-              769: {
-                slidesPerView:2,
-                slidesPerGroup:1,
-                spaceBetween: 60,
-           
+              1024: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                // spaceBetween: 20,
               },
             }}
           >
-           
-            <SwiperSlide >
+            <SwiperSlide>
               <div className={styles.reviews__column}>
-                <ImQuotesRight className={styles.quotes}/>
+                <ImQuotesRight className={styles.quotes} />
                 <div className={styles.reviews__column__img}>
-                  <img src={paul}/>
+                  <img src={paul} />
                 </div>
                 <span className={styles.person__name}>
-                  Paul</span>
-                <span className={styles.person__position}>Owner <span className={styles.person__company}>in Paul.com</span></span>
+                  <FormattedMessage id="reviews.personName1" />
+                </span>
+                <span className={styles.person__position}>
+                  <FormattedMessage id="reviews.personPosition1" />
+                  <span className={styles.person__company}>
+                    <FormattedMessage id="reviews.personCompany1" />
+                  </span>
+                </span>
                 <p className={styles.person__quotes}>
-                Projects for many large domestic and foreign corporations, 
-                enterprises in many elds such as nance, banking, F&B, education, communication.
+                  <FormattedMessage id="reviews.personQuotes1" />
                 </p>
-              </div>    
-            </SwiperSlide >
+              </div>
+            </SwiperSlide>
 
             <SwiperSlide>
               <div className={styles.reviews__column}>
-                <ImQuotesRight className={styles.quotes}/>
+                <ImQuotesRight className={styles.quotes} />
                 <div className={styles.reviews__column__img}>
-                  <img src={robert}/>
+                  <img src={robert} />
                 </div>
+
                 <span className={styles.person__name}>
-          Robert
+                  <FormattedMessage id="reviews.personName2" />
                 </span>
                 <span className={styles.person__position}>
-          Founder <span className={styles.person__company}>in Apple inc.</span>
+                  <FormattedMessage id="reviews.personPosition2" />
+                  <span className={styles.person__company}>
+                    <FormattedMessage id="reviews.personCompany2" />
+                  </span>
                 </span>
                 <p className={styles.person__quotes}>
-          Founded in 2007, Sparch is specializing in 
-          providing innovative services such as website design, 
-          brand identity and marketing
+                  <FormattedMessage id="reviews.personQuotes2" />
                 </p>
               </div>
-            </SwiperSlide>  
-            <SwiperSlide >
-              <div className={styles.reviews__column}>
-                <ImQuotesRight className={styles.quotes}/>
-                <div className={styles.reviews__column__img}>
-                  <img src={paul}/>
-                </div>
-                <span className={styles.person__name}>
-                  Paul</span>
-                <span className={styles.person__position}>Owner <span className={styles.person__company}>in Paul.com</span></span>
-                <p className={styles.person__quotes}>
-                Projects for many large domestic and foreign corporations, 
-                enterprises in many elds such as nance, banking, F&B, education, communication.
-                </p>
-              </div>    
-            </SwiperSlide >
+            </SwiperSlide>
 
             <SwiperSlide>
               <div className={styles.reviews__column}>
-                <ImQuotesRight className={styles.quotes}/>
+                <ImQuotesRight className={styles.quotes} />
                 <div className={styles.reviews__column__img}>
-                  <img src={robert}/>
+                  <img src={paul} />
                 </div>
                 <span className={styles.person__name}>
-          Robert
+                  <FormattedMessage id="reviews.personName1" />
                 </span>
                 <span className={styles.person__position}>
-          Founder <span className={styles.person__company}>in Apple inc.</span>
+                  <FormattedMessage id="reviews.personPosition1" />
+                  <span className={styles.person__company}>
+                    <FormattedMessage id="reviews.personCompany1" />
+                  </span>
                 </span>
                 <p className={styles.person__quotes}>
-          Founded in 2007, Sparch is specializing in 
-          providing innovative services such as website design, 
-          brand identity and marketing
+                  <FormattedMessage id="reviews.personQuotes1" />
                 </p>
               </div>
-            </SwiperSlide>    
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className={styles.reviews__column}>
+                <ImQuotesRight className={styles.quotes} />
+                <div className={styles.reviews__column__img}>
+                  <img src={robert} />
+                </div>
+
+                <span className={styles.person__name}>
+                  <FormattedMessage id="reviews.personName2" />
+                </span>
+                <span className={styles.person__position}>
+                  <FormattedMessage id="reviews.personPosition2" />
+                  <span className={styles.person__company}>
+                    <FormattedMessage id="reviews.personCompany2" />
+                  </span>
+                </span>
+                <p className={styles.person__quotes}>
+                  <FormattedMessage id="reviews.personQuotes2" />
+                </p>
+              </div>
+            </SwiperSlide>
 
             <div className="reviews-pagination">
               <div className="swiper-pagination">
                 <span className="swiper-pagination-bullet "></span>
-              </div> 
-            </div> 
-        
-        
+              </div>
+            </div>
           </Swiper>
         </div>
       </div>
-
     </section>
   );
 };

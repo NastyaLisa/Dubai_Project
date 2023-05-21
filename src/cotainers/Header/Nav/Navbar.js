@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom';
-
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+
 import styles from './Navbar.module.scss';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 
@@ -18,8 +19,6 @@ const Navbar = ({ navbar }) => {
       setIsOpen(false);
     }
   };
-  
-  
 
   return (
     <div className={styles.nav} onClick={handleNavbarClick}>
@@ -33,7 +32,7 @@ const Navbar = ({ navbar }) => {
                   isActive ? activeLink : normalLink
                 }
               >
-                BUY
+                <FormattedMessage id="header.buy" />
               </NavLink>
             </li>
             <button onClick={() => setIsOpen(!isOpen)} className={styles.btn}>
@@ -48,14 +47,18 @@ const Navbar = ({ navbar }) => {
             }
           >
             <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
-              <li className={styles.submenu__link}>Category number one </li>
-            </NavLink>
-            <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
-              <li className={styles.submenu__link}>Apartments in Dubai</li>{' '}
+              <li className={styles.submenu__link}>
+                <FormattedMessage id="header.submenu1" />
+              </li>
             </NavLink>
             <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
               <li className={styles.submenu__link}>
-                Category number twenty five
+                <FormattedMessage id="header.submenu2" />
+              </li>
+            </NavLink>
+            <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
+              <li className={styles.submenu__link}>
+                <FormattedMessage id="header.submenu3" />
               </li>
             </NavLink>
           </ul>
@@ -65,7 +68,7 @@ const Navbar = ({ navbar }) => {
               to="/blog"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
-              BLOG
+              <FormattedMessage id="header.blog" />
             </NavLink>
           </li>
 
@@ -74,7 +77,7 @@ const Navbar = ({ navbar }) => {
               to="/about"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
-              ABOUT
+              <FormattedMessage id="header.about" />
             </NavLink>
           </li>
 
@@ -83,7 +86,7 @@ const Navbar = ({ navbar }) => {
               to="/contacts"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
-              CONTACTS
+              <FormattedMessage id="header.contacts" />
             </NavLink>
           </li>
         </ul>

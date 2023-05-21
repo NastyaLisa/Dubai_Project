@@ -8,8 +8,7 @@ $colorBlack:                  #000000;
 
 $mainFontFirst              : "WorkSans";
 $mainFontWeight             : 400;
-$mainLineHeight             : 1.4;
-$mainFontSize               : 14px;
+
 
 $mainFontSecondary           : "Gilroy";
 $mainFontSecondaryWeight     : 700;
@@ -21,17 +20,26 @@ $footerFontWeight            : 300;
 
 //WIDTH
 
-$desctopWidth             : 1920px;
+// $desctopWidth             : 1920px;
+$desctopWidthMax             : 1920px;
 $desctopContentWidth      : 1830px;  //1830px+paddind 2x15
 $desctopContentWidthMin  : 1140px; //1110px+paddind 2x15
 
-$smDesctopWidth           : 769px;
+$desctopWidthMin        : 1024px; ////min mixin
+
+
 
 //tablet
+$tabletWidthContainerMax  : 1023px;
 $tabletWidth              : 768px;
 $tabletContentWidth       : 700px;     //690+padding 2x5
-$smTabletWidth            : 369px;
+
+$tabletWidthContainerMin  : 576px;//минимальній єкран
+//min-max mixin
+
 
 //mobile
-$mobileContentWidth       : 294px; //290+padding 2x2
-$MobileWidthBox           : 320px;
+$mobileContentWidth       : 294px; //290+padding 2x2 изображение
+$mobileWidthBox           : 320px; //размер макета
+
+$mobileWidthContainer     : 575px; //размер экрана 

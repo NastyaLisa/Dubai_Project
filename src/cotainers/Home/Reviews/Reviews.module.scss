@@ -23,8 +23,8 @@
     display: flex;
     flex-direction: column;
     padding: 25px 40px 16px 35px;
-    width: 290px;
-    height: 192px;
+    // width: 290px;
+    // height: 192px;
     position: relative;
     border: 2px solid #FCD54C;
     row-gap: 10px;
@@ -34,17 +34,17 @@
     }
 
     @include onTablet{
-      width: 330px;
-    height: 200px;
+      // max-width: 330px;
+    // height: 200px;
     }
     @include onDesctop {
       
       padding: 25px 40px 16px 35px;
-      width: 525px;
-      height: 311px;
+      // max-width: 525px;
+      // height: 311px;
      
      
-      row-gap: 15px;
+      // row-gap: 15px;
     }
 
     &__img {

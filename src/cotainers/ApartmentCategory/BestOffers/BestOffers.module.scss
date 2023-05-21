@@ -23,8 +23,7 @@
 
   &__title {
     margin-bottom: 20px;
-    font-family: $mainFontSecondary;
-    font-weight: $mainFontSecondaryWeight;
+    @extend %font-secondary;
     font-size: 24px;
     line-height: 30px;
     text-align: center;
@@ -45,17 +44,17 @@
   //card - slide
   &__card {
     position: relative;
-    width: 140px;
+    max-width: 140px;
     // height: 186px;
 
     @include onTablet {
-      width: 165px;
+      max-width: 165px;
       // height: 220px;
     }
     
 
     @include onDesctop {
-      width: 425px;
+      max-width: 425px;
       height: 878px;
       margin-bottom: 20px;
     }

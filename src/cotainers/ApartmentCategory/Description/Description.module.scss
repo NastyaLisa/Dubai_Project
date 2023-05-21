@@ -4,36 +4,25 @@
 @import "utils/fonts";
 
 .container {
-  @extend %container;
-  width: $mobileContentWidth;
+  @extend %containerMin;
+  margin: 0 auto;
+  
  
-
-  @include onTablet {
-    width: 400px
-    
-  }
-
-  @include onDesctop {
-    width: 878px;
-    
-  }
-
-
 
 }
 
 .description {
-  margin: 0 auto;
-  padding: 42px;
+ 
+  padding-top: 42px;
 
   @include onTablet {
     
-    padding: 62px;
+    padding-top: 62px;
   }
 
   @include onDesctop {
   
-    padding: 120px;
+    padding-top: 120px;
   }
 
   &__main__title {
@@ -60,8 +49,7 @@
   }
 
   &__title {
-    font-family: $mainFontSecondary;
-    font-weight: $mainFontSecondaryWeight;
+    @extend %font-secondary;
     font-size: 16px;
     line-height: 18px;
     // color: $colorTextFaq;

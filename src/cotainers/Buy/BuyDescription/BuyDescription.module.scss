@@ -27,8 +27,7 @@
   }
 
   &__title {
-    font-family: $mainFontSecondary;
-    font-weight: $mainFontSecondaryWeight;
+    @extend %font-secondary;
     font-size: 24px;
     line-height: 30px;
     padding-bottom: 10px;
@@ -77,18 +76,18 @@
   }
 
   &__image {
-    width: 288px;
+    max-width:$mobileContentWidth;
     height: 252px;
     padding-top: 20px;
     overflow: hidden;
 
     @include onTablet {
-      width: 690px;
+      max-width: $tabletContentWidth;
       height: 436px;
     }
 
     @include onDesctop {
-      width: 1110px;
+      width:$desctopContentWidthMin;
       height: 702px;
       padding-top: 60px;
     }

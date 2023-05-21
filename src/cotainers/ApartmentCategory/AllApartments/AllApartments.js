@@ -19,11 +19,11 @@ SwiperCore.use([Pagination, Autoplay, Grid, Navigation]);
 const AllApartments = () => {
   return (
     <section className={`${styles.apartments} ${styles.container}`}>
-      
-      <h2 className={styles.apartments__title}>All Apartments <br/>
-      Category</h2>
-        
-      
+      <h2 className={styles.apartments__title}>
+        All Apartments <br />
+        Category
+      </h2>
+
       <Swiper
         breakpoints={{
           0: {
@@ -34,16 +34,22 @@ const AllApartments = () => {
               fill: 'row',
             },
           },
-          368: {
-            slidesPerView: 4,
+          // 368: {
+          576: {
+            slidesPerView: 3,
             spaceBetween: 10,
           },
-
-          769: {
+          950: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          // 769: {
+          1100: {
             slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
+       
         initialSlide={1}
         pagination={{
           el: '.swiper-pagination',
@@ -51,18 +57,22 @@ const AllApartments = () => {
           bulletClass: 'swiper-pagination-bullet',
         }}
         autoplay={{
-          delay: 70000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         className="mySwiper mySwiper-apartments"
       >
-        <SwiperSlide >
+        <SwiperSlide>
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Townhouse</p>
-              <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+              <button className={styles.apartments__btn}>
+                <a href="#">
+                  Learn more <AiOutlineRight />
+                </a>{' '}
+              </button>
             </div>
-           
+
             <img src={townhouse} alt="illustration townhouse" />
           </div>
         </SwiperSlide>
@@ -70,62 +80,88 @@ const AllApartments = () => {
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Villa</p>
-              <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+              <button className={styles.apartments__btn}>
+                <a href="#">
+                  Learn more <AiOutlineRight />
+                </a>{' '}
+              </button>
             </div>
-          
+
             <img src={villa} alt="illustration villa" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={`${styles.apartments__card} ${styles.card__text}`}>
             <h3>Apartments</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Consequat molestie integer aliquam consectetur. 
-              Faucibus vitae dui massa tellus magna sit.</p>
-            <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
+              molestie integer aliquam consectetur. Faucibus vitae dui massa
+              tellus magna sit.
+            </p>
+            <button className={styles.apartments__btn}>
+              <a href="#">
+                Learn more <AiOutlineRight />
+              </a>{' '}
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Comercial</p>
-              <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+              <button className={styles.apartments__btn}>
+                <a href="#">
+                  Learn more <AiOutlineRight />
+                </a>{' '}
+              </button>
             </div>
-   
+
             <img src={comercial} alt="illustration comercial" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={`${styles.apartments__card} ${styles.card__text}`}>
             <h3>Apartments</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Consequat molestie integer aliquam consectetur. 
-              Faucibus vitae dui massa tellus magna sit.</p>
-            <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
+              molestie integer aliquam consectetur. Faucibus vitae dui massa
+              tellus magna sit.
+            </p>
+            <button className={styles.apartments__btn}>
+              <a href="#">
+                Learn more <AiOutlineRight />
+              </a>{' '}
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Villa</p>
-              <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+              <button className={styles.apartments__btn}>
+                <a href="#">
+                  Learn more <AiOutlineRight />
+                </a>{' '}
+              </button>
             </div>
-           
+
             <img src={villa} alt="illustration villa" />
           </div>
         </SwiperSlide>
-        <SwiperSlide >
+        <SwiperSlide>
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Townhouse</p>
-              <button className={styles.apartments__btn}><a href="#">Learn more <AiOutlineRight /></a> </button>
+              <button className={styles.apartments__btn}>
+                <a href="#">
+                  Learn more <AiOutlineRight />
+                </a>{' '}
+              </button>
             </div>
-           
+
             <img src={townhouse} alt="illustration townhouse" />
           </div>
         </SwiperSlide>
-
-
 
         <div className="apartments__pagination">
           <div className="swiper-pagination">

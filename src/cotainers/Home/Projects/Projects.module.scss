@@ -23,29 +23,29 @@
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 0 auto 10px;
+    margin: 0 auto;
+    padding-bottom: 10px;
 
     @include onTablet {
       flex-direction: row;
 
       align-items: center;
-      max-width: 691px;
-      margin: 0 auto 25px;
+      max-width: $tabletContentWidth;
+      padding-bottom: 25px;
     }
 
     @include onDesctop {
+      padding-bottom: 72px;
       align-items: center;
       flex-direction: row;
-      max-width: 1103px;
-
-      margin: 5px auto 77px;
+      max-width: $desctopContentWidthMin;
     }
   }
 
   &__title {
     margin-bottom: 20px;
-    font-family: $mainFontSecondary;
-    font-weight: $mainFontSecondaryWeight;
+    @extend %font-secondary;
+
     font-size: 24px;
     line-height: 30px;
 
@@ -113,17 +113,16 @@
 
   &__card {
     position: relative;
-    width: 140px;
     height: 186px;
 
     @include onTablet {
-      width: 165px;
+      // width: 165px;
       height: 220px;
     }
 
     @include onDesctop {
       height: 573px;
-      width: 430px;
+      // width: 430px;
     }
 
     &__title {
@@ -150,7 +149,7 @@
 .card__text {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  justify-content: space-evenly;
   text-align: left;
 
   padding: 15px 8px 10px 9px;
@@ -158,13 +157,11 @@
   color: $colorMain;
 
   @include onDesctop {
-    row-gap: 125px;
     padding: 46px 96px 44px 30px;
   }
 
   h3 {
-    font-family: $mainFontSecondary;
-    font-weight: $mainFontSecondaryWeight;
+    @extend %font-secondary;
     font-size: 18px;
     line-height: 22px;
 

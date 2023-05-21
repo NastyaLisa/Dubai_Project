@@ -3,18 +3,16 @@
 @import "utils/variables";
 @import "utils/templates";
 
-.expertise {
+.container {
   @extend %container;
-
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
-
-  width: 100%;
-  padding-top: 78px;
-
   color: $colorMainText;
+}
+
+.expertise {
+  padding-top: 78px;
 
   @include onTablet {
     padding-top: 15px;
@@ -25,10 +23,10 @@
   }
 
   &__quote {
-    // width: $;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    color: $colorTextFaq;
 
     @include onTablet {
       margin: 0;
@@ -36,40 +34,34 @@
     }
 
     @include onDesctop {
-      // height: 600px;
       width: 730px;
     }
 
     &__subtitle {
-      color: $colorAccent;
       padding-bottom: 10px;
-      font-weight: 600;
-      line-height: 17px;
+      @extend %font_16px_600;
+      color: $colorAccent;
 
       @include onTablet {
-        line-height: 19px;
         padding-bottom: 14px;
       }
 
       @include onDesctop {
-        line-height: 29px;
         padding-bottom: 40px;
       }
     }
 
     &__title {
-      font-family: $mainFontSecondary;
-      font-weight: $mainFontSecondaryWeight;
+      @extend %font-secondary;
       font-size: 24px;
       line-height: 30px;
-      color: $colorTextFaq;
+
       padding-bottom: 10px;
 
       @include onTablet {
         font-size: 30px;
         line-height: 37px;
-        padding-bottom: 23px;
-        padding-right: 200px;
+        padding: 0 200px 23px 0;
       }
 
       @include onDesctop {
@@ -77,23 +69,6 @@
         line-height: 69px;
 
         padding-bottom: 33px;
-      }
-    }
-
-    &__content {
-      color: $colorTextFaq;
-      line-height: 23px;
-      // padding-bottom: 40px;
-
-      @include onTablet {
-        font-size: 14px;
-        line-height: 160%;
-        /* or 22px */
-      }
-
-      @include onDesctop {
-        font-size: 18px;
-        line-height: 29px;
       }
     }
   }
@@ -104,24 +79,19 @@
   width: 100%;
   overflow: hidden;
   padding: 40px 0;
- 
 
   @include onTablet {
     padding: 70px 0;
-    
   }
 
   @include onDesctop {
-    // height: 920px;
-
-    padding-top: 89px;
-    padding-bottom: 120px;
+    padding: 89px 0 120px 0;
   }
 
   video {
     display: block;
     width: 100%;
-    // height: 100%;
+
     object-fit: cover;
   }
 }
@@ -145,60 +115,44 @@
     width: 125px;
     height: 125px;
   }
-}
 
-.btn__play img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .quote {
-  max-width: 288px;
-max-height: 227px;
-margin: 0 auto;
-padding: 22px 24px;
+  max-width: $mobileContentWidth;
+  margin: 0 auto;
+  padding: 22px 24px;
   border: 1px $colorAccent solid;
 
   @include onTablet {
-    max-height: 162px;
-    max-width: 690px;
-    padding: 22px 24px;
+    max-width: $tabletContentWidth;
+    padding: 37px 59px;
   }
 
   @include onDesctop {
-    
     padding: 70px 95px;
-    max-height: 313px;
-    max-width: 1110px;
+
+    max-width: $desctopContentWidthMin;
   }
 
   &__content {
-    max-width: 238px;
-    max-height: 182px;
-    // padding: 22px 24px;
-    
     font-family: $mainFontSecondary;
     color: $colorMainText;
     font-size: 16px;
     line-height: 160%;
 
-    /* or 26px */
     @include onTablet {
-      max-width: 690px;
-      max-height: 162px;
-      // padding: 37px 61px;
       font-size: 18px;
       line-height: 160%;
-      /* or 29px */
     }
 
     @include onDesctop {
-      max-width: 919px;
-      max-height: 174px;
-      // padding: 70px 95px;
-     
       font-size: 30px;
       line-height: 48px;
     }

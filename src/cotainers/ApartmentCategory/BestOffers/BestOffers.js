@@ -43,19 +43,28 @@ const BestOffers = () => {
       <Swiper
         breakpoints={{
           0: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
-            grid: {
-              rows: 1,
-              fill: 'row',
-            },
+            // grid: {
+            //   rows: 1,
+            //   fill: 'row',
+            // },
           },
-          368: {
-            slidesPerView: 4,
+          400: {
+            slidesPerView: 2,
             spaceBetween: 10,
           },
 
           769: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
+          },
+
+          1100: {
             slidesPerView: 4,
             spaceBetween: 30,
             grid: {
@@ -105,9 +114,10 @@ const BestOffers = () => {
             <AiOutlineLeft />
           </button>
           <div className={styles.paginationWrapper}>
-            <div className={`${styles.paginationBullet} swiper-pagination`}></div>
+            <div
+              className={`${styles.paginationBullet} swiper-pagination`}
+            ></div>
           </div>
-          
 
           <button className={`${styles.nextBtn} ${styles.navBtn}`}>
             <AiOutlineRight />
