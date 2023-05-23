@@ -5,58 +5,26 @@
 .nav {
   @include flex-v-center;
 
-  // max-width: 114px;
-  // width: 100%;
-  // display: none;
   font-family: $mainFontSecondary;
   font-weight: $mainFontWeight;
-
-  @include onTablet {
-    // max-width: 179px;
-  }
-
-  @include onDesctop {
-    max-width: 670px;
-  }
 
   &__list {
     display: none;
 
     @include onTablet {
-      // display: grid;
-      // grid-template-columns: repeat(4, auto);
-      // column-gap: 35px;
-      // line-height: 19px;
+      display: none;
     }
-
     @include onDesctop {
       display: grid;
       align-items: center;
       grid-template-columns: repeat(4, auto);
-      width: 340px;
       column-gap: 53px;
       font-size: 14px;
       line-height: 17px;
     }
-
-    &__open {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      row-gap: 20px;
-      width: 288px;
-      padding-bottom: 59px;
-      padding-left: 20px;
-      border-bottom: 2px solid $colorAccent;
-      font-size: 36px;
+    &__item {
+      position: relative;
     }
-
-    // &__active{
-    //   display: grid;
-    //   grid-template-rows: repeat(4,auto);
-    //   row-gap: 20px;
-
-    // }
 
     &__link {
       @include onTablet {
@@ -78,94 +46,123 @@
           // opacity: 0.8;
         }
       }
-
-      &__active {
-        @include onDesctop {
-          position: relative;
-        }
-
-        &::before {
-          content: "";
-
-          position: absolute;
-          left: 0;
-          top: 100%;
-
-          display: block;
-          height: 2px;
-          width: 100%;
-          background-color: $colorAccent;
-        }
-      }
     }
+
+//burger
+
+    &__open {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 30px;
+      width: $mobileContentWidth ;
+      padding: 50px 0 20px;
+      
+      border-bottom: 2px solid $colorAccent;
+      font-size: 36px;
+
+      @include onTablet {
+       display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 0 auto;
+      row-gap: 20px;
+      }
   }
-}
+  }
 
-
-.submenu {
-  
-  position: fixed;
-  
-  background-color: $colorMain;
+  &__submenu {
+    display: none;
+    position: relative;
+background-color: #272727;
   width: 247px;
   height: 110px;
-  margin-top: 85px;
+  margin-top: 30px;
   border: 1px solid #979797;
-  left: calc(50% - 579px);
+  left: 0;
   right: 0;
-  top: -100%;
-  bottom: 0;
-  z-index: 10;
+  top: 0;
+    z-index: 10;
   transition: top 1s ease;
- 
-  @include onDesctop {
- 
+
+
+
+     &.open {
+        display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  @include onDesctop{
+    position: absolute;
   }
+}
+    
 
   &__link {
     font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-display: flex;
-      // justify-content: center;
-      align-items: center;
-      height: 36px;
-      width: 100%;
-      padding: 5px 10px;
-      color: $colorMainText;
-      cursor: pointer;
-      opacity: 1;
+    font-size: 14px;
+    line-height: 17px;
+    height: 36px;
+    width: 100%;
+    padding: 10px;
+    color: $colorMainText;
+    cursor: pointer;
+    opacity: 1;
     @include onDesctop {
-      
     }
 
     &:hover {
       background-color: $colorAccent;
-
       cursor: pointer;
       @include onDesctop {
-    
         // opacity: 0.8;
       }
     }
   }
 }
-.btn{
-  width: 30px;
-  height: 30px;
-  &:hover{
-    color: $colorAccent;
+
+}
+
+//     &__item {
+//       position: relative;
+//     }
+//     
+
+//       &__active {
+//         @include onDesctop {
+//           position: relative;
+//         }
+
+//         &::before {
+//           content: "";
+//           position: absolute;
+//           left: 0;
+//           top: 100%;
+//           display: block;
+//           height: 2px;
+//           width: 100%;
+//           background-color: $colorAccent;
+//         }
+//       }
+//     }
+//   }
+
+// 
+
+.button__arrow {
+  position: absolute;
+  top: 5px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #ffffff;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+
+  &.active {
+    border-top: 7px solid $colorAccent;
+    transform: rotate(-180deg);
   }
- 
-  
-}
-
-.active{
-  top: 0;
-}
-
-.box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

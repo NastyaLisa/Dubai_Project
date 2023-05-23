@@ -2,11 +2,11 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styles from './Button.module.scss';
 
-const Button =({nav})=>{
+const Button =({navbarOpen})=>{
   const close =`${styles.btn}`;
   const open =`${styles.btn} ${styles.btn__open} `;
   return (
-    <button type="button" className={nav ? open : close}>
+    <button type="button" className={navbarOpen ? open : close}>
       <FormattedMessage id="button.consultation" />
     </button>
   );

@@ -1,51 +1,49 @@
-@import 'utils/fonts';
-@import  'utils/mixin';
-@import  'utils/variables';
-
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
 
 .lang {
   display: none;
 
+  @include onTablet {
+    display: flex;
+    width: 50px;
+  }
+
   @include onDesctop {
     display: flex;
     width: 50px;
-   
   }
 
-  &__open{
-    display:block;
+  &__open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 38px;
     background-color: aqua;
+
+    @include onTablet{
+      display: block;
+    width: 50px;
+    margin: 0;
+    }
   }
-  &__btn{
+
+  &__btn {
     font-size: 14px;
-  line-height: 16px;
- 
-
-  @include onTablet {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  @include onDesctop {
-    
+    line-height: 16px;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
 
-     &:hover {
-      font-weight: 700;
+    @include onDesctop {
+      &:hover {
+        font-weight: 700;
         color: $colorAccent;
         cursor: pointer;
       }
-  
-  }
-//dont work
-  &:not(:last-child){
+    }
 
-    @include onDesctop{
-    margin-right: 7px;
+    &:not(:last-child) {
+      margin-right: 7px;
     }
   }
-}
 }

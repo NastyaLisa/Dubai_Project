@@ -3,95 +3,129 @@ import { NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 import styles from './Navbar.module.scss';
-import { AiOutlineCaretDown } from 'react-icons/ai';
 
-const Navbar = ({ navbar }) => {
+
+const Navbar = ({ navbarOpen, setNavbarOpen }) => {
   const activeLink = `${styles.nav__list__link} ${styles.nav__list__link__active}`;
   const normalLink = `${styles.nav__list__link}`;
+
+  const active = `${styles.button__arrow} ${styles.active}`;
+  const normal = `${styles.button__arrow}`;
 
   const close = `${styles.nav__list}`;
   const open = `${styles.nav__list} ${styles.nav__list__open} `;
 
-  const [isOpen, setIsOpen] = useState(false);
-  const handleNavbarClick = (event) => {
-    if (isOpen) {
-      event.stopPropagation();
-      setIsOpen(false);
-    }
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+
+  const handleMenuToggle = (isSubmenuOpen) => {
+    setIsSubmenuOpen(!isSubmenuOpen);
+  };
+
+  const handleSubmenuItemClick = () => {
+    setIsSubmenuOpen(false);
   };
 
   return (
-    <div className={styles.nav} onClick={handleNavbarClick}>
-      <nav>
-        <ul className={navbar ? open : close}>
-          <div className={styles.box}>
-            <li className={styles.menu}>
-              <NavLink
-                to="/buy"
-                className={({ isActive }) =>
-                  isActive ? activeLink : normalLink
-                }
-              >
-                <FormattedMessage id="header.buy" />
-              </NavLink>
-            </li>
-            <button onClick={() => setIsOpen(!isOpen)} className={styles.btn}>
-              <AiOutlineCaretDown />
-            </button>
-          </div>
+    // <div>
+    <nav className={styles.nav}>
+      <ul className={navbarOpen ? open : close}>
+        {/* <ul className={styles.nav__list}> */}
+        <li className={styles.nav__list__item}>
+          <NavLink
+            exact
+            to="/buy"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            onClick={() => setNavbarOpen(false)}
+          >
+            <FormattedMessage id="header.buy" />
+          </NavLink>
+
+          <button
+            type="button"
+            onClick={() => handleMenuToggle(isSubmenuOpen)}
+            className={isSubmenuOpen ? active : normal}
+          ></button>
+
           <ul
             className={
-              isOpen
-                ? [styles.submenu, styles.active].join(' ')
-                : [styles.submenu]
+              isSubmenuOpen
+                ? [styles.nav__submenu, styles.open].join(' ')
+                : styles.nav__submenu
             }
           >
-            <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
-              <li className={styles.submenu__link}>
+            <li className={styles.nav__submenu__link}>
+              <NavLink
+                exact
+                to="/apartment-category"
+                onClick={() => {
+                  handleSubmenuItemClick();
+                  setNavbarOpen(false);
+                }}
+              >
                 <FormattedMessage id="header.submenu1" />
-              </li>
-            </NavLink>
-            <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
-              <li className={styles.submenu__link}>
+              </NavLink>
+            </li>
+            <li className={styles.nav__submenu__link}>
+              <NavLink
+                exact
+                to="/apartment-category"
+                onClick={() => {
+                  handleSubmenuItemClick();
+                  setNavbarOpen(false);
+                }}
+              >
                 <FormattedMessage id="header.submenu2" />
-              </li>
-            </NavLink>
-            <NavLink to="/apartment-category" onClick={() => setIsOpen(false)}>
-              <li className={styles.submenu__link}>
+              </NavLink>
+            </li>
+            <li className={styles.nav__submenu__link}>
+              <NavLink
+                exact
+                to="/apartment-category"
+                onClick={() => {
+                  handleSubmenuItemClick();
+                  setNavbarOpen(false);
+                }}
+              >
                 <FormattedMessage id="header.submenu3" />
-              </li>
-            </NavLink>
+              </NavLink>
+            </li>
           </ul>
+        </li>
+        <li className={styles.nav__list__item}>
+          <NavLink
+            exact
+            to="/blog"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            onClick={() => setNavbarOpen(false)}
+          >
+            <FormattedMessage id="header.blog" />
+          </NavLink>
+        </li>
 
-          <li>
-            <NavLink
-              to="/blog"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              <FormattedMessage id="header.blog" />
-            </NavLink>
-          </li>
+        <li className={styles.nav__list__item}>
+          <NavLink
+            exact
+            to="/about"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            onClick={() => setNavbarOpen(false)}
+          >
+            <FormattedMessage id="header.about" />
+          </NavLink>
+        </li>
 
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              <FormattedMessage id="header.about" />
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/contacts"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              <FormattedMessage id="header.contacts" />
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <li className={styles.nav__list__item}>
+          <NavLink
+            exact
+            to="/contacts"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            onClick={() => setNavbarOpen(false)}
+          >
+            <FormattedMessage id="header.contacts" />
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+    // </div>
   );
 };
 

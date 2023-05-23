@@ -23,6 +23,12 @@ line-height: 160%;
   }
 }
 
+/* Стили для блокировки прокрутки при открытом бургер-меню */
+body.menu-open {
+  overflow: hidden;
+}
+
+
 // .section{
 //   @extend %containerMain;
 // }
