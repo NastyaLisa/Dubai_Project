@@ -11,15 +11,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
 }
 
 .footer {
-  padding: 50px 0 65px 0;
+  padding: 50px 0 20px 0;
   position: relative;
 
   @include onTablet {
-    padding: 70px 0 50px 0;
+    padding: 70px 0 30px 0;
   }
 
   @include onDesctop {
@@ -31,21 +32,25 @@
     display: block;
     position: absolute;
     width: 100%;
-    border-top: 2px solid yellowgreen;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);;
   }
-
-  &::after {
+        &::after {
     content: "";
     display: block;
     position: absolute;
     width: 100%;
-    bottom: 55px;
-    border-bottom: 2px solid yellowgreen;
+    bottom: 100px;
+     border-top: 1px solid rgba(255, 255, 255, 0.3);;
 
+     @include onTablet{
+      bottom: 70px;
+     }
     @include onDesctop {
-      bottom: 95px;
+      bottom: 85px;
     }
   }
+
+
 
   &__logo {
     padding-top: 40px;
@@ -62,6 +67,7 @@
       padding-top: 30px;
     }
 
+
     &__list {
       display: flex;
       flex-direction: column;
@@ -75,7 +81,7 @@
       @include onDesctop {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 7%;
+        grid-column-gap: 6%;
         padding-top: 100px;
         padding-bottom: 95px;
         font-weight: 300;
@@ -124,7 +130,7 @@
 
 
   &__contact__list {
-
+position: relative;
     @include onDesctop {
       padding: 40px 0 0;
     }
@@ -163,6 +169,89 @@
     }
   }
 
-  .btn__footer{
-    display: block;
+  .footer__bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 100%;
+
+
+
+  
+
+  gap: 20px;
+  padding-top: 60px;
+  align-items: center;
+
+
+
+@include onTablet{
+   flex-direction: row;
+    gap: 0;
+    max-width: 700px;
+  
+}
+    @include onDesctop{
+       flex-direction: row;
+ gap: 0;
+    max-width: 1790px;
+  
+    }
+    &__text{
+      order:1;
+
+      @include onTablet{
+        order: 0;
+      }
+      @include onDesctop{
+        order: 0;
+      }
+    }
+ 
+}
+.scrollToTop {
+  position: absolute;
+ bottom: 87%;
+  right: 10%;
+  z-index: 999;
+}
+
+.arrow {
+  margin: 30px;
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid $colorAccent;
+  border-left: 5px solid $colorAccent;
+  transform: rotate(90deg);
+  margin: -16px;
+  animation: arrow-top 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.5s;
+}
+
+@keyframes arrow-top {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+}
+
+  

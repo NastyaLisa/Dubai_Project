@@ -20,19 +20,22 @@ SwiperCore.use([Pagination, Autoplay, Grid, Navigation]);
 
 const BestOffers = () => {
   const swiper = useRef(null);
+  
   function renderBullet(index, className) {
-    
-    return `<span class="${className}">${index +1}</span>`;
+    const offersDataLength = offersData.length;
+
+    if (
+      index < 3 ||
+    index === offersDataLength - 2 ||
+    index === offersDataLength - 1
+    ) {
+      return `<span class="${className}">${index + 1}</span>`;
+    } else if (index === 3) {
+      return `<span class="${className}">...</span>`;
+    } else {
+      return '';
+    }
   }
-  // function renderBullet(index, className) {
-  //   if (index <= 2 || index >= offersData.length - 1) {
-  //     return `<span class="${className}">${index + 1}</span>`;
-  //   } else if (index === 3) {
-  //     return `<span class="${className}">${index + 2}</span>`;
-  //   } else {
-  //     return '';
-  //   }
-  // }
 
   
   
@@ -43,19 +46,23 @@ const BestOffers = () => {
       <Swiper
         breakpoints={{
           0: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 10,
-            // grid: {
-            //   rows: 1,
-            //   fill: 'row',
-            // },
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
           },
           400: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
+            grid: {
+              rows: 3,
+              fill: 'row',
+            },
           },
 
-          769: {
+          768: {
             slidesPerView: 3,
             spaceBetween: 30,
             grid: {

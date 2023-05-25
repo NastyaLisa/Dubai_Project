@@ -3,66 +3,95 @@
 @import "utils/variables";
 @import "utils/templates";
 
- .social__footer{
-.social{
+.social {
+  /* Общие стили для списка */
+  &__list {
+    display: flex;
 
-
-      
     @include onDesctop {
-     
+      /* Стили для списка на десктопе */
     }
 
-    &__list {
+    &__item {
       @include onDesctop {
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
+        /* Стили для элементов списка на десктопе */
+      }
+
+      &:hover {
+        color: $colorAccent;
+      }
+    }
+  }
+
+  /* Стили для главной страницы */
+  &.main {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 3%;
+      left: 95%;
+      z-index: 5;
+    }
+
+    @include onDesctop {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 3%;
+      left: 97%;
+      z-index: 5;
+    }
+
+    .social__list {
+      flex-direction: column;
+
+      @include onDesctop {
       }
 
       &__item {
-        @include onDesctop {
-        }
-
         &:not(:last-child) {
-          margin-right: 20px;
-        }
-
-        &:hover {
-          color: $colorAccent;
+          padding-bottom: 20px;
         }
       }
     }
   }
- }
 
-.social{
-&__hero{
-  
-    @include onDesctop {
-      display: flex;
-      flex-direction: column;
-  
-      position: absolute;
-      top: 3%;
-      left: 97%;
-      z-index: 25;
-    }
-  
-    &__list {
+  /* Стили для футера */
+  &.footer {
+    display: flex;
+
+    .social__list {
+      flex-direction: row;
+
       @include onDesctop {
       }
-  
+
       &__item {
-        @include onDesctop {
-        }
-  
         &:not(:last-child) {
-          margin-bottom: 20px;
+          padding-right: 30px;
         }
-  
-        &:hover {
-          color: $colorAccent;
-        }
+      }
+    }
+  }
+
+  /* Стили для контактов */
+  &.contacts {
+    display: flex;
+
+    .social__list {
+      flex-direction: row;
+
+      @include onDesctop {
+      }
+
+      &__item {
+        // &:not(:last-child) 
+        // {
+          padding-left: 14px;
+        // }
       }
     }
   }

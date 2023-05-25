@@ -6,7 +6,7 @@ import image2 from 'images/hero/slider_2.webp';
 import image3 from 'images/hero/slider_3.webp';
 import  styles from'./Hero.module.scss';
 import {AiOutlineRight} from 'react-icons/ai';
-
+import { NavLink } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {Autoplay, Navigation, Pagination} from 'swiper';
@@ -15,8 +15,9 @@ import 'swiper/scss';
 import 'swiper/scss/autoplay';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import './SwiperStyles.scss';
-// import Social from '../../../components/Social/Social';
+
+
+import Social from '../../../components/Social/Social';
 
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -44,42 +45,48 @@ const Hero = () => {
             </span>
             <FormattedMessage id="Home.luxury" />
           </h1>
-          <button className={styles.hero__text__button}>
-            <FormattedMessage id="button.consultation" />
-            <AiOutlineRight />
+          <button>
+            <NavLink
+              exact="true"
+              to="/contacts"
+              className={styles.hero__text__button}
+            >
+              <FormattedMessage id="button.consultation" />
+              <AiOutlineRight />
+            </NavLink>
           </button>
         </div>
 
-        {/* <Social className= {styles.social__hero}/> */}
+        <Social className="main" />
         <Swiper
           slidesPerView={1}
           pagination={{
-            el: '.swiper-pagination',
+            el: `.${styles.pagination}`,
             clickable: true,
-            renderBullet: (index, className) => {
-              const bullet = menu[index];
-              const text = intl.formatMessage({ id: bullet.textId });
-              console.log(bullet.textId);
-
-              return `
-            <div class='swiper-pagination-bullet ${className}'>
-              <div class="swiper-pagination__item">
-                <span class="pagination__accent">${bullet.accent}</span>
-                <span class="pagination__text">${text}</span>
-              </div>
-            </div>
-          `;
+            bulletClass: `${styles.pagination__bullet}`,
+            bulletActiveClass: `${styles.pagination__bullet__active}`,
+            renderBullet: function (index, className) {
+              return `<div class="${className} ${styles.pagination__bullet}">
+          <div class="${styles.pagination__item}">
+            <span class="${styles.pagination__accent}">
+              ${menu[index].accent}
+            </span>
+            <span class="${styles.pagination__text}">
+              ${intl.formatMessage({ id: menu[index].textId })}
+            </span>
+          </div>
+        </div>`;
             },
           }}
           autoplay={{
-            delay: 5000,
+            delay: 50000,
             disableOnInteraction: false,
           }}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: `.${styles.swiper_button_next}`,
+            prevEl: `.${styles.swiper_button_prev}`,
           }}
-          className="mySwiper mySwiper-hero"
+          className={styles.hero__swiper}
         >
           <SwiperSlide>
             <div className={styles.hero__slider}>
@@ -96,13 +103,15 @@ const Hero = () => {
               <img src={image3} alt="" className={styles.image} />
             </div>
           </SwiperSlide>
-          <div className="swiper_button">
-            <button className="swiper-button-prev">PREV</button>
-            <span>|</span>
-            <button className="swiper-button-next">NEXT</button>
-          </div>
 
-          <div className="swiper-pagination"></div>
+          <div className={styles.swiper_button}>
+            <button className={styles.swiper_button_prev}>PREV</button>
+            <span>|</span>
+            <button className={styles.swiper_button_next}>NEXT</button>
+          </div>
+          <div className={styles.pagination__container}>
+            <div className={styles.pagination}></div>
+          </div>
         </Swiper>
       </div>
     </section>

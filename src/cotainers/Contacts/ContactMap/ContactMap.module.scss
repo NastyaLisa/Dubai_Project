@@ -107,6 +107,7 @@ line-height: 45px;
     font-weight: 600;
     color: $colorMainText;
     margin-bottom: 20px;
+    display: flex;
 
     @include onTablet {
       font-size: 14px;

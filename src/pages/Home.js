@@ -1,5 +1,6 @@
 import React from 'react';
-import Hero  from '../cotainers/Home/Hero/Hero';
+import Hero from '../cotainers/Home/Hero/Hero';
+// import Popup from '../components/Popup/Popup';
 import Projects from '../cotainers/Home/Projects/Projects';
 import Expertise from '../cotainers/Home/Expertise/Expertise';
 import Examples from '../cotainers/Home/Examples/Examples';
@@ -11,18 +12,20 @@ import '../scss/main.scss';
 
 
 const Home = () => {
-  return(
+  // const [showPopup, setShowPopoup] = useState(false);
+  return (
     <main className="section">
-      <Hero/>
-      <Projects/>
-      <Expertise/>
-      <Examples/>
-      <FormInner/>
-      <Articles/>
-      <Reviews/>
-      <Faq/>
+      <Hero />
+      {/* <button onClick={() => setShowPopoup(true)}>CLICK </button>
+      {showPopup && <Popup hide={(state) => setShowPopoup(state)} />} */}
+      <Projects />
+      <Expertise />
+      <Examples />
+      <FormInner />
+      <Articles />
+      <Reviews />
+      <Faq />
     </main>
- 
   );
 };
 

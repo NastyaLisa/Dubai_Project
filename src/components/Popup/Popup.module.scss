@@ -1,0 +1,164 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $colorMain;
+  z-index: 15;
+}
+
+.popup__main {
+  position: relative;
+  padding: 20px;
+  border: 1px solid $colorBlack;
+  background-color: $colorMainText;
+}
+
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 5px;
+  text-align: center;
+
+  color: #272727;
+
+  @include onTablet {
+    padding: 25px;
+  }
+
+  @include onDesctop {
+    padding: 65px 140px 44px;
+    align-items: center;
+  }
+}
+
+.title {
+  padding-bottom: 10px;
+  font-family: $mainFontSecondary;
+
+  font-weight: $mainFontSecondaryWeight;
+  font-size: 26px;
+  line-height: 40px;
+  color: $colorBlack;
+
+  @include onDesctop {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+
+.subtitle {
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $colorBlack;
+
+  @include onDesctop {
+    padding-bottom: 45px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+
+  @include onTablet {}
+
+  @include onDesctop {
+    width: 450px;
+    height: 200px;
+  }
+
+  label {
+    display: none;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 25px;
+  font-size: 15px;
+  line-height: 23px;
+  border-bottom: 1px solid $colorText;
+
+  @include onDesctop {
+    height: 43px;
+    font-size: 20px;
+  }
+
+  ::placeholder {
+    font-family: $mainFontSecondary;
+    font-size: 14px;
+    line-height: 19px;
+    color: $colorMain;
+
+    @include onDesctop {
+      font-size: 16px;
+    }
+  }
+}
+
+.button {
+  width: 106px;
+  height: 35px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  background-color: $colorAccent;
+  color: $colorBlack;
+  cursor: pointer;
+
+  @include onTablet {
+    width: 165px;
+    font-size: 14px;
+  }
+
+  @include onDesctop {
+    width: 216px;
+    height: 54px;
+
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  right: 5px;
+  top: -35px;
+  z-index: 16;
+  color: $colorAccent;
+  font-size: 30px;
+
+  @include onTablet {
+    right: -45px;
+    top: -45px;
+  }
+
+  @include onDesctop {
+    right: -45px;
+    top: -45px;
+  }
+}
+
+.closed {
+  display: none;
+  overflow: auto;
+}

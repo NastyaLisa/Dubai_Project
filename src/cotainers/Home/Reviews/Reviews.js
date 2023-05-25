@@ -20,9 +20,12 @@ const Reviews = ()=>{
         <div className="reviews__slider">
           <Swiper
             slidesPerView={2}
-            slidesPerGroup={1}
-            spaceBetween={60}
-            initialSlide={1}
+            // slidesPerGroup={2}
+            spaceBetween={55}
+            initialSlide={0}
+            centeredSlides={true} // Центрирование слайдов
+            centeredSlidesBounds={true} // Ограничение центрирования
+            // Ширина одного слайда
             loop={true}
             autoplay={{
               delay: 50000,
@@ -48,10 +51,12 @@ const Reviews = ()=>{
               1024: {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
+                width: 1100, 
                 // spaceBetween: 20,
               },
             }}
           >
+            
             <SwiperSlide>
               <div className={styles.reviews__column}>
                 <ImQuotesRight className={styles.quotes} />

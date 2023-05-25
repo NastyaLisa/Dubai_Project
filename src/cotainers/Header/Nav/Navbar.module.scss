@@ -48,108 +48,79 @@
       }
     }
 
-//burger
+    //burger
 
     &__open {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
       row-gap: 30px;
-      width: $mobileContentWidth ;
-      padding: 50px 0 20px;
-      
+      width: $mobileContentWidth;
+      padding: 50px;
+
       border-bottom: 2px solid $colorAccent;
       font-size: 36px;
 
       @include onTablet {
-       display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      margin: 0 auto;
-      row-gap: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 auto;
+        row-gap: 60px;
       }
-  }
+    }
   }
 
   &__submenu {
     display: none;
     position: relative;
-background-color: #272727;
-  width: 247px;
-  height: 110px;
-  margin-top: 30px;
-  border: 1px solid #979797;
-  left: 0;
-  right: 0;
-  top: 0;
+    background-color: #272727;
+    width: 247px;
+    height: 110px;
+    margin-top: 30px;
+    border: 1px solid #979797;
+    left: 0;
+    right: 0;
+    top: 0;
     z-index: 10;
-  transition: top 1s ease;
+    transition: top 1s ease;
 
+    &.open {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      border: none;
 
-
-     &.open {
-        display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-
-  @include onDesctop{
-    position: absolute;
-  }
-}
-    
-
-  &__link {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    height: 36px;
-    width: 100%;
-    padding: 10px;
-    color: $colorMainText;
-    cursor: pointer;
-    opacity: 1;
-    @include onDesctop {
+      @include onDesctop {
+        position: absolute;
+      }
     }
 
-    &:hover {
-      background-color: $colorAccent;
+    &__link {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      height: 36px;
+      width: 100%;
+      padding: 10px;
+      color: $colorMainText;
       cursor: pointer;
+      opacity: 1;
       @include onDesctop {
-        // opacity: 0.8;
+      }
+
+      &:hover {
+        background-color: $colorAccent;
+        cursor: pointer;
+        @include onDesctop {
+          // opacity: 0.8;
+        }
       }
     }
   }
 }
-
-}
-
-//     &__item {
-//       position: relative;
-//     }
-//     
-
-//       &__active {
-//         @include onDesctop {
-//           position: relative;
-//         }
-
-//         &::before {
-//           content: "";
-//           position: absolute;
-//           left: 0;
-//           top: 100%;
-//           display: block;
-//           height: 2px;
-//           width: 100%;
-//           background-color: $colorAccent;
-//         }
-//       }
-//     }
-//   }
-
-// 
 
 .button__arrow {
   position: absolute;
@@ -164,5 +135,9 @@ background-color: #272727;
   &.active {
     border-top: 7px solid $colorAccent;
     transform: rotate(-180deg);
+    right: 90px;
+    @include onDesctop{
+      right: -20px;
+    }
   }
 }

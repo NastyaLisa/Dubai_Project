@@ -13,7 +13,11 @@
     },
     "plugins": ["react"],
     "ignorePatterns": "webpack.config.js",
-  
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    }
+  },
     "rules": {
       "no-unused-vars": "warn",
       "react/prop-types": 0,

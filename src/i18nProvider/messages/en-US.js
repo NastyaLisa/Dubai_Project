@@ -17,7 +17,11 @@ const translations = {
     'Home.welcome': 'Welcome Home',
     'Home.to': 'To',
     'Home.luxury': 'Luxury',
-
+    'popup.title': 'Leave your contacts',
+    'popup.subtitle': 'We will contact you within three hours',
+    'popup.sendButton': 'Send',
+    'popup.namePlaceholder': 'Name *',
+    'popup.telPlaceholder': 'Tel *',
     'projects.title': 'Latest projects',
     'projects.all': 'All',
     'projects.building': 'Building',

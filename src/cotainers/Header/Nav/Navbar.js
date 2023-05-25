@@ -32,7 +32,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
         {/* <ul className={styles.nav__list}> */}
         <li className={styles.nav__list__item}>
           <NavLink
-            exact
+            exact="true"
             to="/buy"
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             onClick={() => setNavbarOpen(false)}
@@ -55,7 +55,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
           >
             <li className={styles.nav__submenu__link}>
               <NavLink
-                exact
+                exact="true"
                 to="/apartment-category"
                 onClick={() => {
                   handleSubmenuItemClick();
@@ -67,7 +67,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
             </li>
             <li className={styles.nav__submenu__link}>
               <NavLink
-                exact
+                exact="true"
                 to="/apartment-category"
                 onClick={() => {
                   handleSubmenuItemClick();
@@ -79,7 +79,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
             </li>
             <li className={styles.nav__submenu__link}>
               <NavLink
-                exact
+                exact="true"
                 to="/apartment-category"
                 onClick={() => {
                   handleSubmenuItemClick();
@@ -93,7 +93,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
         </li>
         <li className={styles.nav__list__item}>
           <NavLink
-            exact
+            exact="true"
             to="/blog"
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             onClick={() => setNavbarOpen(false)}
@@ -104,7 +104,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
 
         <li className={styles.nav__list__item}>
           <NavLink
-            exact
+            exact="true"
             to="/about"
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             onClick={() => setNavbarOpen(false)}
@@ -115,7 +115,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
 
         <li className={styles.nav__list__item}>
           <NavLink
-            exact
+            exact="true"
             to="/contacts"
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             onClick={() => setNavbarOpen(false)}

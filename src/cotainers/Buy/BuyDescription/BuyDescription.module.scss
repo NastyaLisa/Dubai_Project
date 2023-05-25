@@ -87,7 +87,7 @@
     }
 
     @include onDesctop {
-      width:$desctopContentWidthMin;
+      max-width:$desctopContentWidthMin;
       height: 702px;
       padding-top: 60px;
     }

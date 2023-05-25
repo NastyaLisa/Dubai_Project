@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ContactMap.module.scss';
+import Social from '../../../components/Social/Social';
 
 const ContactMapForm = () => {
   return (
@@ -30,7 +31,7 @@ const ContactMapForm = () => {
               </a>
             </li>
 
-            <li className={`${styles.contact__item} ${styles.detail__}`}>Follow us: SOCIALS
+            <li className={`${styles.contact__item} ${styles.detail}`}>Follow us: <Social className="contacts"/>
             </li>
 
             <li className={styles.contact__item}>Work Hours: <span className={styles.detail}>Monday - Friday : 08h00 - 17h30</span>

@@ -152,7 +152,7 @@ line-height: 16px;
 
 
   @include onTablet{
-    width: 88%;
+    width: 70%;
     margin: 35px auto 0;
   }
   @include onDesctop{
@@ -206,7 +206,9 @@ line-height: 16px;
     }
   }
   
-
+// .nextBtn{
+//   color: aqua;
+// }
   
 }
 

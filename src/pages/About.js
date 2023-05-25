@@ -1,12 +1,17 @@
 import React from 'react';
-// import Hero  from '../cotainers/Home/Hero/Hero';
-// import Projects from '../cotainers/Home/Projects/Projects';
+
 const About = () => {
-    
-  return(
+  const titleStyle = {
+    textAlign: 'center',
+    fontSize: '40px',
+    marginTop: '50px',
+    lineHeight: '50px',
+  
+  };
+
+  return (
     <section className="section">
-      <h1>About</h1>
-    
+      <h1 style={titleStyle}>Page under construction</h1>
     </section>
   );
 };

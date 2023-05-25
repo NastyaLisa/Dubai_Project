@@ -23,10 +23,11 @@ line-height: 160%;
   }
 }
 
-/* Стили для блокировки прокрутки при открытом бургер-меню */
-body.menu-open {
+/* Стили для блокировки прокрутки */
+body.bodyNoScroll {
   overflow: hidden;
 }
+
 
 
 // .section{
@@ -68,8 +69,12 @@ body.menu-open {
   padding-top: 46px;
 }
     @include onDesctop {
+      width: 1800px; /* Ширина видимости двух слайдов */
+  margin: 0 auto; /* Центрирование контейнера */
+  width: 100%;
+  // overflow: hidden;
      padding-top: 56px;
-      overflow: visible;
+      // overflow: visible;
     }
   }
 

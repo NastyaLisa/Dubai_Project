@@ -20,12 +20,14 @@
     align-items: center;
     justify-content: center;
     margin-top: 38px;
-    background-color: aqua;
+    order:2;
+    // background-color: aqua;
 
     @include onTablet{
       display: block;
-    width: 50px;
-    margin: 0;
+    // width: 50px;
+    margin-top: 0;
+    
     }
   }
 

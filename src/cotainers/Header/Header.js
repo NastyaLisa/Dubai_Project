@@ -15,9 +15,9 @@ const Header = ({ onLanguageChange }) => {
 
   useEffect(() => {
     if (isNavbarOpen) {
-      document.body.classList.add('menu-open');
+      document.body.classList.add('bodyNoScroll');
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.classList.remove('bodyNoScroll');
     }
   }, [isNavbarOpen]);
 
@@ -57,7 +57,7 @@ const Header = ({ onLanguageChange }) => {
             <div
               className={
                 isNavbarOpen
-                  ? `${styles.contact__open}`
+                  ? `${styles.header__ui__block__contact__open}`
                   : `${styles.header__ui__block__contact}`
               }
             >

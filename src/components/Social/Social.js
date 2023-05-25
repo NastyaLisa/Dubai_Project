@@ -1,14 +1,13 @@
 import React from 'react';
-// import styles from './Social.module.scss';
 import './Social.scss';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa';
 import { ImYoutube } from 'react-icons/im';
 import { RiInstagramFill } from 'react-icons/ri';
 
-const Social = () => {
+const Social = ({ className }) => {
   return (
-    <div className="social">
+    <div className={`social ${className}`}>
       <ul className="social__list">
         <li className="social__list__item">
           <a href="https://www.facebook.com/dybai-real-estate">

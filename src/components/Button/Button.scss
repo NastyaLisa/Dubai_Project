@@ -1,0 +1,58 @@
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+
+.button {
+  display: block;
+  width: 284px;
+  height: 67px;
+  background-color: $colorAccent;
+  color: $colorBlack;
+  font-family: $mainFontFirst;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  // padding-top: 74px;
+  text-align: center;
+
+  @include onTablet {
+    display: block;
+    width: 142px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 0;
+  }
+  @include onDesctop {
+    display: block;
+    width: 165px;
+    height: 41px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__open {
+    display: block;
+    margin-top: 38px;
+    @include onTablet {
+      margin-top: 0;
+    }
+  }
+
+  &.footer__btn {
+    
+margin-top: 50px;
+    @include onTablet{
+      position: absolute;
+      top: 25%;
+      right: 0;
+    }
+    @include onTablet{
+      margin-top: 0;
+    }
+    @include onDesctop {
+      margin-top: 75px;
+    }
+  }
+
+}

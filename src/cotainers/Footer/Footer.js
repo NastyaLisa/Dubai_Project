@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import Logo from 'component/Logo/Logo';
 import Button from 'component/Button/Button';
+import Social from '../../components/Social/Social';
 
 import styles from './Footer.module.scss';
 
@@ -25,6 +26,26 @@ const Footer = () => {
       [subMenu]: !prevState[subMenu],
     }));
   };
+
+  useEffect(() => {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+    return () => {
+      scrollToTopButton.removeEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+    };
+  }, []);
+  
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -33,7 +54,16 @@ const Footer = () => {
             <Logo />
           </NavLink>
         </div>
-        {/* <div className={styles.footer__list}> */}
+
+        <a href="#" id="scrollToTop" className={styles.scrollToTop}>
+          <div className={styles.arrow}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+ 
+        </a>
+
         <div className={styles.footer__menu}>
           <ul className={styles.footer__menu__list}>
             {/* BUY        */}
@@ -93,9 +123,9 @@ const Footer = () => {
 
             {/* Services */}
             <li className={styles.footer__menu__link}>
-              <NavLink to="/services">
-                <FormattedMessage id="footer.services" />
-              </NavLink>
+              {/* <NavLink to="/services"> */}
+              <FormattedMessage id="footer.services" />
+              {/* </NavLink> */}
               <button
                 onClick={() => toggleSubMenu('isServicesSubMenuOpen')}
                 className={`${styles.button__arrow} ${
@@ -214,7 +244,7 @@ const Footer = () => {
                     dubairealty@mail.com
                   </li>
                   <li className={styles.footer__contact__link}>
-                    <Button className={styles.btn__footer} />
+                    <Button className="footer__btn" />
                   </li>
                 </ul>
               </address>
@@ -226,6 +256,7 @@ const Footer = () => {
           <div className={styles.footer__bottom__text}>
             <p>© 2023 Dubai Realty</p>
           </div>
+          <Social className="footer" />
         </div>
       </div>
     </footer>
