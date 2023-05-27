@@ -11,13 +11,15 @@ import About from './pages/About';
 import Contacts from './pages/Contacts';
 import Footer from './cotainers/Footer/Footer';
 import './scss/main.scss';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 
 
 const App = () => {
 
   const [locale, setLocale] = useState(LOCALES.ENGLISH);
+
+  
   const handleLanguageChange = (newLocale) => {
     setLocale(newLocale);
   };

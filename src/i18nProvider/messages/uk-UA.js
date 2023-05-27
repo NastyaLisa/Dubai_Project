@@ -146,6 +146,9 @@ const translations = {
     'footer.about.submenu5': 'Агентство нерухомості',
     'footer.contacts': 'Контакт',
     'footer.contacts.address': '964 Worthington Drive\nДубай, ОАЕ',
+
+    'contact.form.subtitle': 'Ми завжди',
+    'contact.form.subtitle.accent': 'на зв\'язку',
   },
 };
 

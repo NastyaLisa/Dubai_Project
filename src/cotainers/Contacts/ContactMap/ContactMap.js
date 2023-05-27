@@ -40,7 +40,7 @@ const ContactMapForm = () => {
         </address>
         <div className={styles.map}>
           <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d112341.2371618447!2d55.15579948055373!3d25.083781147698247!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2ssg!4v1684069920709!5m2!1sru!2ssg"
-            // width="800" height="600" 
+             
             style={{ border: '0' }}
             allowFullScreen=""
             loading="lazy"

@@ -133,16 +133,16 @@ line-height: 45px;
 .map {
   position: relative;
 
-  width: 289px;
+  max-width: 289px;
   height: 351px;
 
   @include onTablet {
-    width: 695px;
+    max-width: 695px;
     height: 595px;
   }
 
   @include onDesctop {
-    width: 1800px;
+    max-width: 1800px;
     height: 768px;
   }
 

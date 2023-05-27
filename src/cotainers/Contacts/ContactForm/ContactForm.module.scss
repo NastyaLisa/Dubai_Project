@@ -39,6 +39,7 @@
   }
 
   &__title {
+   
         text-align: start;
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
@@ -53,6 +54,8 @@
     }
 
     span {
+      
+display: block;
       color: $colorAccent;
     }
   }

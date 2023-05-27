@@ -119,6 +119,8 @@ const translations = {
     'footer.about.submenu5': 'Real estate agency',
     'footer.contacts': 'Contact',
     'footer.contacts.address': '964 Worthington Drive\nDubai, UAE',
+    'contact.form.subtitle': 'Be in touch',
+    'contact.form.subtitle.accent': 'with us',
   },
 };
 
