@@ -2,94 +2,48 @@
 @import "mixin";
 
 %container {
-  // max-width: $mobileContentWidth; //294
-  max-width: $mobileWidthBox ; //320 +++
-
+  max-width: $mobileContentWidthMax; //520px
   width: 100%;
-  // max-width:$MobileWidthContainer; //575
   margin: 0 auto;
-  padding: 0 2px;
-  // border: 1px solid coral;
-@include onMobileL{
-   .container {
-    width: 100vw; /* Растянуть контейнер на всю ширину экрана */
-  }
-}
+  padding: 0 15px;
+
   @include onTablet {
-    // min-width: $smTabletWidth; //369
+    max-width: $tabletWidthContainerMax; //834px
+    padding: 0 10px;
+  }
 
-    width: 100%;
-    min-width: $tabletWidthContainerMin; //576++
-    // min-width: $smTabletWidthMedium ; //576
-max-width: $tabletWidthContainerMax; //1024
-
-    max-width: $tabletContentWidth; //700++
-    padding: 0 5px;
-    // border: 1px solid yellow;
+  @include onTabletLarge {
+    max-width: $tabletWidthLargeContent; //1024px
+    padding: 0 10px;
   }
 
   @include onDesctop {
-    // min-width: $smDesctopWidth; //769
-width: 100%;
-    min-width: $desctopWidthMin; //1025==
-    max-width: $desctopContentWidth;
-
-    // border: 2px solid violet;
+    max-width: $desctopContentWidth; //1830px
     padding: 0 15px;
   }
 }
 
 %containerMin {
-  max-width: $mobileContentWidth; //294
+  max-width: $mobileContentWidthMax; //520px
+  width: 100%;
   margin: 0 auto;
-  padding: 0 2px;
-  // border: 1px solid coral;
-@include onMobileL{
-     border: 1px solid coral;
-    width: 100vw; /* Растянуть контейнер на всю ширину экрана */
-  
-}
+  padding: 0 5px;
+
   @include onTablet {
-    // min-width: $smTabletWidth;
     max-width: $tabletContentWidth; //700
     padding: 0 5px;
-    // border: 1px solid yellow;
   }
-  @include onDesctop {
-    // min-width: $smDesctopWidth;
-    min-width: $desctopWidthMin;//1025
 
+  @include onTabletLarge {
+    max-width: $tabletWidthLarge; //971px
+    padding: 0 10px;
+  }
+
+  @include onDesctop {
     max-width: $desctopContentWidthMin; //1140
-
-    // border: 2px solid blue;
     padding: 0 15px;
   }
 }
-
-
-
-%containerMain {
-  max-width:$mobileWidthContainer; //575
-  margin: 0 auto;
-  padding: 0 2px;
-  // border: 1px solid green;
-
-  @include onTablet {
-    min-width: $tabletWidthContainerMin; //576
-    max-width: $tabletWidthContainerMax; //1024
-    padding: 0 5px;
-    // border: 1px solid bisque;
-  }
-
-  @include onDesctop {
-    min-width: $desctopWidthMin; //769
-    max-width: $desctopWidthMax; //1920
-
-    // border: 2px solid red;
-    padding: 0 15px;
-  }
-}
-
 
 %font-main-text {
   font-size: 14px;
@@ -103,13 +57,11 @@ width: 100%;
   }
 }
 
-
-%font-title-text{
+%font-title-text {
   font-family: $mainFontSecondary;
   font-weight: $mainFontSecondaryWeight;
   font-size: 24px;
-line-height: 30px;
-  
+  line-height: 30px;
 
   @include onTablet {
     font-size: 40px;
@@ -118,18 +70,18 @@ line-height: 30px;
 
   @include onDesctop {
     font-size: 60px;
-line-height: 80px;
-/* or 133% */
+    line-height: 80px;
+    /* or 133% */
   }
 }
 
-%font_16px_600{
-      font-weight: 600;
-      font-size: 16px;
-line-height: 19px;
+%font_16px_600 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
 }
 
-%font-secondary{
+%font-secondary {
   font-family: $mainFontSecondary;
-      font-weight: $mainFontSecondaryWeight;
+  font-weight: $mainFontSecondaryWeight;
 }

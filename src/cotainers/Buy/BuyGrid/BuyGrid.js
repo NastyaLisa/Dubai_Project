@@ -30,8 +30,6 @@ const BuyGrid = () => {
             <div className={`${styles.cell} ${styles.cell__text} ${styles.cell__odd}`}>Key handover
             </div>
  
-
-
             <div className={`${styles.cell} ${styles.cell__text} ${styles.cell__even}`}>Payment processing
             </div>
             <div className={`${styles.cell} ${styles.cell__text} ${styles.cell__odd}`}>Dealing with repair requests
@@ -53,8 +51,6 @@ const BuyGrid = () => {
             <div className={`${styles.cell} ${styles.cell__text} ${styles.cell__odd}`}>Repair management</div>
           </div>
           
-
-
           {/* <!-- Вторая колонка без последних 5 строк --> */}
           <div className={`${styles.grid__cell__second} `}>
             <div className={`${styles.cell} ${styles.cell__mark} ${styles.cell__odd}`}>✓</div>
@@ -73,9 +69,8 @@ const BuyGrid = () => {
             <div className={`${styles.cell} ${styles.cell__mark} ${styles.cell__even}`}></div>
             <div className={`${styles.cell} ${styles.cell__mark} ${styles.cell__odd}`}></div>
           </div>
-          {/* <!-- Третья колонка со всеми строками --> */}
-        
 
+          {/* <!-- Третья колонка со всеми строками --> */}     
           <div className={`${styles.grid__cell__third} `}>
             <div className={`${styles.cell} ${styles.cell__mark} ${styles.cell__odd}`}>✓</div>
             <div className={`${styles.cell} ${styles.cell__mark} ${styles.cell__even}`}>✓</div>

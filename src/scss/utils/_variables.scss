@@ -1,45 +1,42 @@
-$colorMainText              : #ffffff;
-$colorText                  : #929292;
-$colorAccent                : #FCD54C;
-$colorMain                  : #272727;
-$colorTextFaq               : #E8E8E8;
-$colorBlack:                  #000000;
+$colorMainText               : #ffffff;
+$colorText                   : #929292;
+$colorAccent                 : #FCD54C;
+$colorMain                   : #272727;
+$colorTextFaq                : #E8E8E8;
+$colorBlack                  : #000000;
 
 
-$mainFontFirst              : "WorkSans";
-$mainFontWeight             : 400;
-
+$mainFontFirst               : "WorkSans";
+$mainFontWeight              : 400;
 
 $mainFontSecondary           : "Gilroy";
 $mainFontSecondaryWeight     : 700;
 
-$fontFooter                  : "WorkSans";
 $footerFontWeight            : 300;
-
 
 
 //WIDTH
 
-// $desctopWidth             : 1920px;
 $desctopWidthMax             : 1920px;
-$desctopContentWidth      : 1830px;  //1830px+paddind 2x15
-$desctopContentWidthMin  : 1140px; //1110px+paddind 2x15
-
-$desctopWidthMin        : 1024px; ////min mixin
+$desctopContentWidth         : 1830px;  //1830px+paddind 2x15
+$desctopContentWidthMin      : 1140px; //1110px+paddind 2x15
 
 
+//tabletLarge
+$tabletWidthLarge            : 971px; //минимальный экран
+$tabletWidthLargeContent     : 1024px; //макс контент
 
 //tablet
-$tabletWidthContainerMax  : 1023px;
-$tabletWidth              : 768px;
-$tabletContentWidth       : 700px;     //690+padding 2x5
+$tabletWidthContainerMax     : 834px;
+$tabletWidth                 : 768px;
+$tabletContentWidth          : 700px;     //690+padding 2x5
 
-$tabletWidthContainerMin  : 576px;//минимальній єкран
+$tabletWidthContainerMin     : 576px;//минимальный єкран
 //min-max mixin
 
-
 //mobile
-$mobileContentWidth       : 294px; //290+padding 2x2 изображение
-$mobileWidthBox           : 320px; //размер макета
+$mobileContentWidth          : 294px; //290+padding 2x2 изображение
+$mobileWidthBox              : 320px; //размер макета
 
-$mobileWidthContainer     : 575px; //размер экрана 
+$mobileContentWidthMax       : 520px;
+$mobileWidthContainerMax     : 575px; //размер экрана максимальный

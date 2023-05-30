@@ -35,7 +35,7 @@ const Articles = ()=>{
             </h4>
             <img src={image1} />
           </div>
-          <div
+          <article
             className={`${styles.articles__column__item} ${styles.item__text}`}
           >
             <span className={styles.item__text__date}>
@@ -51,7 +51,7 @@ const Articles = ()=>{
               <FormattedMessage id="articles.link" />
               <AiOutlineRight />
             </a>
-          </div>
+          </article>
           
           <div className={styles.articles__column__item}>
             <h4 className={styles.articles__column__item__title}>

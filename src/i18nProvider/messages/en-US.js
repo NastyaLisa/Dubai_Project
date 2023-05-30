@@ -121,6 +121,80 @@ const translations = {
     'footer.contacts.address': '964 Worthington Drive\nDubai, UAE',
     'contact.form.subtitle': 'Be in touch',
     'contact.form.subtitle.accent': 'with us',
+
+    'contacts.title': 'Contacts',
+    'contacts.city': 'Dubai,',
+    'contacts.country': 'UAE',
+    'contacts.address':
+      '269 King Str, 05th Floor, Utral Hosue Building, Dubai, VIC 3000, UAE.',
+    'contacts.social': ' Follow us:',
+    'contacts.time': 'Work Hours:',
+
+    'buy.hero.title': 'Furnished Apartments',
+    'buy.hero.accent': 'in Dubai',
+    'buy.hero.subtitle': 'Rent',
+    'buy.descr.service': '  Service',
+    'buy.descr.title': '  Real estate investment in Dubai, UAE',
+    'buy.descr.subtitle': 'Buying property in Dubai',
+    'buy.descr.text1': `This response is important for our ability to learn from mistakes, 
+                        but it alsogives rise to self-criticism, because it is part of the threat-protection system. 
+                        In other words, what keeps us safe can go too far, and keep us too safe. 
+                        In fact it can trigger self - censoring.`,
+    'buy.descr.text2': ` One touch of a red-hot stove is usually all we need to avoid that kind 
+                        of discomfort in the future. The same is true as we experience the emotional sensation of 
+                        stress from our first instances of social rejection or ridicule. We quickly learn to fear and thus 
+                        automatically avoid potentially stressful situations of all kinds, including the most common of all.`,
+
+    'buy.descr.text3': `This response is important for our ability to learn from mistakes, 
+                        but it alsogives rise to self-criticism, because it is part of the threat-protection system. 
+                        In other words, what keeps us safe can go too far, and keep us too safe. 
+                        In fact it can trigger self-censoring.`,
+
+    'buy.descr.text4': `One touch of a red-hot stove is usually all we need to avoid that kind of 
+                         discomfort in the future. The same is true as we experience the emotional sensation of stress 
+                          from our first instances of social rejection or ridicule. We quickly learn to fear and thus 
+                              automatically avoid potentially stressful situations of all kinds, including the most common of all.`,
+
+    'buy.methods.title': 'Methods for Everyone',
+    'buy.methods.text1': ` This response is important for our ability to learn from mistakes,
+                          but it alsogives rise to self-criticism, because it is part of the
+                          threat-protection system. In other words, what keeps us safe can go
+                          too far, and keep us too safe. In fact it can trigger
+                          self-censoring.`,
+
+    'buy.methods.text2': `  One touch of a red-hot stove is usually all we need to avoid that
+                            kind of discomfort in the future. The same is true as we experience
+                            the emotional sensation of stress from our first instances of social
+                            rejection or ridicule. We quickly learn to fear and thus
+                            automatically avoid potentially stressful situations of all kinds, i
+                            ncluding the most common of all.`,
+
+    'buy.methods.quote': ` Often the path to success lies through many unsuccessful attempts
+              and trials that cause emotional stress. But it/s important not to
+              give in to disappointment and fear, but to continue working
+              towards achieving your goals, because in the end, victory and
+              success always come.`,
+
+    'buy.articles.title1':
+      'Dubai Apartments: A Combination of Luxury and Unmatched Views',
+
+    'buy.articles.title2':
+      'Dubai Apartments: True Beauty in the Palm of Your Hands',
+
+    'buy.articles.text1': `Apartments in the UAE are not just spacious and luxurious environments, but they also feature stunning architecture and unique design. Every detail and every room is tastefully crafted with attention to the smallest details.
+                          Dubai apartments offer a wide range of options, including luxurious penthouses, large apartments with panoramic windows, and private balconies with ocean views. You can enjoy vast spaces where every corner offers comfort and coziness.
+                          The apartments also impress with their infrastructure. You will find everything you need for a comfortable life, including spa centers, fitness clubs, swimming pools, restaurants, and much more. You will be surrounded by luxury and provided with all the necessary amenities to make your stay unforgettable.
+                          Dubai apartments are true beauty that exceeds all expectations. Forget about the ordinary and give yourself the opportunity to indulge in an exquisite life in the palm of your hands.`,
+
+    'buy.articles.text2': `Real estate in Dubai is a symbol of luxury and prestige. Located in the heart of this cosmopolitan city, they offer incredible views of the beautiful skyline and modern architecture.
+                          When you step out onto the balcony of your apartment, you are greeted with breathtaking views of Dubai's coastline and the Arabian Gulf. Every day, you will enjoy the interplay of sunlight, graceful waves, and magical colors of the sky.
+                          Dubai apartments offer not only exclusive locations but also impeccable service and luxurious amenities. You can enjoy shared swimming pools, fitness centers, spa salons, and premium-class restaurants that will cater to your relaxation and enjoyment.
+                          Dubai apartments are the perfect choice for those who want to live in luxury and enjoy all the benefits that this unparalleled place has to offer. They are designed for people who value comfort, elegance, and a high standard of living. Experience unforgettable impressions and acquaint yourself with the
+                          luxurious world of apartments in Dubai.`,
+    'buy.articles.text3': 'Luxury and Comfort: Real estate in the UAE offers luxurious villas and apartments with modern design and the highest level of comfort. You will have exclusive spaces with stylish interiors and all the necessary amenities for a comfortable living.',
+    'buy.articles.text4': 'Safety and Privacy: Real estate in the UAE ensures a high level of security and privacy. Many villas and apartments are located in gated complexes with 24/7 security, video surveillance systems, and card access. You can enjoy peace and security in your home environment.',
+    'buy.articles.text5': 'Tax Benefits: The UAE offers attractive tax conditions for property owners. You can take advantage of financial benefits such as no income tax, tax exemptions, and low property rates.',
+    'buy.articles.text6': 'Investment Potential: Real estate in the UAE has high investment potential. This region is attractive to investors worldwide due to its stability, developed infrastructure, and strategic location. You can earn high rental income or benefit from the appreciation of property value',
   },
 };
 

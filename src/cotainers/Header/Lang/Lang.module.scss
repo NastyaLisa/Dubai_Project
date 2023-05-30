@@ -32,6 +32,7 @@
   }
 
   &__btn {
+    font-family: $mainFontSecondary;
     font-size: 14px;
     line-height: 16px;
     font-weight: 600;
@@ -47,5 +48,8 @@
     &:not(:last-child) {
       margin-right: 7px;
     }
+  }
+  .active{
+    color: $colorAccent;
   }
 }

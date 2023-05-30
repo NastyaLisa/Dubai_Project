@@ -40,7 +40,7 @@ const Hero = () => {
           </span>
           <h1 className={styles.hero__text__title}>
             <FormattedMessage id="Home.welcome" />
-            <span className={styles.hero__text__title__acent}>
+            <span className={styles.hero__text__title__accent}>
               <FormattedMessage id="Home.to" />
             </span>
             <FormattedMessage id="Home.luxury" />

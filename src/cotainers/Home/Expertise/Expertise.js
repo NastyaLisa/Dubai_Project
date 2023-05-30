@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import video from 'images/home/video.mp4';
 
-
 import poster from 'images/home/poster.webp';
 import play_button from 'images/svg/play_button.svg';
 import styles from './Expertise.module.scss';
@@ -28,9 +27,9 @@ const Expertise = () => {
           <h2 className={styles.expertise__quote__title}>
             <FormattedMessage id="expertise.quote.title" />
           </h2>
-          <blockquote className={styles.expertise__quote__content}>
+          <p className={styles.expertise__quote__content}>
             <FormattedMessage id="expertise.quote.content" />
-          </blockquote>
+          </p>
         </div>
 
         <div className={styles.video}>
@@ -56,7 +55,7 @@ const Expertise = () => {
         <div className={styles.quote}>
           <blockquote className={styles.quote__content}>
             <FormattedMessage id="quote.content"/>
-            <span> - <FormattedMessage id="quote.author"/> </span>
+            <cite> - <FormattedMessage id="quote.author"/> </cite>
           </blockquote>
         </div>
       </div>

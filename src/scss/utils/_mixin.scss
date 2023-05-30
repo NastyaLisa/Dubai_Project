@@ -1,33 +1,28 @@
 @import "utils/variables";
 
-// @mixin onTablet {
-//   @media screen and (min-width: $smTabletWidth) and (max-width: $tabletWidth) {
-//     @content;
-//   }
-// }
-
+//от 576
 @mixin onTablet {
-  @media screen and (min-width: $tabletWidthContainerMin) and (max-width: $tabletWidthContainerMax) {
+  @media screen and (min-width: $tabletWidthContainerMin)  {
     @content;
   }
 }
+
+// от 971
+@mixin onTabletLarge {
+@media screen and (min-width: $tabletWidthLarge )  {
+    @content;
+  }
+}
+// от 1140
 @mixin onDesctop {
-  @media screen and (min-width: $desctopWidthMin ) {
+  @media screen and (min-width: $desctopContentWidthMin ) {
     @content;
   }
 }
 
-@mixin onMobileL {
-   @media screen and (min-width: 410px ) and (max-width: 575px) {
-    @content;
-  }
-}
 
-// @mixin onDesctop {
-//   @media screen and (min-width: $smDesctopWidth) {
-//     @content;
-//   }
-// }
+
+
 
 @mixin flex {
   display: flex;
@@ -242,3 +237,7 @@
 // //       url("#{$file-path}.ttf") format("truetype");
 // //   }
 // // }
+
+
+/* stylelint-disable */
+

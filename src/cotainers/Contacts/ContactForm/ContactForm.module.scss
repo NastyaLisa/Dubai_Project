@@ -27,20 +27,17 @@
   align-items: center;
   margin: 0 auto;
 
-  @include onTablet{
+  @include onTablet {
     flex-direction: row;
     column-gap: 30px;
   }
   @include onDesctop {
-    
     flex-direction: row;
     column-gap: 30px;
-  
   }
 
   &__title {
-   
-        text-align: start;
+    text-align: start;
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
     font-size: 24px;
@@ -54,8 +51,7 @@
     }
 
     span {
-      
-display: block;
+      display: block;
       color: $colorAccent;
     }
   }
@@ -64,20 +60,19 @@ display: block;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    width: 100%;
 
-    @include onTablet{
+    @include onTablet {
       flex-direction: row;
       column-gap: 30px;
       row-gap: 0;
     }
-    @include onDesctop{
-      
+    @include onDesctop {
       flex-direction: row;
       column-gap: 30px;
       row-gap: 0;
     }
-    }
-    
+  }
 
   label {
     display: none;
@@ -87,17 +82,11 @@ display: block;
   &__textarea {
     border: 1px solid #c9c9c9;
     font-family: $mainFontFirst;
-    width: 288px;
+    width: 100%;
     height: 50px;
     padding: 17px;
 
-    @include onTablet {
-      width: 211px;
-    }
-
     @include onDesctop {
-      width: 350px;
-
       padding: 36px;
 
       font-size: 16px;
@@ -110,7 +99,6 @@ display: block;
   }
 
   &__textarea {
-    width: 100%;
     height: 218px;
   }
 
@@ -134,7 +122,7 @@ display: block;
       height: 50px;
     }
 
-    // margin-top: 20px;
+
 
     &:hover,
     &:focus,
@@ -143,5 +131,5 @@ display: block;
     }
   }
 
-  //окончание форм
+ 
 }

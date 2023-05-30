@@ -1,5 +1,3 @@
-// router ???
-
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import image1 from 'images/home/villas.webp';
@@ -22,7 +20,7 @@ SwiperCore.use([Pagination, Autoplay, Grid]);
 const Projects = () => {
   return (
     <section className={`${styles.projects} ${styles.container}`}>
-      <header className={styles.projects__header}>
+      <div className={styles.projects__header}>
         <h2 className={styles.projects__title}>
           <FormattedMessage id="projects.title" />
         </h2>
@@ -50,7 +48,7 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
 
       <Swiper
         breakpoints={{
@@ -67,11 +65,11 @@ const Projects = () => {
             slidesPerView: 3,
             spaceBetween: 10,
           },
-          950: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
           },
-          1100: {
+          1140: {
             slidesPerView: 4,
             spaceBetween: 30,
           },
@@ -82,10 +80,10 @@ const Projects = () => {
           clickable: true,
           bulletClass: 'swiper-pagination-bullet',
         }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
         className={styles.projects__swiper}
         // className="mySwiper mySwiper-projects"
       >
@@ -102,21 +100,23 @@ const Projects = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={`${styles.projects__card} ${styles.card__text}`}>
+          <div
+            className={`${styles.projects__card} ${styles.projects__card__text}`}
+          >
             <h3>
-              
               <FormattedMessage id="projects.card.title" />
             </h3>
             <p>
               <FormattedMessage id="projects.card.description" />
             </p>
             <button>
-              <a href="#">
+              <a href="#" className={styles.projects__card__link}>
                 <FormattedMessage id="projects.card.button" />
                 <AiOutlineRight />
               </a>
             </button>
           </div>
+         
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.projects__card}>
@@ -125,16 +125,17 @@ const Projects = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={`${styles.projects__card} ${styles.card__text}`}>
+          <div
+            className={`${styles.projects__card} ${styles.projects__card__text}`}
+          >
             <h3>
-              
               <FormattedMessage id="projects.card.title" />
             </h3>
             <p>
               <FormattedMessage id="projects.card.description" />
             </p>
             <button>
-              <a href="#">
+              <a href="#" className={styles.projects__card__link}>
                 <FormattedMessage id="projects.card.button" />
                 <AiOutlineRight />
               </a>

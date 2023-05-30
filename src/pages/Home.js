@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from '../cotainers/Home/Hero/Hero';
-// import Popup from '../components/Popup/Popup';
 import Projects from '../cotainers/Home/Projects/Projects';
 import Expertise from '../cotainers/Home/Expertise/Expertise';
 import Examples from '../cotainers/Home/Examples/Examples';

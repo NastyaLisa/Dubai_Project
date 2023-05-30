@@ -4,14 +4,12 @@
 @import "utils/fonts";
 
 .container {
-  @extend %container;
+  @extend %containerMin;
   position: relative;
 }
 
 .blog {
-  
   padding-top: 42px;
-  
 
   @include onTablet {
     padding-top: 62px;
@@ -21,51 +19,68 @@
     padding-top: 120px;
   }
 
-  &__title {
+  &__header {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 20px;
-    @extend %font-secondary;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
 
     @include onTablet {
-      // margin-bottom: 0;
-      font-size: 30px;
-      line-height: 37px;
+      flex-direction: row;
     }
 
     @include onDesctop {
+      flex-direction: row;
+      height: 80px;
       margin-bottom: 84px;
-      font-size: 60px;
-      line-height: 80px;
+    }
+
+    &__searchInput {
+      max-width: 800px;
+      width: 100%;
+      border: 1px solid $colorText;
+      background-image: url(.././../assets/images/Blog/magnifier-glass.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 20px;
+
+      @include onTablet {
+        border-style: 30px;
+      }
+
+      @include onTabletLarge {
+        border-style: 30px;
+      }
+
+      @include onDesctop {
+        border-style: 30px;
+      }
+    }
+
+    &__title {
+      @extend %font-secondary;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+
+      @include onTablet {
+        font-size: 30px;
+        line-height: 37px;
+      }
+
+      @include onDesctop {
+        font-size: 60px;
+        line-height: 80px;
+      }
     }
   }
 
   //card - slide
   &__card {
     position: relative;
-    max-width: 140px;
-    // height: 186px;
-
-    @include onTablet {
-      max-width: 165px;
-      // height: 220px;
-    }
-    
-
-    @include onDesctop {
-      max-width: 425px;
-      height: 878px;
-      margin-bottom: 20px;
-    }
 
     &__image {
-
-
-      @include onDesctop {
-        height: 580px;
-      }
-
       img {
         width: 100%;
         height: 100%;
@@ -78,31 +93,34 @@
       row-gap: 8px;
       text-align: start;
 
-      padding: 9px 7px 7px 8px;
+      padding: 10px;
       background-color: $colorMain;
-border: 1px solid $colorAccent;
-      @include onDesctop {
-        row-gap: 30px;
-        padding: 38px 107px 27px 38px;
+      border: 1px solid $colorAccent;
+
+      @include onTablet {
+        padding: 30px;
       }
 
-      
+      @include onTabletLarge {
+        padding: 30px;
+      }
 
+      @include onDesctop {
+        row-gap: 30px;
+        padding: 38px;
+      }
+    }
   }
 }
 
-
-}
-
-.inform{
-  
+.inform {
   &__title {
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
     font-size: 14px;
     line-height: 20px;
 
-    @include onTablet{
+    @include onTablet {
       font-size: 17px;
       line-height: 20px;
     }
@@ -114,9 +132,11 @@ border: 1px solid $colorAccent;
   }
 
   &__text {
-
-font-size: 12px;
-line-height: 16px;
+    font-family: $mainFontSecondary;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $colorText;
 
     @include onDesctop {
       font-size: 16px;
@@ -150,19 +170,17 @@ line-height: 16px;
   width: 80%;
   margin: 20px auto 0;
 
-
-  @include onTablet{
+  @include onTablet {
     width: 70%;
     margin: 35px auto 0;
   }
-  @include onDesctop{
 
+  @include onDesctop {
     width: 50%;
     margin: 50px auto 0;
   }
- 
 
-  .paginationWrapper{
+  .paginationWrapper {
     display: flex;
     width: 100%;
     height: 20px;
@@ -170,45 +188,41 @@ line-height: 16px;
     align-items: center;
     justify-content: center;
 
-    @include onDesctop{
+    @include onDesctop {
       height: 40px;
     }
   }
-    .paginationBullet {
 
-   
-   
-      padding: 5px;
-     
-      border-radius: 0;
-     
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .paginationItemActive {
-      background-color: #ffc107;
-    }
-  
+  .paginationBullet {
+    padding: 5px;
 
-  
-  
+    border-radius: 0;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .paginationItemActive {
+    background-color: #ffc107;
+  }
+
   .navBtn {
-   
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
 
-    @include onDesctop{
+    @include onDesctop {
       font-size: 30px;
     }
   }
-  
-// .nextBtn{
-//   color: aqua;
-// }
-  
+
 }
 
+.loading{
+  text-align: center;
+  font-size: 40px;
+  line-height: 52px;
+  color: $colorAccent;
+}

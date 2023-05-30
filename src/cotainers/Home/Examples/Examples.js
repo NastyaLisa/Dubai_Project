@@ -23,7 +23,7 @@ const Examples = ()=>{
             <FormattedMessage id="examples" />
           </p>
         </div>
-        <div className={styles.examples__col}>
+        <div className={styles.examples__column}>
           <img
             src={image2}
             alt="example dubai rent"

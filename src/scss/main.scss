@@ -1,25 +1,20 @@
-@import 'utils/fonts';
-@import 'utils/mixin';
-@import 'utils/variables';
-@import 'utils/normalize';
-@import 'utils/templates';
+@import "utils/fonts";
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/normalize";
+@import "utils/templates";
 
-
-html{
+html {
   font-family: $mainFontFirst;
   font-weight: $mainFontWeight;
-   font-size: 14px;
-line-height: 160%;
+  font-size: 14px;
+  line-height: 160%;
   color: $colorMainText;
   background-color: $colorMain;
 
-  
-
   @include onDesctop {
-     font-size: 18px;
-line-height: 160%;
-
-    
+    font-size: 18px;
+    line-height: 160%;
   }
 }
 
@@ -28,25 +23,14 @@ body.bodyNoScroll {
   overflow: hidden;
 }
 
-
-
-// .section{
-//   @extend %containerMain;
-// }
-
-
 .projects__pagination {
-  // margin-top: 35px;
   margin: 35px auto 0;
 
-  @include onTablet{
-    // margin-top: 50px;
-      margin: 50px auto 0;
+  @include onTablet {
+    margin: 50px auto 0;
   }
-  @include onDesctop{
-
-// margin-top: 110px;
-  margin: 110px auto 0;
+  @include onDesctop {
+    margin: 110px auto 0;
   }
 
   .swiper-pagination-bullet {
@@ -54,26 +38,25 @@ body.bodyNoScroll {
     height: 13px;
     background-color: $colorAccent;
 
-    @include onDesctop { 
+    @include onDesctop {
       width: 13px;
-    height: 13px;
+      height: 13px;
     }
   }
-  
 }
 
 .reviews__slider {
   .swiper {
-  padding-top: 36px;
-@include onTablet{
-  padding-top: 46px;
-}
+    padding-top: 36px;
+    @include onTablet {
+      padding-top: 46px;
+    }
     @include onDesctop {
       width: 1800px; /* Ширина видимости двух слайдов */
-  margin: 0 auto; /* Центрирование контейнера */
-  width: 100%;
-  // overflow: hidden;
-     padding-top: 56px;
+      margin: 0 auto; /* Центрирование контейнера */
+      width: 100%;
+      // overflow: hidden;
+      padding-top: 56px;
       // overflow: visible;
     }
   }
@@ -110,16 +93,14 @@ body.bodyNoScroll {
   }
 }
 
-
 .apartments__pagination {
   margin-top: 35px;
-  
 
-  @include onTablet{
+  @include onTablet {
     margin-top: 50px;
   }
-  @include onDesctop{
-margin-top: 110px;
+  @include onDesctop {
+    margin-top: 110px;
   }
 
   .swiper-pagination-bullet {
@@ -127,39 +108,9 @@ margin-top: 110px;
     height: 13px;
     background-color: $colorAccent;
 
-    @include onDesctop { 
+    @include onDesctop {
       width: 13px;
-    height: 13px;
+      height: 13px;
     }
   }
-  
 }
-
-// .offers__pagination {
-//   margin-top: 35px;
-  
-
-//   @include onTablet{
-//     margin-top: 50px;
-//   }
-//   @include onDesctop{
-// margin-top: 110px;
-//   }
-
-//   .swiper-pagination-bullet {
-//     width: 20px;
-//     height: 20px;
-//     text-align: center;
-//     line-height: 20px;
-//     font-size: 12px;
-//     color: #000;
-//     opacity: 1;
-//     background: rgba(0, 0, 0, 0.2);
-//   }
-  
-//   .swiper-pagination-bullet-active {
-//     color: #fff;
-//     background: #007aff;
-//   }
-  
-// }

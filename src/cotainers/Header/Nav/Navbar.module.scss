@@ -37,6 +37,7 @@
       @include onDesctop {
         transition: opacity 0.2s ease-in;
         display: flex;
+        font-weight: 600;
       }
 
       &:hover {
@@ -44,6 +45,25 @@
           color: $colorAccent;
           cursor: pointer;
           // opacity: 0.8;
+        }
+      }
+
+       &__active {
+        @include onDesctop {
+          position: relative;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          left: 0;
+          top: 100%;
+
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: $colorAccent;
         }
       }
     }

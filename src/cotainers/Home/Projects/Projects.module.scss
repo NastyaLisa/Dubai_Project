@@ -113,16 +113,18 @@
 
   &__card {
     position: relative;
+    
     height: 186px;
+    
 
     @include onTablet {
-      // width: 165px;
-      height: 220px;
+     
+    height: 220px;
     }
 
     @include onDesctop {
-      height: 573px;
-      // width: 430px;
+      height: 570px;
+    
     }
 
     &__title {
@@ -143,59 +145,83 @@
       width: 100%;
       height: 100%;
     }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+
+      padding: 15px 8px 10px 9px;
+      background-color: $colorAccent;
+      color: $colorMain;
+
+      @include onDesctop {
+        row-gap: 30px;
+        padding: 45px;
+      }
+
+      h3 {
+        font-family: $mainFontSecondary;
+        font-weight: $mainFontSecondaryWeight;
+        font-size: 18px;
+        line-height: 22px;
+
+        @include onDesctop {
+          font-size: 32px;
+          line-height: 45px;
+        }
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 12px;
+
+        @include onTablet {
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        @include onDesctop {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        font-weight: $mainFontSecondaryWeight;
+        font-size: 12px;
+        line-height: 14px;
+
+        @include onDesctop {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+      }
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $colorMainText;
+        cursor: pointer;
+      }
+    }
   }
 }
 
-.card__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: left;
+.projects__swiper{
+  max-height: 500px;
 
-  padding: 15px 8px 10px 9px;
-  background-color: $colorAccent;
-  color: $colorMain;
-
-  @include onDesctop {
-    padding: 46px 96px 44px 30px;
+  @include onDesctop{
+    max-height: 812px;
   }
 
-  h3 {
-    @extend %font-secondary;
-    font-size: 18px;
-    line-height: 22px;
-
-    @include onDesctop {
-      font-size: 32px;
-      line-height: 45px;
-    }
-  }
-
-  p {
-    font-size: 10px;
-    line-height: 12px;
-
-    @include onTablet {
-      font-size: 12px;
-      line-height: 14px;
-    }
-
-    @include onDesctop {
-      font-size: 22px;
-      line-height: 26px;
-    }
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    font-weight: $mainFontSecondaryWeight;
-    font-size: 12px;
-    line-height: 14px;
-
-    @include onDesctop {
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
+  
 }

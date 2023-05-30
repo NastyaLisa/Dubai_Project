@@ -21,7 +21,18 @@
   }
 
   &__description {
-    @include flex-all-sb;
+       display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include onTablet{
+    justify-content: space-between;
+  }
+    @include onTabletLarge{
+      justify-content: space-around;
+    }
+    @include onDesctop{
+      justify-content: space-between;
+    }
 
     &__title {
       font-family: $mainFontSecondary;
@@ -72,6 +83,7 @@
     flex-direction: column;
     gap: 20px;
     max-width: 288px;
+    margin: 0 auto;
 
     @include onTablet {
       display: grid;
@@ -91,17 +103,17 @@
 
     &__item {
       position: relative;
-      width: 290px;
+      max-width: 290px;
       height: 219px;
 
       @include onTablet {
-        width: 208px;
+        max-width: 208px;
         height: 220px;
       }
 
       @include onDesctop {
         height: 350px;
-        width: 350px;
+        max-width: 350px;
       }
 
       img {
@@ -182,7 +194,7 @@
     line-height: 24px;
 
     &:hover {
-      color: $colorAccent;
+      color: $colorText;
       cursor: pointer;
     }
   }

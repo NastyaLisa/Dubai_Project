@@ -9,9 +9,7 @@
 }
 
 .offers {
-  
   padding-top: 42px;
-  
 
   @include onTablet {
     padding-top: 62px;
@@ -29,7 +27,6 @@
     text-align: center;
 
     @include onTablet {
-      // margin-bottom: 0;
       font-size: 30px;
       line-height: 37px;
     }
@@ -44,26 +41,25 @@
   //card - slide
   &__card {
     position: relative;
-    max-width: 140px;
-    // height: 186px;
+    max-width: 288px;
+    max-height: 577px;
 
     @include onTablet {
-      max-width: 165px;
-      // height: 220px;
+      max-width: 332px;
+      max-height: 577px;
     }
-    
 
     @include onDesctop {
       max-width: 425px;
-      height: 878px;
+      max-height: 878px;
       margin-bottom: 20px;
     }
 
     &__image {
-
+      max-height: 329px;
 
       @include onDesctop {
-        height: 580px;
+        max-height: 580px;
       }
 
       img {
@@ -77,32 +73,29 @@
       flex-direction: column;
       row-gap: 8px;
       text-align: start;
-
+      max-height: 348px;
       padding: 9px 7px 7px 8px;
       background-color: $colorMain;
-border: 1px solid $colorAccent;
-      @include onDesctop {
-        row-gap: 30px;
-        padding: 38px 107px 27px 38px;
+      border: 1px solid $colorAccent;
+
+      @include onTablet {
       }
-
-      
-
+      @include onDesctop {
+        row-gap: 25px;
+        padding: 38px;
+      }
+    }
   }
 }
 
-
-}
-
-.inform{
-  
+.inform {
   &__title {
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
     font-size: 14px;
     line-height: 20px;
 
-    @include onTablet{
+    @include onTablet {
       font-size: 17px;
       line-height: 20px;
     }
@@ -114,9 +107,9 @@ border: 1px solid $colorAccent;
   }
 
   &__text {
-
-font-size: 12px;
-line-height: 16px;
+    color: $colorText;
+    font-size: 12px;
+    line-height: 16px;
 
     @include onDesctop {
       font-size: 16px;
@@ -150,19 +143,16 @@ line-height: 16px;
   width: 80%;
   margin: 20px auto 0;
 
-
-  @include onTablet{
+  @include onTablet {
     width: 70%;
     margin: 35px auto 0;
   }
-  @include onDesctop{
-
+  @include onDesctop {
     width: 50%;
     margin: 50px auto 0;
   }
- 
 
-  .paginationWrapper{
+  .paginationWrapper {
     display: flex;
     width: 100%;
     height: 20px;
@@ -170,45 +160,32 @@ line-height: 16px;
     align-items: center;
     justify-content: center;
 
-    @include onDesctop{
+    @include onDesctop {
       height: 40px;
     }
   }
-    .paginationBullet {
+  .paginationBullet {
+    padding: 5px;
 
-   
-   
-      padding: 5px;
-     
-      border-radius: 0;
-     
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .paginationItemActive {
-      background-color: #ffc107;
-    }
-  
+    border-radius: 0;
 
-  
-  
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .paginationItemActive {
+    background-color: #ffc107;
+  }
+
   .navBtn {
-   
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
 
-    @include onDesctop{
+    @include onDesctop {
       font-size: 30px;
     }
   }
-  
-// .nextBtn{
-//   color: aqua;
-// }
-  
 }
-

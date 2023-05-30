@@ -4,26 +4,20 @@
 @import "utils/templates";
 
 .social {
-  /* Общие стили для списка */
+ 
   &__list {
     display: flex;
 
-    @include onDesctop {
-      /* Стили для списка на десктопе */
-    }
 
     &__item {
-      @include onDesctop {
-        /* Стили для элементов списка на десктопе */
-      }
-
+     
       &:hover {
         color: $colorAccent;
       }
     }
   }
 
-  /* Стили для главной страницы */
+  /* Styles for main*/
   &.main {
     display: none;
 
@@ -59,7 +53,7 @@
     }
   }
 
-  /* Стили для футера */
+  /* Styles for footer */
   &.footer {
     display: flex;
 
@@ -77,7 +71,7 @@
     }
   }
 
-  /* Стили для контактов */
+  /* Styles fpr contacts */
   &.contacts {
     display: flex;
 
@@ -88,10 +82,9 @@
       }
 
       &__item {
-        // &:not(:last-child) 
-        // {
+       
           padding-left: 14px;
-        // }
+        
       }
     }
   }

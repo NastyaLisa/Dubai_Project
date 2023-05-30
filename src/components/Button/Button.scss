@@ -12,7 +12,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-  // padding-top: 74px;
   text-align: center;
 
   @include onTablet {
@@ -23,6 +22,7 @@
     line-height: 14px;
     padding-top: 0;
   }
+
   @include onDesctop {
     display: block;
     width: 165px;
@@ -34,23 +34,30 @@
   &__open {
     display: block;
     margin-top: 38px;
+
     @include onTablet {
       margin-top: 0;
     }
   }
 
   &.footer__btn {
-    
-margin-top: 50px;
-    @include onTablet{
+
+    margin-top: 50px;
+
+
+    @include onTablet {
+      margin-top: 0;
       position: absolute;
       top: 25%;
       right: 0;
     }
-    @include onTablet{
-      margin-top: 0;
+
+    @include onTabletLarge{
+     position: relative;
+     margin-top: 45px;
     }
     @include onDesctop {
+      position: relative;
       margin-top: 75px;
     }
   }

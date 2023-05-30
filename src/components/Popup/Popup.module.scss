@@ -13,6 +13,7 @@
   bottom: 0;
   left: 0;
   background-color: $colorMain;
+  opacity: 0.95;
   z-index: 15;
 }
 
@@ -31,7 +32,7 @@
   padding: 5px;
   text-align: center;
 
-  color: #272727;
+  color: $colorMain;
 
   @include onTablet {
     padding: 25px;
@@ -79,7 +80,8 @@
   align-items: center;
   height: 135px;
 
-  @include onTablet {}
+  @include onTablet {
+  }
 
   @include onDesctop {
     width: 450px;

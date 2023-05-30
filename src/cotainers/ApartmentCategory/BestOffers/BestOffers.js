@@ -3,7 +3,6 @@ import { offersData } from './offersData';
 import styles from './BestOffers.module.scss';
 import { useRef } from 'react';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
-// import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Grid, Pagination, Navigation } from 'swiper';
@@ -46,14 +45,14 @@ const BestOffers = () => {
       <Swiper
         breakpoints={{
           0: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
             grid: {
-              rows: 2,
+              rows: 5,
               fill: 'row',
             },
           },
-          400: {
+          576: {
             slidesPerView: 2,
             spaceBetween: 20,
             grid: {
@@ -107,7 +106,7 @@ const BestOffers = () => {
                 <h3 className={styles.inform__title}>{offer.title}</h3>
                 <p className={styles.inform__text}>{offer.description}</p>
                 <button className={styles.inform__btn}>
-                  <a href="#">
+                  <a href="#" className={styles.inform__btn}>
                     Learn more <AiOutlineRight />
                   </a>
                 </button>

@@ -27,10 +27,10 @@ const Reviews = ()=>{
             centeredSlidesBounds={true} // Ограничение центрирования
             // Ширина одного слайда
             loop={true}
-            autoplay={{
-              delay: 50000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 50000,
+            //   disableOnInteraction: false,
+            // }}
             pagination={{
               el: '.swiper-pagination',
               clickable: true,
@@ -40,12 +40,12 @@ const Reviews = ()=>{
             breakpoints={{
               0: {
                 slidesPerView: 1,
-                slidesPerGroup: 1,
+                // slidesPerGroup: 1,
                 // spaceBetween: 50,
               },
-              650: {
+              576: {
                 slidesPerView: 2,
-                slidesPerGroup: 1,
+                // slidesPerGroup: 1,
                 // spaceBetween: 40,
               },
               1024: {

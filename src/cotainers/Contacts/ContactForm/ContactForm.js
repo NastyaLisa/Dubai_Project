@@ -15,7 +15,7 @@ const ContactForm = () => {
   const validationSchema = Yup.object({
     name: Yup.string()
       .required('Required')
-      .matches(/^[A-Za-z]+$/, 'Invalid name format'),
+      .matches(/^[A-Za-zА-Яа-я]+\s?[A-Za-zА-Яа-я]*$/, 'Invalid name format'),
     email: Yup.string().email('Invalid email address').required('Required'),
     subject: Yup.string().required('Required'),
     message: Yup.string().required('Required'),

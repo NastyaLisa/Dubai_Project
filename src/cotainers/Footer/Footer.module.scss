@@ -3,16 +3,13 @@
 @import "utils/variables";
 @import "utils/templates";
 
-
 .container {
-
   @extend %container;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-
 }
 
 .footer {
@@ -32,31 +29,30 @@
     display: block;
     position: absolute;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
-        &::after {
+
+  &::after {
     content: "";
     display: block;
     position: absolute;
     width: 100%;
     bottom: 100px;
-     border-top: 1px solid rgba(255, 255, 255, 0.3);;
-
-     @include onTablet{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    @include onTablet {
       bottom: 70px;
-     }
+    }
+
     @include onDesctop {
-      bottom: 85px;
+      bottom: 130px;
     }
   }
-
-
 
   &__logo {
     padding-top: 40px;
 
     @include onDesctop {
-      padding-top: 70px;
+      padding-top: 90px;
     }
   }
 
@@ -67,32 +63,45 @@
       padding-top: 30px;
     }
 
-
+    @include onDesctop{
+      padding-top: 50px;
+    }
     &__list {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: $mobileContentWidth;
+      font-weight: 400;
 
       @include onTablet {
         width: $tabletContentWidth;
       }
-
+  @include onTabletLarge{
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+         grid-column-gap: 15%;
+        padding-bottom: 65px;
+        
+        width: 100%;
+        margin: 0 auto;
+      }
       @include onDesctop {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 6%;
-        padding-top: 100px;
-        padding-bottom: 95px;
-        font-weight: 300;
+        grid-column-gap: 5%;
+       
+        padding-bottom: 65px;
+      
         width: 100%;
         margin: 0 auto;
       }
 
+    
     }
 
     &__link {
       position: relative;
+     
 
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -105,7 +114,13 @@
     position: relative;
 
     padding: 5px 0 0 15px;
+    font-weight: $footerFontWeight;
 
+    @include onTabletLarge{
+       padding: 20px 0 0;
+      display: block;
+      position: relative;
+    }
     @include onDesctop {
       padding: 40px 0 0;
       display: block;
@@ -118,7 +133,6 @@
   }
 
   &__submenu__link {
-
     white-space: nowrap;
     margin-bottom: 10px;
 
@@ -128,13 +142,15 @@
     }
   }
 
-
   &__contact__list {
-position: relative;
+    position: relative;
+
+    @include onTabletLarge {
+      padding: 30px 0 0;
+    }
     @include onDesctop {
       padding: 40px 0 0;
     }
-
   }
 
   &__contact__link {
@@ -146,73 +162,77 @@ position: relative;
         cursor: pointer;
       }
     }
+    &__mail{
+      font-family: $mainFontSecondary;
+      font-weight: 400;
+    }
   }
 }
-  .button__arrow {
-    position: absolute;
-    top: 5px;
-    right: 0px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid $colorMainText;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
 
-    @include onDesctop {
-      display: none;
-    }
+.button__arrow {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid $colorMainText;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
 
-    &.active {
-      border-top: 10px solid $colorAccent;
-      transform: rotate(-180deg);
-
-    }
+  @include onTabletLarge{
+    display: none;
+  }
+  @include onDesctop {
+    display: none;
   }
 
-  .footer__bottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    width: 100%;
+  &.active {
+    border-top: 10px solid $colorAccent;
+    transform: rotate(-180deg);
+  }
+}
 
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-
-  
+  width: 100%;
 
   gap: 20px;
   padding-top: 60px;
   align-items: center;
 
-
-
-@include onTablet{
-   flex-direction: row;
+  @include onTablet {
+    flex-direction: row;
     gap: 0;
     max-width: 700px;
-  
-}
-    @include onDesctop{
-       flex-direction: row;
- gap: 0;
-    max-width: 1780px;
-  
-    }
-    &__text{
-      order:1;
+  }
 
-      @include onTablet{
-        order: 0;
-      }
-      @include onDesctop{
-        order: 0;
-      }
+  @include onDesctop {
+    flex-direction: row;
+    gap: 0;
+    max-width: 1780px;
+  }
+
+  &__text {
+    font-family: Lexend;
+    font-weight: 300;
+    order: 1;
+
+    @include onTablet {
+      order: 0;
     }
- 
+
+    @include onDesctop {
+      order: 0;
+    }
+  }
 }
+
 .scrollToTop {
   position: absolute;
- bottom: 87%;
+  bottom: 87%;
   right: 10%;
   z-index: 999;
 }
@@ -245,13 +265,13 @@ position: relative;
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(-20px, -20px);
   }
 }
-
-  

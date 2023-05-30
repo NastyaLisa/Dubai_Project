@@ -44,15 +44,12 @@
     display: flex;
     justify-content: flex-start;
     background-color: $colorMain;
-   
 
     @include onTablet {
       position: absolute;
       z-index: 2;
       top: 33%;
       left: calc(50% - 320px);
-      // transform: translate(-50%, -50%);
-     
     }
 
     @include onDesctop {
@@ -60,14 +57,13 @@
       z-index: 2;
       top: 33%;
       left: calc(50% - 617px);
-      // transform: translate(-50%, -50%);
-     
     }
   }
 
   &__items {
     width: 287px;
     height: 293px;
+
     @include onTablet {
       padding: 30px;
       width: 273px;
@@ -76,32 +72,33 @@
 
     @include onDesctop {
       padding: 85px;
-       width: 544px;
+      width: 544px;
       height: 605px;
     }
   }
+
   .city {
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
-    @include onDesctop{
+
+    @include onDesctop {
       font-size: 32px;
-line-height: 45px;
+      line-height: 45px;
     }
   }
 
-  .phone{
+  .phone {
     font-family: $mainFontSecondary;
     font-weight: $mainFontSecondaryWeight;
     font-size: 20px;
     line-height: 25px;
 
-    @include onDesctop{
+    @include onDesctop {
       font-size: 32px;
       line-height: 45px;
       padding: 30px 0 60px;
     }
   }
-  
 
   &__item {
     font-weight: 600;
@@ -120,9 +117,10 @@ line-height: 45px;
       line-height: 21px;
     }
 
-.country{
-  color: $colorAccent;
-}
+    .country {
+      color: $colorAccent;
+    }
+
     .detail {
       font-weight: $mainFontWeight;
       color: $colorText;
@@ -133,16 +131,21 @@ line-height: 45px;
 .map {
   position: relative;
 
-  max-width: 289px;
+  max-width: $mobileContentWidthMax;
   height: 351px;
 
   @include onTablet {
-    max-width: 695px;
+    max-width: $tabletContentWidth;
     height: 595px;
   }
 
+  @include onTabletLarge {
+    max-width: $tabletWidthLargeContent;
+    height: 768px;
+  }
+
   @include onDesctop {
-    max-width: 1800px;
+    max-width: $desctopWidthMax;
     height: 768px;
   }
 

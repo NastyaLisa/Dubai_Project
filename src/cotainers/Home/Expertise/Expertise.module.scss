@@ -29,12 +29,12 @@
     color: $colorTextFaq;
 
     @include onTablet {
-      margin: 0;
+      margin: 0 auto;
       text-align: left;
     }
 
     @include onDesctop {
-      width: 730px;
+      max-width: 730px;
     }
 
     &__subtitle {
@@ -59,12 +59,14 @@
       padding-bottom: 10px;
 
       @include onTablet {
+        max-width: 450px;
         font-size: 30px;
         line-height: 37px;
-        padding: 0 200px 23px 0;
+        padding-bottom: 23px ;
       }
 
       @include onDesctop {
+        max-width: 730px;
         font-size: 70px;
         line-height: 69px;
 
@@ -157,7 +159,7 @@
       line-height: 48px;
     }
 
-    span {
+    cite {
       color: $colorAccent;
     }
   }

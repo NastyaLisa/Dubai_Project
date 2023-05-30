@@ -3,7 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import Logo from 'component/Logo/Logo';
 import Button from 'component/Button/Button';
-import Social from '../../components/Social/Social';
+import Social from 'component/Social/Social';
 
 import styles from './Footer.module.scss';
 
@@ -240,7 +240,7 @@ const Footer = () => {
                   <li className={styles.footer__contact__link}>
                     <FormattedMessage id="footer.contacts.address" />
                   </li>
-                  <li className={styles.footer__contact__link}>
+                  <li className={`${styles.footer__contact__link} ${styles.footer__contact__link__mail}`}>
                     dubairealty@mail.com
                   </li>
                   <li className={styles.footer__contact__link}>

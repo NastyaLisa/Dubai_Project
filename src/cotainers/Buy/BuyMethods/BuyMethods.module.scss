@@ -3,13 +3,11 @@
 @import "utils/variables";
 @import "utils/templates";
 
-
 .container {
   @extend %containerMin;
 }
 
 .methods {
-
   padding-top: 78px;
 
   @include onTablet {
@@ -29,7 +27,7 @@
   }
 
   &__title {
-     @extend %font-secondary;
+    @extend %font-secondary;
     font-size: 24px;
     line-height: 30px;
     padding-bottom: 10px;
@@ -49,17 +47,13 @@
   }
 
   &__text {
-
     padding-bottom: 10px;
 
     @include onTablet {
-
       padding-bottom: 20px;
     }
 
     @include onDesctop {
-
-
       padding-bottom: 20px;
     }
   }
@@ -68,9 +62,8 @@
     color: $colorText;
 
     @include onDesctop {
-      text-align: justify
+      text-align: justify;
     }
-
   }
 
   &__subtitle {
@@ -81,11 +74,12 @@
     }
   }
 
-
   &__quote {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 290px;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
     border: 2px solid $colorAccent;
@@ -94,20 +88,38 @@
     @include onTablet {
       flex-direction: row;
       padding: 36px;
+      max-width: 690px;
+
+      align-items: flex-start;
+    }
+
+    @include onTabletLarge {
+      flex-direction: row;
+      padding: 36px;
+      max-width: 690px;
+
+      align-items: flex-start;
     }
 
     @include onDesctop {
       flex-direction: row;
       padding: 40px;
       max-width: 730px;
-      width: 100%;
+
       align-items: flex-start;
     }
 
     svg {
-
       width: 50px;
       color: $colorAccent;
+
+      @include onTablet {
+        width: 150px;
+      }
+
+      @include onTabletLarge {
+        width: 150px;
+      }
 
       @include onDesctop {
         width: 200px;
@@ -118,7 +130,6 @@
       font-weight: 600;
 
       @include onDesctop {
-
         font-size: 20px;
         line-height: 35px;
         padding-bottom: 20px;
@@ -126,19 +137,31 @@
     }
 
     &__author {
-
+      display: flex;
+      flex-direction: column;
+      text-align: end;
       font-weight: $mainFontSecondaryWeight;
       line-height: 26px;
+      padding-top: 10px;
 
+      @include onTablet {
+        text-align: start;
+      }
 
+      @include onTabletLarge {
+        text-align: start;
+      }
+
+      @include onDesctop {
+        text-align: start;
+      }
 
       &__descr {
         color: $colorText;
+        padding-top: 10px;
       }
     }
   }
-
-
 
   .box {
     display: flex;

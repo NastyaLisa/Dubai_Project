@@ -5,6 +5,7 @@
 
 .container {
   @extend %containerMin;
+  margin: 0 auto;
 }
 
 .description {
@@ -62,6 +63,10 @@
   &__text {
     color: $colorText;
 
+    @include onTabletLarge {
+      text-align: justify;
+    }
+
     @include onDesctop {
       text-align: justify;
     }
@@ -72,11 +77,12 @@
 
     &__accent {
       color: $colorText;
+      padding-left: 20px;
     }
   }
 
   &__image {
-    max-width:$mobileContentWidth;
+    max-width: $mobileContentWidthMax;
     height: 252px;
     padding-top: 20px;
     overflow: hidden;
@@ -86,8 +92,13 @@
       height: 436px;
     }
 
+    @include onTabletLarge {
+      max-width: $tabletWidthLargeContent;
+      height: 500px;
+    }
+
     @include onDesctop {
-      max-width:$desctopContentWidthMin;
+      max-width: $desctopContentWidthMin;
       height: 702px;
       padding-top: 60px;
     }

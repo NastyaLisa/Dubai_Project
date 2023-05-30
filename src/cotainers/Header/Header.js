@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../../components/Logo/Logo';
+import Logo from 'component/Logo/Logo';
 import { NavLink } from 'react-router-dom';
 import Navbar from './Nav/Navbar';
 import Button from 'component/Button/Button';
@@ -12,6 +12,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Header = ({ onLanguageChange }) => {
 
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  
 
   useEffect(() => {
     if (isNavbarOpen) {
@@ -27,8 +28,6 @@ const Header = ({ onLanguageChange }) => {
   const activeBurger = `${styles.burger} ${styles.burger__active}`;
   const normalBurger = `${styles.burger}`;
 
-
-
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -39,8 +38,6 @@ const Header = ({ onLanguageChange }) => {
         <div className={isNavbarOpen ? active : normal}>
           <Navbar navbarOpen={isNavbarOpen} setNavbarOpen={setIsNavbarOpen} />
 
-          {/* {isNavbarOpen && (
-            <div className={styles.header__ui__block}> */}
           <div
             className={
               isNavbarOpen
@@ -69,10 +66,11 @@ const Header = ({ onLanguageChange }) => {
               </a>
             </div>
           </div>
-          {/* )} */}
+         
         </div>
 
         <button
+          
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
           className={isNavbarOpen ? activeBurger : normalBurger}
         >
