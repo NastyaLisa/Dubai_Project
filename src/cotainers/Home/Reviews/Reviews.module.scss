@@ -93,34 +93,29 @@
 }
 
 .quotes {
+  margin-left: 50%;
   font-size: 60px;
 
   line-height: 200px;
-  // margin-left: 270px;
-  margin-left: 40%;
+
   color: $colorAccent;
 
   @include onTablet {
+    margin-left: 60%;
     font-size: 50px;
-
     line-height: 170px;
-    // margin-left: 240px;
-     margin-left: 60%;
   }
 
   @include onTabletLarge {
+    margin-left: 60%;
     font-size: 50px;
-
     line-height: 170px;
-    // margin-left: 280px;
-     margin-left: 60%;
   }
 
   @include onDesctop {
+    margin-left: 70%;
     font-size: 60px;
 
     line-height: 200px;
-     margin-left: 60%;
-    // margin-left: 400px;
   }
 }

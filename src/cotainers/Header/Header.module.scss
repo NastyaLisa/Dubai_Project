@@ -116,7 +116,7 @@
         line-height: 19px;
         align-items: center;
         position: absolute;
-        top: -9%;
+        top: -6%;
         left: 27%;
         display: grid;
 
@@ -125,7 +125,7 @@
 
       @include onTabletLarge {
         column-gap: 50px;
-        top: -6%;
+        top: 0;
         left: 27%;
       }
     }

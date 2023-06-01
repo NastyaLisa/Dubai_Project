@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { NavLink } from 'react-router-dom';
 import image1 from 'images/home/villas.webp';
 import image2 from 'images/home/villas_2.webp';
 import image3 from 'images/home/houses.webp';
@@ -86,7 +87,6 @@ const Projects = () => {
           disableOnInteraction: false,
         }}
         className={styles.projects__swiper}
-        
       >
         <SwiperSlide>
           <div className={styles.projects__card}>
@@ -111,13 +111,12 @@ const Projects = () => {
               <FormattedMessage id="projects.card.description" />
             </p>
             <button>
-              <a href="#" className={styles.projects__card__link}>
+              <NavLink to="/buy" className={styles.projects__card__link}>
                 <FormattedMessage id="projects.card.button" />
                 <AiOutlineRight />
-              </a>
+              </NavLink>
             </button>
           </div>
-         
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.projects__card}>
@@ -136,10 +135,10 @@ const Projects = () => {
               <FormattedMessage id="projects.card.description" />
             </p>
             <button>
-              <a href="#" className={styles.projects__card__link}>
+              <NavLink to="/buy" className={styles.projects__card__link}>
                 <FormattedMessage id="projects.card.button" />
                 <AiOutlineRight />
-              </a>
+              </NavLink>
             </button>
           </div>
         </SwiperSlide>

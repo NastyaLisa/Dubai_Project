@@ -164,3 +164,14 @@
   display: none;
   overflow: auto;
 }
+
+.label {
+  // display: none;
+}
+
+.error{
+  display: none;
+}
+.invalid{
+  border: 2px solid red;
+}

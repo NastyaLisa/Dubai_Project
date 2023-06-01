@@ -95,7 +95,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
           <NavLink
             exact="true"
             to="/blog"
-            // aria-current="page"
+         
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             onClick={() => setNavbarOpen(false)}
           >

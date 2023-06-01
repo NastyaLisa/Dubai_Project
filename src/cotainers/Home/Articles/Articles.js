@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
-// import { LOCALES } from './i18nProvider/index.js';
+
 
 import image1 from 'images/home/article_1.png';
 import image2 from 'images/home/article_2.jpg';
@@ -9,6 +9,7 @@ import image2 from 'images/home/article_2.jpg';
 import styles from './Articles.module.scss';
 
 import { AiOutlineRight} from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 const Articles = ()=>{
 
@@ -21,10 +22,10 @@ const Articles = ()=>{
           <h2 className={styles.articles__description__title}>
             <FormattedMessage id="home.arcticleTitle" />
           </h2>
-          <a href="#" className={styles.articles__description__link}>
+          <NavLink to="/blog" className={styles.articles__description__link}>
             <FormattedMessage id="home.arcticleLink" />
             <AiOutlineRight />
-          </a>
+          </NavLink>
         </div>
 
         <div className={styles.articles__column}>

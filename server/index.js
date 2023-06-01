@@ -15,49 +15,19 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+
+
+
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 
-// Маршрут для главной страницы
 
-// Middleware для перенаправления на соответствующую страницу при изменении языка
-app.use((req, res, next) => {
-  const { lang } = req.query;
 
-  if (lang && lang === 'ua') {
-    // Перенаправление на украинскую версию страницы
-    return res.redirect(`/${lang}${req.originalUrl}`);
-  } else if (req.path === '/') {
-    // Перенаправление на английскую версию главной страницы
-    return res.redirect('/en');
-  }
-
-  next();
-});
-
-// Маршрут для главной страницы на английском языке
-app.get('/en', (req, res) => {
+app.get('/', (req, res) => {
   const filePath = path.join(__dirname, '..', 'dist', 'index.html');
   res.sendFile(filePath);
 });
 
-// Маршрут для главной страницы на украинском языке
-app.get('/ua', (req, res) => {
-  const filePath = path.join(__dirname, '..', 'dist', 'index.html');
-  res.sendFile(filePath);
-});
 
-// Маршрут для страницы контактов
-app.get('/:lang/contacts', (req, res) => {
-  const { lang } = req.params;
-
-  if (lang === 'ua') {
-    const filePath = path.join(__dirname, '..', 'dist', 'index.html');
-    res.sendFile(filePath);
-  } else {
-    const filePath = path.join(__dirname, '..', 'dist', 'index.html');
-    res.sendFile(filePath);
-  }
-});
 
 app.get('/blog', async (req, res) => {
   try {
@@ -73,7 +43,6 @@ app.get('/blog', async (req, res) => {
   }
 });
 
-// Маршрут для отправки электронной почты
 app.post('/send', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -122,14 +91,8 @@ app.post('/send', (req, res) => {
   });
 });
 
-// Маршрут для главной страницы
-// app.get('/', (req, res) => {
-//   const filePath = path.join(__dirname, '..', 'dist', 'index.html');
 
-//   res.sendFile(filePath);
-// });
 
-// Запуск сервера
 app.listen(PORT, () => {
   console.log(`Server started on Port ${PORT}`);
 });

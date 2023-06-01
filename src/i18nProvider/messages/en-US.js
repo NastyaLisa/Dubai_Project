@@ -10,9 +10,9 @@ const translations = {
     'header.submenu2': 'Apartments in Dubai',
     'header.submenu3': ' Category number five',
     'button.consultation': 'Book a consultation ',
-    'Home.slider.1': 'Welcome to our \nluxury homes',
+    'Home.slider.1': 'Welcome to our luxury homes',
     'Home.slider.2': 'Discover your \ndream home.',
-    'Home.slider.3': 'Experience luxury living \n ',
+    'Home.slider.3': 'Experience luxury living  ',
 
     'Home.welcome': 'Welcome Home',
     'Home.to': 'To',

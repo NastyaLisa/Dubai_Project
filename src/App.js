@@ -13,10 +13,7 @@ import Footer from './cotainers/Footer/Footer';
 import './scss/main.scss';
 import { Routes, Route } from 'react-router-dom';
 
-
-
 const App = () => {
-
   const [locale, setLocale] = useState(LOCALES.ENGLISH);
 
   const handleLanguageChange = (newLocale) => {
@@ -25,7 +22,6 @@ const App = () => {
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
-
       <React.Fragment>
         <Header onLanguageChange={handleLanguageChange} />
         <Routes>
@@ -40,11 +36,8 @@ const App = () => {
         </Routes>
         <Footer />
       </React.Fragment>
-
     </IntlProvider>
   );
 };
 
 export default App;
-
-

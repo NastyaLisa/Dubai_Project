@@ -19,7 +19,7 @@ const FormInner = () => {
   });
 
   const handleSubmit = (values, { setSubmitting }) => {
-    console.log(values);
+ 
     setSubmitting(false);
   };
   const intl = useIntl();

@@ -40,6 +40,7 @@ const Hero = () => {
           </span>
           <h1 className={styles.hero__text__title}>
             <FormattedMessage id="Home.welcome" />
+          
             <span className={styles.hero__text__title__accent}>
               <FormattedMessage id="Home.to" />
             </span>
@@ -79,7 +80,7 @@ const Hero = () => {
             },
           }}
           autoplay={{
-            delay: 50000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           navigation={{

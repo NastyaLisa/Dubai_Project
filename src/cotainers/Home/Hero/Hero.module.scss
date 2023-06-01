@@ -35,6 +35,7 @@
   }
 
   &__swiper {
+    padding-bottom: 20px;
     border-bottom: 2px solid $colorAccent;
 
     @include onTablet {
@@ -116,12 +117,13 @@
       display: flex;
       flex-wrap: wrap;
 
-      max-width: 250px;
+      max-width: 220px;
 
       font-family: SpaceGrotesk;
       font-weight: $mainFontSecondaryWeight;
       font-size: 30px;
       line-height: 38px;
+     
 
       @include onTablet {
         max-width: 430px;
@@ -151,7 +153,8 @@
       }
 
       &__description {
-        @include onTablet {}
+        @include onTablet {
+        }
 
         @include onDesctop {
           font-size: 16px;
@@ -225,7 +228,9 @@
     position: absolute;
     bottom: 7%;
   }
-
+  @include onTabletLarge {
+      left: 7%;
+    }
   @include onDesctop {
     display: flex;
     height: 24px;
@@ -235,9 +240,7 @@
     width: 162px;
     bottom: 0;
 
-    @include onTabletLarge {
-      left: 7%;
-    }
+  
   }
 
   span {
@@ -301,21 +304,23 @@
 
   .pagination {
     display: flex;
-    justify-content: space-between;
+justify-content: space-around;
     align-items: center;
-
-    height: 84px;
+    gap: 10%;
+    height: 100px;
     margin: 0 auto;
     background-color: $colorMain;
 
     @include onTablet {
-      justify-content: space-around;
+      gap: 7%;
     }
 
-    @include onTabletLarge {}
+    @include onTabletLarge {
+      gap: 8%;
+    }
 
     @include onDesctop {
-      justify-content: space-around;
+      gap: 8%;
 
       height: 150px;
 
@@ -372,7 +377,7 @@
     &__bullet {
       display: flex;
       flex-direction: column;
-      max-width: 70px;
+      max-width: 78px;
       height: 70px;
 
       @include onTablet {

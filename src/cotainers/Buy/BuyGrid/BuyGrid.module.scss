@@ -20,14 +20,14 @@
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    min-width: 287px;
+    // min-width: 287px;
 
     @include onTablet {
-      min-width: 690px;
+      // min-width: 690px;
     }
 
     @include onDesctop {
-      min-width: 1100px;
+      // min-width: 1100px;
     }
   }
 
@@ -43,11 +43,14 @@
     background-color: #fcd54c;
 
     @include onTablet {
-      width: 690px;
+      max-width: 690px;
+    }
+    @include onTabletLarge{
+      max-width: 946px;
     }
 
     @include onDesctop {
-      width: 1110px;
+      max-width: 1110px;
     }
 
     &__text {
@@ -67,7 +70,12 @@
           text-align: center;
           width: 178px;
         }
-
+@include onTabletLarge{
+   display: block;
+        
+          text-align: center;
+          width: 310px;
+}
         @include onDesctop {
           display: block;
          
@@ -114,12 +122,13 @@
     width: 288px;
 
     @include onTablet {
-      grid-area: 2 / 1 / 16 / 2;
+     
       width: 320px;
     }
 
+
     @include onDesctop {
-      grid-area: 2 / 1 / 16 / 2;
+      
       width: 370px;
     }
   }
@@ -131,8 +140,14 @@
       display: block;
       grid-area: 2 / 2 / 16 / 3;
       width: 227px;
+       margin: 0 auto;
     }
-
+@include onTabletLarge{
+  display: block;
+      grid-area: 2 / 2 / 16 / 3;
+      width: 310px;
+      margin: 0 auto;
+}
     @include onDesctop {
       display: block;
       grid-area: 2 / 2 / 16 / 3;
@@ -149,7 +164,11 @@
       grid-area: 2 / 3 / 16 / 4;
       width: 133px;
     }
-
+@include onTabletLarge{
+    display: block;
+      grid-area: 2 / 3 / 16 / 4;
+      width: 310px;
+}
     @include onDesctop {
       display: block;
       grid-area: 2 / 3 / 16 / 4;
