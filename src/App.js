@@ -37,7 +37,12 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
 
-            <Route path="*" element={<h1>Click Logo</h1>} />
+            <Route
+              path="*"
+              element={
+                <h1 style={{ textAlign: 'center', fontSize: '40px' }}>Click Logo</h1>
+              }
+            />
           </Routes>
           <Footer />
         </React.Fragment>

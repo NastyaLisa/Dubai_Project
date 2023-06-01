@@ -2,10 +2,8 @@ import React from 'react';
 import BlogPosts from '../cotainers/Blog/BlogPosts';
 
 
-const Blog = () => {
-  return (
-    <BlogPosts />
-  );
+const Blog = ({locale}) => {
+  return <BlogPosts locale={locale} />;
 };
 
 export default Blog;

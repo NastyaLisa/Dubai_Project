@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import comercial from 'images/apartment_category/Commercial_426x581.webp';
 import townhouse from 'images/apartment_category/Townhous_426x581.webp';
 import villa from 'images/apartment_category/Villa_426x581.webp';
@@ -20,8 +21,7 @@ const AllApartments = () => {
   return (
     <section className={`${styles.apartments} ${styles.container}`}>
       <h2 className={styles.apartments__title}>
-        All Apartments <br />
-        Category
+        <FormattedMessage id="apartments.title" />
       </h2>
 
       <Swiper
@@ -34,22 +34,21 @@ const AllApartments = () => {
               fill: 'row',
             },
           },
-          // 368: {
+
           576: {
             slidesPerView: 3,
             spaceBetween: 10,
           },
-          950: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
           },
-          // 769: {
+
           1100: {
             slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
-       
         initialSlide={1}
         pagination={{
           el: '.swiper-pagination',
@@ -57,19 +56,20 @@ const AllApartments = () => {
           bulletClass: 'swiper-pagination-bullet',
         }}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
-        className="mySwiper mySwiper-apartments"
+        className={styles.apartments__swiper}
       >
         <SwiperSlide>
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Townhouse</p>
-              <button className={styles.apartments__btn}>
-                <a href="#">
-                  Learn more <AiOutlineRight />
-                </a>{' '}
+              <button>
+                <a href="#" className={styles.apartments__card__link}>
+                  <FormattedMessage id="projects.card.button" />
+                  <AiOutlineRight />
+                </a>
               </button>
             </div>
 
@@ -80,10 +80,11 @@ const AllApartments = () => {
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Villa</p>
-              <button className={styles.apartments__btn}>
-                <a href="#">
-                  Learn more <AiOutlineRight />
-                </a>{' '}
+              <button>
+                <a href="#" className={styles.apartments__card__link}>
+                  <FormattedMessage id="projects.card.button" />
+                  <AiOutlineRight />
+                </a>
               </button>
             </div>
 
@@ -91,17 +92,20 @@ const AllApartments = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={`${styles.apartments__card} ${styles.card__text}`}>
-            <h3>Apartments</h3>
+          <div
+            className={`${styles.apartments__card} ${styles.apartments__card__text}`}
+          >
+            <h3>
+              <FormattedMessage id="apartments.card.title" />
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-              molestie integer aliquam consectetur. Faucibus vitae dui massa
-              tellus magna sit.
+              <FormattedMessage id="apartments.card.description" />
             </p>
-            <button className={styles.apartments__btn}>
-              <a href="#">
-                Learn more <AiOutlineRight />
-              </a>{' '}
+            <button>
+              <a href="#" className={styles.apartments__card__link}>
+                <FormattedMessage id="projects.card.button" />
+                <AiOutlineRight />
+              </a>
             </button>
           </div>
         </SwiperSlide>
@@ -109,10 +113,11 @@ const AllApartments = () => {
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Comercial</p>
-              <button className={styles.apartments__btn}>
-                <a href="#">
-                  Learn more <AiOutlineRight />
-                </a>{' '}
+              <button>
+                <a href="#" className={styles.apartments__card__link}>
+                  <FormattedMessage id="projects.card.button" />
+                  <AiOutlineRight />
+                </a>
               </button>
             </div>
 
@@ -120,17 +125,20 @@ const AllApartments = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={`${styles.apartments__card} ${styles.card__text}`}>
-            <h3>Apartments</h3>
+          <div
+            className={`${styles.apartments__card} ${styles.apartments__card__text}`}
+          >
+            <h3>
+              <FormattedMessage id="apartments.card.title" />
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-              molestie integer aliquam consectetur. Faucibus vitae dui massa
-              tellus magna sit.
+              <FormattedMessage id="apartments.card.description" />
             </p>
-            <button className={styles.apartments__btn}>
-              <a href="#">
-                Learn more <AiOutlineRight />
-              </a>{' '}
+            <button>
+              <a href="#" className={styles.apartments__card__link}>
+                <FormattedMessage id="projects.card.button" />
+                <AiOutlineRight />
+              </a>
             </button>
           </div>
         </SwiperSlide>
@@ -138,10 +146,11 @@ const AllApartments = () => {
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Villa</p>
-              <button className={styles.apartments__btn}>
-                <a href="#">
-                  Learn more <AiOutlineRight />
-                </a>{' '}
+              <button>
+                <a href="#" className={styles.apartments__card__link}>
+                  <FormattedMessage id="projects.card.button" />
+                  <AiOutlineRight />
+                </a>
               </button>
             </div>
 
@@ -152,10 +161,11 @@ const AllApartments = () => {
           <div className={styles.apartments__card}>
             <div className={styles.apartments__card__inform}>
               <p className={styles.apartments__card__title}>Townhouse</p>
-              <button className={styles.apartments__btn}>
-                <a href="#">
-                  Learn more <AiOutlineRight />
-                </a>{' '}
+              <button>
+                <a href="#" className={styles.apartments__card__link}>
+                  <FormattedMessage id="projects.card.button" />
+                  <AiOutlineRight />
+                </a>
               </button>
             </div>
 

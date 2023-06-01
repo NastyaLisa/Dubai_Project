@@ -6,6 +6,7 @@
 .container {
   @extend %container;
   position: relative;
+  margin: 0 auto;
 }
 
 .offers {
@@ -41,26 +42,26 @@
   //card - slide
   &__card {
     position: relative;
-    max-width: 288px;
-    max-height: 577px;
+    // max-width: 288px;
+    // max-height: 577px;
 
-    @include onTablet {
-      max-width: 332px;
-      max-height: 577px;
-    }
+    // @include onTablet {
+    //   max-width: 332px;
+    //   max-height: 577px;
+    // }
 
-    @include onDesctop {
-      max-width: 425px;
-      max-height: 878px;
-      margin-bottom: 20px;
-    }
+    // @include onDesctop {
+    //   max-width: 425px;
+    //   max-height: 878px;
+    //   margin-bottom: 20px;
+    // }
 
     &__image {
-      max-height: 329px;
+      // max-height: 329px;
 
-      @include onDesctop {
-        max-height: 580px;
-      }
+      // @include onDesctop {
+      //   max-height: 580px;
+      // }
 
       img {
         width: 100%;
@@ -71,18 +72,22 @@
     &__inform {
       display: flex;
       flex-direction: column;
-      row-gap: 8px;
+      row-gap: 20px;
       text-align: start;
-      max-height: 348px;
-      padding: 9px 7px 7px 8px;
+      // max-height: 348px;
+      padding: 20px;
       background-color: $colorMain;
       border: 1px solid $colorAccent;
 
       @include onTablet {
+           padding: 16px;
+      }
+        @include onTabletLarge {
+           padding: 27px;
       }
       @include onDesctop {
         row-gap: 25px;
-        padding: 38px;
+        padding: 30px;
       }
     }
   }

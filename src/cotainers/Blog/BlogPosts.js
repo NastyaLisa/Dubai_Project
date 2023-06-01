@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BlogPosts.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Grid, Pagination, Navigation } from 'swiper';
+import SwiperCore, { Grid, Pagination, Navigation } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
+import { FormattedMessage,useIntl } from 'react-intl';
 
-SwiperCore.use([Pagination, Autoplay, Grid, Navigation]);
+
+SwiperCore.use([Pagination, Grid, Navigation]);
 
 const BlogPosts = () => {
+  const intl = useIntl();
   const [postsData, setPostsData] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:5000/blog');
@@ -45,12 +49,16 @@ const BlogPosts = () => {
   return (
     <section className={`${styles.blog} ${styles.container}`}>
       <div className={styles.blog__header}>
-        <h2 className={styles.blog__header__title}>Blog</h2>
+        <h2 className={styles.blog__header__title}>
+          <FormattedMessage id="blog.title" />
+        </h2>
         <input
           type="text"
           value={searchValue}
           onChange={handleSearchInputChange}
-          placeholder="Search..."
+          placeholder={intl.formatMessage({
+            id: 'blog.search',
+          })}
           className={styles.blog__header__searchInput}
         />
       </div>
@@ -137,9 +145,7 @@ const BlogPosts = () => {
           </div>
         </Swiper>
       ) : (
-        <p className={styles.loading}>
-          Page Loading from the server...
-        </p> // Отображение загрузки, пока данные не получены
+        <p className={styles.loading}>Page Loading from the server...</p> // Отображение загрузки, пока данные не получены
       )}
     </section>
   );

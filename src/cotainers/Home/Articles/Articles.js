@@ -15,7 +15,6 @@ const Articles = ()=>{
  
   
   return (
-    // <I18nPropvider>
     <section className={styles.articles}>
       <div className={styles.container}>
         <div className={styles.articles__description}>
@@ -31,7 +30,7 @@ const Articles = ()=>{
         <div className={styles.articles__column}>
           <div className={styles.articles__column__item}>
             <h4 className={styles.articles__column__item__title}>
-              Discover Architecture
+              <FormattedMessage id="articles.title" />
             </h4>
             <img src={image1} />
           </div>
@@ -52,17 +51,17 @@ const Articles = ()=>{
               <AiOutlineRight />
             </a>
           </article>
-          
+
           <div className={styles.articles__column__item}>
             <h4 className={styles.articles__column__item__title}>
-              Discover Architecture
+              <FormattedMessage id="articles.title" />
             </h4>
             <img src={image2} />
           </div>
         </div>
       </div>
     </section>
-    // </I18nPropvider>
+   
   );
 };
 export default Articles;

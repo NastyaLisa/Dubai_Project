@@ -10,7 +10,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Grid,  Pagination } from 'swiper';
 import 'swiper/scss';
-// import 'swiper/scss/navigation';
+
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay';
 import 'swiper/scss/grid';
@@ -85,7 +85,7 @@ const Projects = () => {
         //   disableOnInteraction: false,
         // }}
         className={styles.projects__swiper}
-        // className="mySwiper mySwiper-projects"
+        
       >
         <SwiperSlide>
           <div className={styles.projects__card}>

@@ -191,10 +191,48 @@ const translations = {
                           Dubai apartments offer not only exclusive locations but also impeccable service and luxurious amenities. You can enjoy shared swimming pools, fitness centers, spa salons, and premium-class restaurants that will cater to your relaxation and enjoyment.
                           Dubai apartments are the perfect choice for those who want to live in luxury and enjoy all the benefits that this unparalleled place has to offer. They are designed for people who value comfort, elegance, and a high standard of living. Experience unforgettable impressions and acquaint yourself with the
                           luxurious world of apartments in Dubai.`,
-    'buy.articles.text3': 'Luxury and Comfort: Real estate in the UAE offers luxurious villas and apartments with modern design and the highest level of comfort. You will have exclusive spaces with stylish interiors and all the necessary amenities for a comfortable living.',
-    'buy.articles.text4': 'Safety and Privacy: Real estate in the UAE ensures a high level of security and privacy. Many villas and apartments are located in gated complexes with 24/7 security, video surveillance systems, and card access. You can enjoy peace and security in your home environment.',
-    'buy.articles.text5': 'Tax Benefits: The UAE offers attractive tax conditions for property owners. You can take advantage of financial benefits such as no income tax, tax exemptions, and low property rates.',
-    'buy.articles.text6': 'Investment Potential: Real estate in the UAE has high investment potential. This region is attractive to investors worldwide due to its stability, developed infrastructure, and strategic location. You can earn high rental income or benefit from the appreciation of property value',
+    'buy.articles.text3':
+      'Luxury and Comfort: Real estate in the UAE offers luxurious villas and apartments with modern design and the highest level of comfort. You will have exclusive spaces with stylish interiors and all the necessary amenities for a comfortable living.',
+    'buy.articles.text4':
+      'Safety and Privacy: Real estate in the UAE ensures a high level of security and privacy. Many villas and apartments are located in gated complexes with 24/7 security, video surveillance systems, and card access. You can enjoy peace and security in your home environment.',
+    'buy.articles.text5':
+      'Tax Benefits: The UAE offers attractive tax conditions for property owners. You can take advantage of financial benefits such as no income tax, tax exemptions, and low property rates.',
+    'buy.articles.text6':
+      'Investment Potential: Real estate in the UAE has high investment potential. This region is attractive to investors worldwide due to its stability, developed infrastructure, and strategic location. You can earn high rental income or benefit from the appreciation of property value',
+    'buy.features.statistic1': 'YEARS WORKING',
+    'buy.features.statistic2': 'TALANTED MANAGERS',
+    'buy.features.statistic3': 'COMPLITLY PROJECTS',
+    'buy.arcticle.title': ' We will also propose',
+    'buy.arcticle.link': ' View all services',
+    'buy.articles.title': 'Mortgage Registration',
+    'buy.articles.description': `A person applying
+              for a mortgage in the United Arab Emirates must meet the following
+              requirements`,
+
+    'blog.title': 'Blog',
+    'blog.search': 'Search',
+
+    'apartment.hero.title': ' Apartments',
+    'apartment.hero.accent': 'in Dubai',
+
+    'apartments.title': ' All Apartments Category',
+    'apartments.card.title': 'Apartments',
+    'apartments.card.description':
+                                'Experience the ultimate comfort and convenience with our modern amenities and stunning views. Whether you\'re here for business or pleasure, our apartments offer the perfect home away from home.',
+    'apartments.offer': 'Best offers',
+    'apartment.description.mainTitle': 'Apartments',
+    'apartment.description.text1': `Explore our wide selection of rental apartments in Dubai. We offer a variety of options to suit your needs and preferences. 
+                                    Find your perfect home today!'Discover the best apartments available for rent in Dubai. We provide a range of high-quality apartments in prime locations. Experience luxury living at its finest. 
+                                    With state-of-the-art amenities, spacious layouts, and breathtaking views, our apartments offer the perfect blend of comfort and style.
+                                    Whether you're looking for a cozy studio or a luxurious penthouse, we have the perfect apartment to meet your expectations.'`,
+
+    'apartment.description.title': 'Apartment Rentals',
+    'apartment.description.text2': `"With state-of-the-art amenities, spacious layouts, and breathtaking views, our apartments offer the perfect blend of comfort 
+                                    and style. Whether you're looking for a cozy studio or a luxurious penthouse, we have the perfect apartment to meet your expectations.
+                                    Enjoy a vibrant lifestyle with convenient access to shopping malls, restaurants, parks, and entertainment venues. 
+                                    Our apartments are located in desirable neighborhoods, ensuring you have everything you need right at your doorstep.
+                                    Our dedicated team is ready to assist you in finding the ideal apartment that suits your preferences and budget.
+                                    Contact us today to schedule a viewing and start your journey to finding your dream home in Dubai.`,
   },
 };
 

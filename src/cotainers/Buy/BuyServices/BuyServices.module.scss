@@ -44,7 +44,10 @@
         font-size: 25px;
         line-height: 45px;
       }
-
+@include onTabletLarge{
+  font-size: 30px;
+        line-height: 37px;
+}
       @include onDesctop {
         font-size: 32px;
         line-height: 45px;

@@ -17,16 +17,17 @@ module.exports = {
   },
   resolve: {
     alias: {
-      utils: path.resolve(__dirname, 'src/scss/utils'),
-      fonts: path.resolve(__dirname, 'src/assets/fonts'),
-      images: path.resolve(__dirname, 'src/assets/images'),
-      component: path.resolve(__dirname, 'src/components'),
-      containers: path.resolve(__dirname, 'src/containers'),
+      utils: path.resolve(__dirname, "src/scss/utils"),
+      fonts: path.resolve(__dirname, "src/assets/fonts"),
+      images: path.resolve(__dirname, "src/assets/images"),
+      component: path.resolve(__dirname, "src/components"),
+      containers: path.resolve(__dirname, "src/containers"),
     },
   },
   plugins: [
     new HTMLWebpackPlugin({
       template: "./src/index.html",
+      favicon: "./src/assets/images/favicon.ico.gif",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -55,7 +56,7 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-               postcssOptions: {
+              postcssOptions: {
                 plugins: [require("autoprefixer")(), require("cssnano")()],
               },
             },
@@ -72,16 +73,16 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          "css-loader",
           {
-            loader: 'postcss-loader',
-options: {
-postcssOptions: {
-config: path.resolve(__dirname, "postcss.config.js")
-              }
-            }
-          }
-        ]
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                config: path.resolve(__dirname, "postcss.config.js"),
+              },
+            },
+          },
+        ],
       },
 
       {
@@ -134,8 +135,8 @@ config: path.resolve(__dirname, "postcss.config.js")
   },
   devServer: {
     static: {
-    directory: path.join(__dirname, 'src'),
+      directory: path.join(__dirname, "src"),
     },
     port: 3000,
-    },
+  },
 };

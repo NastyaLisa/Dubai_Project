@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import image1 from 'images/services/features1.webp';
 import image2 from 'images/services/features2.webp';
 import image3 from 'images/services/features3.webp';
@@ -24,22 +24,24 @@ const Features = () => {
         <div className={styles.features__statistic}>
           <ul className={styles.features__statistic__list}>
             <li className={styles.features__statistic__item}>
-             
               <p className={styles.features__statistic__item__number}>20</p>
-              <p className={styles.features__statistic__item__label}>YEARS WORKING</p>
-            
+              <p className={styles.features__statistic__item__label}>
+                <FormattedMessage id="buy.features.statistic1" />
+              </p>
             </li>
             <li className={styles.features__statistic__item}>
-            
               <p className={styles.features__statistic__item__number}>7</p>
-              <p className={styles.features__statistic__item__label}>TALANTED MANAGERS</p>
-            
+              <p className={styles.features__statistic__item__label}>
+                <FormattedMessage id="buy.features.statistic2" />
+              </p>
             </li>
             <li className={styles.features__statistic__item}>
-             
-              <p className={styles.features__statistic__item__number}>100<sup className={styles.sup}>+</sup></p>
-              <p className={styles.features__statistic__item__label}>COMPLITLY PROJECTS</p>
-            
+              <p className={styles.features__statistic__item__number}>
+                100<sup className={styles.sup}>+</sup>
+              </p>
+              <p className={styles.features__statistic__item__label}>
+                <FormattedMessage id="buy.features.statistic3" />
+              </p>
             </li>
           </ul>
         </div>

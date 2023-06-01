@@ -1,21 +1,22 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { offersData } from './offersData';
 import styles from './BestOffers.module.scss';
 import { useRef } from 'react';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, Grid, Pagination, Navigation } from 'swiper';
+import SwiperCore, {  Grid, Pagination, Navigation } from 'swiper';
 import('swiper/scss').then(() => {
   import('swiper/scss/navigation');
   import('swiper/scss/pagination');
-  import('swiper/scss/autoplay');
+  
 });
 
 import 'swiper/scss/autoplay';
 import 'swiper/scss/grid';
 
-SwiperCore.use([Pagination, Autoplay, Grid, Navigation]);
+SwiperCore.use([Pagination,  Grid, Navigation]);
 
 const BestOffers = () => {
   const swiper = useRef(null);
@@ -40,7 +41,9 @@ const BestOffers = () => {
   
   return (
     <section className={`${styles.offers} ${styles.container}`}>
-      <h2 className={styles.offers__title}>Best Offers</h2>
+      <h2 className={styles.offers__title}>
+        <FormattedMessage id="apartments.offer" />
+      </h2>
 
       <Swiper
         breakpoints={{
