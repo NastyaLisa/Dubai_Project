@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styles from './Reviews.module.scss';
+import './Reviews.scss';
 import paul from 'images/home/reviews/Mask-Group2.png';
 import robert from 'images/home/reviews/Mask-Group.png';
 import {ImQuotesRight} from 'react-icons/im';
@@ -20,17 +21,15 @@ const Reviews = ()=>{
         <div className="reviews__slider">
           <Swiper
             slidesPerView={2}
-            // slidesPerGroup={2}
             spaceBetween={55}
             initialSlide={0}
             centeredSlides={true} // Центрирование слайдов
             centeredSlidesBounds={true} // Ограничение центрирования
-            // Ширина одного слайда
             loop={true}
-            // autoplay={{
-            //   delay: 50000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             pagination={{
               el: '.swiper-pagination',
               clickable: true,
@@ -39,20 +38,16 @@ const Reviews = ()=>{
             className="mySwiper mySwiper-reviews"
             breakpoints={{
               0: {
-                slidesPerView: 1,
-                // slidesPerGroup: 1,
-                // spaceBetween: 50,
+                slidesPerView: 1,              
               },
               576: {
-                slidesPerView: 2,
-                // slidesPerGroup: 1,
-                // spaceBetween: 40,
+                slidesPerView: 2, 
+                width: 600,
               },
               1024: {
                 slidesPerView: 2,
                 slidesPerGroup: 1,
-                width: 1100, 
-                // spaceBetween: 20,
+                width: 1100,               
               },
             }}
           >

@@ -42,27 +42,8 @@
   //card - slide
   &__card {
     position: relative;
-    // max-width: 288px;
-    // max-height: 577px;
-
-    // @include onTablet {
-    //   max-width: 332px;
-    //   max-height: 577px;
-    // }
-
-    // @include onDesctop {
-    //   max-width: 425px;
-    //   max-height: 878px;
-    //   margin-bottom: 20px;
-    // }
 
     &__image {
-      // max-height: 329px;
-
-      // @include onDesctop {
-      //   max-height: 580px;
-      // }
-
       img {
         width: 100%;
         height: 100%;
@@ -74,16 +55,16 @@
       flex-direction: column;
       row-gap: 20px;
       text-align: start;
-      // max-height: 348px;
+
       padding: 20px;
       background-color: $colorMain;
       border: 1px solid $colorAccent;
 
       @include onTablet {
-           padding: 16px;
+        padding: 16px;
       }
-        @include onTabletLarge {
-           padding: 27px;
+      @include onTabletLarge {
+        padding: 27px;
       }
       @include onDesctop {
         row-gap: 25px;

@@ -1,0 +1,52 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.reviews__slider {
+  .swiper {
+    padding-top: 36px;
+    @include onTablet {
+      padding-top: 46px;
+    }
+    @include onDesctop {
+      width: 1800px; /* Ширина видимости двух слайдов */
+      margin: 0 auto; /* Центрирование контейнера */
+      width: 100%;
+      // overflow: hidden;
+      padding-top: 56px;
+      // overflow: visible;
+    }
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next {
+    padding-top: 20px;
+  }
+
+  .reviews-pagination {
+    margin-top: 20px;
+    padding-top: 20px;
+
+    @include onTablet {
+      margin-top: 36px;
+      padding-top: 36px;
+    }
+
+    @include onDesctop {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      background-color: $colorAccent;
+
+      @include onDesctop {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}

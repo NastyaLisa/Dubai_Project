@@ -44,6 +44,7 @@
       background-repeat: no-repeat;
       background-position: right;
       background-size: 20px;
+      padding: 15px;
 
       @include onTablet {
         border-style: 30px;
@@ -102,7 +103,7 @@
       }
 
       @include onTabletLarge {
-        padding: 30px;
+        padding: 35px;
       }
 
       @include onDesctop {
@@ -194,16 +195,17 @@
   }
 
   .paginationBullet {
-    padding: 5px;
+    padding: 8px;
+    margin: 0 auto;
 
-    border-radius: 0;
+    border-radius: 50%;
 
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: $colorText;
   }
-
   .paginationItemActive {
-    background-color: #ffc107;
+    background-color: $colorAccent;
   }
 
   .navBtn {
@@ -217,10 +219,9 @@
       font-size: 30px;
     }
   }
-
 }
 
-.loading{
+.loading {
   text-align: center;
   font-size: 40px;
   line-height: 52px;

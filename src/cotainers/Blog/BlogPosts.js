@@ -103,6 +103,7 @@ const BlogPosts = () => {
           pagination={{
             clickable: true,
             bulletActiveClass: `${styles.paginationItemActive}`,
+            bulletClass: `${styles.paginationBullet}`,
             el: `.${styles.paginationWrapper}`,
           }}
           navigation={{

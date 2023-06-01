@@ -4,7 +4,7 @@ import comercial from 'images/apartment_category/Commercial_426x581.webp';
 import townhouse from 'images/apartment_category/Townhous_426x581.webp';
 import villa from 'images/apartment_category/Villa_426x581.webp';
 import styles from './AllApartments.module.scss';
-
+import './AllApartments.scss';
 import { AiOutlineRight } from 'react-icons/ai';
 
 import { Swiper, SwiperSlide } from 'swiper/react';

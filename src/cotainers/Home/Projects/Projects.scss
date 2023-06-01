@@ -1,0 +1,26 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.projects__pagination {
+  margin: 35px auto 0;
+
+  @include onTablet {
+    margin: 50px auto 0;
+  }
+  @include onDesctop {
+    margin: 110px auto 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    background-color: $colorAccent;
+
+    @include onDesctop {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

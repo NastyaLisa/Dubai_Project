@@ -4,6 +4,7 @@ import image1 from 'images/home/villas.webp';
 import image2 from 'images/home/villas_2.webp';
 import image3 from 'images/home/houses.webp';
 import styles from './Projects.module.scss';
+import './Projects.scss';
 
 import { AiOutlineRight } from 'react-icons/ai';
 
@@ -80,10 +81,10 @@ const Projects = () => {
           clickable: true,
           bulletClass: 'swiper-pagination-bullet',
         }}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         className={styles.projects__swiper}
         
       >

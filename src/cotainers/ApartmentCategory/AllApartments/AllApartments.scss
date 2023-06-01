@@ -1,0 +1,27 @@
+@import "utils/mixin";
+@import "utils/variables";
+@import "utils/templates";
+@import "utils/fonts";
+
+.apartments__pagination {
+  margin-top: 35px;
+
+  @include onTablet {
+    margin-top: 50px;
+  }
+  @include onDesctop {
+    margin-top: 110px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    background-color: $colorAccent;
+cursor: pointer;
+    transition: all 0.3s ease;
+    @include onDesctop {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
